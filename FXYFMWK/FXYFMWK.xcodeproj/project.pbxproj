@@ -13,7 +13,6 @@
 		E62C11C02121BD200020D199 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E62C11BC2121BD200020D199 /* ViewController.m */; };
 		E62C11C12121BD200020D199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E62C11BD2121BD200020D199 /* main.m */; };
 		E62C11C22121BD200020D199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E62C11BE2121BD200020D199 /* AppDelegate.m */; };
-		E62C11CD2121CBF50020D199 /* PXYMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E62C11CC2121CBF50020D199 /* PXYMulticastDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +26,6 @@
 		E62C11BD2121BD200020D199 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E62C11BE2121BD200020D199 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E62C11BF2121BD200020D199 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E62C11CB2121CBF50020D199 /* PXYMulticastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXYMulticastDelegate.h; sourceTree = "<group>"; };
-		E62C11CC2121CBF50020D199 /* PXYMulticastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXYMulticastDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +58,7 @@
 		E62C11A32121BCFF0020D199 /* FXYFMWK */ = {
 			isa = PBXGroup;
 			children = (
-				E62C11C32121BE140020D199 /* PXYFMWK */,
+				E636449A212EB742004CE897 /* PXYFMWK */,
 				E62C11BA2121BD200020D199 /* Main */,
 				E62C11AA2121BCFF0020D199 /* Main.storyboard */,
 				E62C11AD2121BD010020D199 /* Assets.xcassets */,
@@ -83,38 +80,27 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		E62C11C32121BE140020D199 /* PXYFMWK */ = {
+		E636449A212EB742004CE897 /* PXYFMWK */ = {
 			isa = PBXGroup;
 			children = (
-				E62C11C42121BE520020D199 /* Helper */,
+				E636449B212EB742004CE897 /* Helper */,
 			);
 			path = PXYFMWK;
 			sourceTree = "<group>";
 		};
-		E62C11C42121BE520020D199 /* Helper */ = {
+		E636449B212EB742004CE897 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				E62C11CA2121CBF50020D199 /* PXYMulticastDelegate */,
-				E62C11C52121BE520020D199 /* PXYRuntime */,
+				E636449C212EB742004CE897 /* PXYRuntime */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		E62C11C52121BE520020D199 /* PXYRuntime */ = {
+		E636449C212EB742004CE897 /* PXYRuntime */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = PXYRuntime;
-			sourceTree = "<group>";
-		};
-		E62C11CA2121CBF50020D199 /* PXYMulticastDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				E62C11CB2121CBF50020D199 /* PXYMulticastDelegate.h */,
-				E62C11CC2121CBF50020D199 /* PXYMulticastDelegate.m */,
-			);
-			name = PXYMulticastDelegate;
-			path = ../../../../../../../../Desktop/ImageCorner/ImageCorner/PXYMulticastDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +176,6 @@
 				E62C11C12121BD200020D199 /* main.m in Sources */,
 				E62C11C22121BD200020D199 /* AppDelegate.m in Sources */,
 				E62C11C02121BD200020D199 /* ViewController.m in Sources */,
-				E62C11CD2121CBF50020D199 /* PXYMulticastDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
