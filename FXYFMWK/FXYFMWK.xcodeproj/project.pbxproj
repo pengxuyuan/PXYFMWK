@@ -13,6 +13,10 @@
 		E62C11C02121BD200020D199 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E62C11BC2121BD200020D199 /* ViewController.m */; };
 		E62C11C12121BD200020D199 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E62C11BD2121BD200020D199 /* main.m */; };
 		E62C11C22121BD200020D199 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E62C11BE2121BD200020D199 /* AppDelegate.m */; };
+		E63644A9212EB825004CE897 /* PXYRuntimeNSCodingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E636449F212EB824004CE897 /* PXYRuntimeNSCodingHelper.m */; };
+		E63644AA212EB825004CE897 /* NSObject+PXYRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E63644A1212EB824004CE897 /* NSObject+PXYRuntimeHelper.m */; };
+		E63644AB212EB825004CE897 /* NSObject+PXYKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = E63644A5212EB825004CE897 /* NSObject+PXYKVO.m */; };
+		E63644AC212EB825004CE897 /* PXYRuntimeMethodSwizzledHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E63644A8212EB825004CE897 /* PXYRuntimeMethodSwizzledHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		E62C11BD2121BD200020D199 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E62C11BE2121BD200020D199 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E62C11BF2121BD200020D199 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E636449E212EB824004CE897 /* PXYRuntimeNSCodingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXYRuntimeNSCodingHelper.h; sourceTree = "<group>"; };
+		E636449F212EB824004CE897 /* PXYRuntimeNSCodingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXYRuntimeNSCodingHelper.m; sourceTree = "<group>"; };
+		E63644A1212EB824004CE897 /* NSObject+PXYRuntimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PXYRuntimeHelper.m"; sourceTree = "<group>"; };
+		E63644A2212EB824004CE897 /* NSObject+PXYRuntimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PXYRuntimeHelper.h"; sourceTree = "<group>"; };
+		E63644A4212EB825004CE897 /* NSObject+PXYKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PXYKVO.h"; sourceTree = "<group>"; };
+		E63644A5212EB825004CE897 /* NSObject+PXYKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PXYKVO.m"; sourceTree = "<group>"; };
+		E63644A7212EB825004CE897 /* PXYRuntimeMethodSwizzledHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXYRuntimeMethodSwizzledHelper.h; sourceTree = "<group>"; };
+		E63644A8212EB825004CE897 /* PXYRuntimeMethodSwizzledHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXYRuntimeMethodSwizzledHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +111,48 @@
 		E636449C212EB742004CE897 /* PXYRuntime */ = {
 			isa = PBXGroup;
 			children = (
+				E63644A0212EB824004CE897 /* RuntimeHelper */,
+				E63644A3212EB825004CE897 /* RuntimeKVO */,
+				E63644A6212EB825004CE897 /* RuntimeMethodSwizzled */,
+				E636449D212EB824004CE897 /* RuntimeNSCoding */,
 			);
 			path = PXYRuntime;
+			sourceTree = "<group>";
+		};
+		E636449D212EB824004CE897 /* RuntimeNSCoding */ = {
+			isa = PBXGroup;
+			children = (
+				E636449E212EB824004CE897 /* PXYRuntimeNSCodingHelper.h */,
+				E636449F212EB824004CE897 /* PXYRuntimeNSCodingHelper.m */,
+			);
+			path = RuntimeNSCoding;
+			sourceTree = "<group>";
+		};
+		E63644A0212EB824004CE897 /* RuntimeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E63644A1212EB824004CE897 /* NSObject+PXYRuntimeHelper.m */,
+				E63644A2212EB824004CE897 /* NSObject+PXYRuntimeHelper.h */,
+			);
+			path = RuntimeHelper;
+			sourceTree = "<group>";
+		};
+		E63644A3212EB825004CE897 /* RuntimeKVO */ = {
+			isa = PBXGroup;
+			children = (
+				E63644A4212EB825004CE897 /* NSObject+PXYKVO.h */,
+				E63644A5212EB825004CE897 /* NSObject+PXYKVO.m */,
+			);
+			path = RuntimeKVO;
+			sourceTree = "<group>";
+		};
+		E63644A6212EB825004CE897 /* RuntimeMethodSwizzled */ = {
+			isa = PBXGroup;
+			children = (
+				E63644A7212EB825004CE897 /* PXYRuntimeMethodSwizzledHelper.h */,
+				E63644A8212EB825004CE897 /* PXYRuntimeMethodSwizzledHelper.m */,
+			);
+			path = RuntimeMethodSwizzled;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +227,11 @@
 			files = (
 				E62C11C12121BD200020D199 /* main.m in Sources */,
 				E62C11C22121BD200020D199 /* AppDelegate.m in Sources */,
+				E63644AC212EB825004CE897 /* PXYRuntimeMethodSwizzledHelper.m in Sources */,
 				E62C11C02121BD200020D199 /* ViewController.m in Sources */,
+				E63644A9212EB825004CE897 /* PXYRuntimeNSCodingHelper.m in Sources */,
+				E63644AB212EB825004CE897 /* NSObject+PXYKVO.m in Sources */,
+				E63644AA212EB825004CE897 /* NSObject+PXYRuntimeHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
