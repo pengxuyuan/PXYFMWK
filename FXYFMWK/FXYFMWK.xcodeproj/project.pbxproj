@@ -135,8 +135,8 @@
 		E63644A0212EB824004CE897 /* RuntimeHelper */ = {
 			isa = PBXGroup;
 			children = (
-				E63644A1212EB824004CE897 /* NSObject+PXYRuntimeHelper.m */,
 				E63644A2212EB824004CE897 /* NSObject+PXYRuntimeHelper.h */,
+				E63644A1212EB824004CE897 /* NSObject+PXYRuntimeHelper.m */,
 			);
 			path = RuntimeHelper;
 			sourceTree = "<group>";
