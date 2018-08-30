@@ -58,11 +58,11 @@
 		E61EA6AA21379AD300394FFF /* PXYFMWK */ = {
 			isa = PBXGroup;
 			children = (
+				E61EA6B621379AD300394FFF /* PXYFMWK */,
+				E61EA6B021379AD300394FFF /* Main */,
 				E61EA6AB21379AD300394FFF /* Assets.xcassets */,
 				E61EA6AC21379AD300394FFF /* LaunchScreen.storyboard */,
 				E61EA6AE21379AD300394FFF /* Main.storyboard */,
-				E61EA6B021379AD300394FFF /* Main */,
-				E61EA6B621379AD300394FFF /* PXYFMWK */,
 				E61EA6C821379AD400394FFF /* Info.plist */,
 			);
 			path = PXYFMWK;
@@ -71,11 +71,11 @@
 		E61EA6B021379AD300394FFF /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E61EA6B121379AD300394FFF /* AppDelegate.h */,
-				E61EA6B221379AD300394FFF /* ViewController.m */,
 				E61EA6B321379AD300394FFF /* main.m */,
+				E61EA6B121379AD300394FFF /* AppDelegate.h */,
 				E61EA6B421379AD300394FFF /* AppDelegate.m */,
 				E61EA6B521379AD300394FFF /* ViewController.h */,
+				E61EA6B221379AD300394FFF /* ViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
