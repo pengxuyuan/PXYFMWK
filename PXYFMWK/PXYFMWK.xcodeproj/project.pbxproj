@@ -19,7 +19,21 @@
 		E61EA6D221379AD400394FFF /* PXYRuntimeMethodSwizzledHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C421379AD400394FFF /* PXYRuntimeMethodSwizzledHelper.m */; };
 		E61EA6D321379AD400394FFF /* PXYRuntimeNSCodingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C721379AD400394FFF /* PXYRuntimeNSCodingHelper.m */; };
 		E61EA6D421379AD400394FFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E61EA6C821379AD400394FFF /* Info.plist */; };
+		E61EA846213CD79100394FFF /* PXYAPMLoadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E61EA8302137E05B00394FFF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E61EA6AB21379AD300394FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +55,8 @@
 		E61EA6C621379AD400394FFF /* PXYRuntimeNSCodingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXYRuntimeNSCodingHelper.h; sourceTree = "<group>"; };
 		E61EA6C721379AD400394FFF /* PXYRuntimeNSCodingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXYRuntimeNSCodingHelper.m; sourceTree = "<group>"; };
 		E61EA6C821379AD400394FFF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E61EA843213CD79100394FFF /* PXYAPMLoadMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYAPMLoadMonitor.h; sourceTree = "<group>"; };
+		E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYAPMLoadMonitor.m; sourceTree = "<group>"; };
 		E62C11A12121BCFF0020D199 /* PXYFMWK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXYFMWK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +99,7 @@
 		E61EA6B621379AD300394FFF /* PXYFMWK */ = {
 			isa = PBXGroup;
 			children = (
+				E61EA83E213CD4C900394FFF /* Component */,
 				E61EA6B721379AD400394FFF /* Helper */,
 			);
 			path = PXYFMWK;
@@ -153,6 +170,31 @@
 			path = RuntimeNSCoding;
 			sourceTree = "<group>";
 		};
+		E61EA83E213CD4C900394FFF /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E61EA840213CD74F00394FFF /* PXYAPMComponent */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E61EA840213CD74F00394FFF /* PXYAPMComponent */ = {
+			isa = PBXGroup;
+			children = (
+				E61EA842213CD77600394FFF /* PXYAPMLoadMonitor */,
+			);
+			path = PXYAPMComponent;
+			sourceTree = "<group>";
+		};
+		E61EA842213CD77600394FFF /* PXYAPMLoadMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				E61EA843213CD79100394FFF /* PXYAPMLoadMonitor.h */,
+				E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */,
+			);
+			path = PXYAPMLoadMonitor;
+			sourceTree = "<group>";
+		};
 		E62C11982121BCFF0020D199 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +221,7 @@
 				E62C119D2121BCFF0020D199 /* Sources */,
 				E62C119E2121BCFF0020D199 /* Frameworks */,
 				E62C119F2121BCFF0020D199 /* Resources */,
+				E61EA8302137E05B00394FFF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +288,7 @@
 				E61EA6D221379AD400394FFF /* PXYRuntimeMethodSwizzledHelper.m in Sources */,
 				E61EA6CD21379AD400394FFF /* main.m in Sources */,
 				E61EA6CC21379AD400394FFF /* ViewController.m in Sources */,
+				E61EA846213CD79100394FFF /* PXYAPMLoadMonitor.m in Sources */,
 				E61EA6CE21379AD400394FFF /* AppDelegate.m in Sources */,
 				E61EA6CF21379AD400394FFF /* PXYMulticastDelegate.m in Sources */,
 				E61EA6D321379AD400394FFF /* PXYRuntimeNSCodingHelper.m in Sources */,
