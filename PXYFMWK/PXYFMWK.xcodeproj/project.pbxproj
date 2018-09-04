@@ -20,7 +20,36 @@
 		E61EA6D321379AD400394FFF /* PXYRuntimeNSCodingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C721379AD400394FFF /* PXYRuntimeNSCodingHelper.m */; };
 		E61EA6D421379AD400394FFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E61EA6C821379AD400394FFF /* Info.plist */; };
 		E61EA846213CD79100394FFF /* PXYAPMLoadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */; };
+		E61EA884213D16C300394FFF /* PXYFMWKDYLIB.h in Headers */ = {isa = PBXBuildFile; fileRef = E61EA882213D16C300394FFF /* PXYFMWKDYLIB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E61EA887213D16C300394FFF /* PXYFMWKDYLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61EA880213D16C300394FFF /* PXYFMWKDYLIB.framework */; };
+		E61EA888213D16C300394FFF /* PXYFMWKDYLIB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E61EA880213D16C300394FFF /* PXYFMWKDYLIB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E61EA88C213D185500394FFF /* PXYAPMLoadMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = E61EA843213CD79100394FFF /* PXYAPMLoadMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E61EA88D213D185C00394FFF /* PXYMulticastDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E61EA6B921379AD400394FFF /* PXYMulticastDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E61EA88E213D186400394FFF /* NSObject+PXYKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = E61EA6BD21379AD400394FFF /* NSObject+PXYKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E61EA88F213D186D00394FFF /* NSObject+PXYRuntimeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E61EA6C121379AD400394FFF /* NSObject+PXYRuntimeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E61EA890213D187500394FFF /* PXYRuntimeMethodSwizzledHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E61EA6C321379AD400394FFF /* PXYRuntimeMethodSwizzledHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E61EA891213D187C00394FFF /* PXYRuntimeNSCodingHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E61EA6C621379AD400394FFF /* PXYRuntimeNSCodingHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E61EA892213D18C900394FFF /* PXYAPMLoadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */; };
+		E61EA893213D18D700394FFF /* PXYMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6BA21379AD400394FFF /* PXYMulticastDelegate.m */; };
+		E61EA894213D18D700394FFF /* NSObject+PXYKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6BE21379AD400394FFF /* NSObject+PXYKVO.m */; };
+		E61EA895213D18D700394FFF /* NSObject+PXYRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C021379AD400394FFF /* NSObject+PXYRuntimeHelper.m */; };
+		E61EA896213D18D700394FFF /* PXYRuntimeMethodSwizzledHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C421379AD400394FFF /* PXYRuntimeMethodSwizzledHelper.m */; };
+		E61EA897213D18D700394FFF /* PXYRuntimeNSCodingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C721379AD400394FFF /* PXYRuntimeNSCodingHelper.m */; };
+		E61EA8BD213D4FB800394FFF /* PXYFMWKLib.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA8BC213D4FB800394FFF /* PXYFMWKLib.m */; };
+		E61EA8BE213D4FB800394FFF /* PXYFMWKLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61EA8BB213D4FB800394FFF /* PXYFMWKLib.h */; };
+		E61EA8C2213D4FD700394FFF /* PXYAPMLoadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */; };
+		E61EA8C3213D4FE100394FFF /* PXYAPMLoadMonitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61EA843213CD79100394FFF /* PXYAPMLoadMonitor.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E61EA885213D16C300394FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E62C11992121BCFF0020D199 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E61EA87F213D16C300394FFF;
+			remoteInfo = PXYFMWKDYLIB;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E61EA8302137E05B00394FFF /* Embed Frameworks */ = {
@@ -29,8 +58,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E61EA888213D16C300394FFF /* PXYFMWKDYLIB.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61EA8B7213D4FB800394FFF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				E61EA8C3213D4FE100394FFF /* PXYAPMLoadMonitor.h in CopyFiles */,
+				E61EA8BE213D4FB800394FFF /* PXYFMWKLib.h in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -57,14 +98,35 @@
 		E61EA6C821379AD400394FFF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E61EA843213CD79100394FFF /* PXYAPMLoadMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYAPMLoadMonitor.h; sourceTree = "<group>"; };
 		E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYAPMLoadMonitor.m; sourceTree = "<group>"; };
+		E61EA880213D16C300394FFF /* PXYFMWKDYLIB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PXYFMWKDYLIB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61EA882213D16C300394FFF /* PXYFMWKDYLIB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYFMWKDYLIB.h; sourceTree = "<group>"; };
+		E61EA883213D16C300394FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E61EA8B9213D4FB800394FFF /* libPXYFMWKLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPXYFMWKLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61EA8BB213D4FB800394FFF /* PXYFMWKLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYFMWKLib.h; sourceTree = "<group>"; };
+		E61EA8BC213D4FB800394FFF /* PXYFMWKLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYFMWKLib.m; sourceTree = "<group>"; };
 		E62C11A12121BCFF0020D199 /* PXYFMWK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXYFMWK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E61EA87C213D16C300394FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61EA8B6213D4FB800394FFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E62C119E2121BCFF0020D199 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61EA887213D16C300394FFF /* PXYFMWKDYLIB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +208,8 @@
 		E61EA6BF21379AD400394FFF /* RuntimeHelper */ = {
 			isa = PBXGroup;
 			children = (
-				E61EA6C021379AD400394FFF /* NSObject+PXYRuntimeHelper.m */,
 				E61EA6C121379AD400394FFF /* NSObject+PXYRuntimeHelper.h */,
+				E61EA6C021379AD400394FFF /* NSObject+PXYRuntimeHelper.m */,
 			);
 			path = RuntimeHelper;
 			sourceTree = "<group>";
@@ -195,10 +257,30 @@
 			path = PXYAPMLoadMonitor;
 			sourceTree = "<group>";
 		};
+		E61EA881213D16C300394FFF /* PXYFMWKDYLIB */ = {
+			isa = PBXGroup;
+			children = (
+				E61EA882213D16C300394FFF /* PXYFMWKDYLIB.h */,
+				E61EA883213D16C300394FFF /* Info.plist */,
+			);
+			path = PXYFMWKDYLIB;
+			sourceTree = "<group>";
+		};
+		E61EA8BA213D4FB800394FFF /* PXYFMWKLib */ = {
+			isa = PBXGroup;
+			children = (
+				E61EA8BB213D4FB800394FFF /* PXYFMWKLib.h */,
+				E61EA8BC213D4FB800394FFF /* PXYFMWKLib.m */,
+			);
+			path = PXYFMWKLib;
+			sourceTree = "<group>";
+		};
 		E62C11982121BCFF0020D199 = {
 			isa = PBXGroup;
 			children = (
 				E61EA6AA21379AD300394FFF /* PXYFMWK */,
+				E61EA881213D16C300394FFF /* PXYFMWKDYLIB */,
+				E61EA8BA213D4FB800394FFF /* PXYFMWKLib */,
 				E62C11A22121BCFF0020D199 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -207,13 +289,67 @@
 			isa = PBXGroup;
 			children = (
 				E62C11A12121BCFF0020D199 /* PXYFMWK.app */,
+				E61EA880213D16C300394FFF /* PXYFMWKDYLIB.framework */,
+				E61EA8B9213D4FB800394FFF /* libPXYFMWKLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		E61EA87D213D16C300394FFF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61EA88C213D185500394FFF /* PXYAPMLoadMonitor.h in Headers */,
+				E61EA88D213D185C00394FFF /* PXYMulticastDelegate.h in Headers */,
+				E61EA884213D16C300394FFF /* PXYFMWKDYLIB.h in Headers */,
+				E61EA88E213D186400394FFF /* NSObject+PXYKVO.h in Headers */,
+				E61EA890213D187500394FFF /* PXYRuntimeMethodSwizzledHelper.h in Headers */,
+				E61EA891213D187C00394FFF /* PXYRuntimeNSCodingHelper.h in Headers */,
+				E61EA88F213D186D00394FFF /* NSObject+PXYRuntimeHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		E61EA87F213D16C300394FFF /* PXYFMWKDYLIB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E61EA88B213D16C300394FFF /* Build configuration list for PBXNativeTarget "PXYFMWKDYLIB" */;
+			buildPhases = (
+				E61EA87B213D16C300394FFF /* Sources */,
+				E61EA87C213D16C300394FFF /* Frameworks */,
+				E61EA87D213D16C300394FFF /* Headers */,
+				E61EA87E213D16C300394FFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PXYFMWKDYLIB;
+			productName = PXYFMWKDYLIB;
+			productReference = E61EA880213D16C300394FFF /* PXYFMWKDYLIB.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E61EA8B8213D4FB800394FFF /* PXYFMWKLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E61EA8BF213D4FB800394FFF /* Build configuration list for PBXNativeTarget "PXYFMWKLib" */;
+			buildPhases = (
+				E61EA8B5213D4FB800394FFF /* Sources */,
+				E61EA8B6213D4FB800394FFF /* Frameworks */,
+				E61EA8B7213D4FB800394FFF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PXYFMWKLib;
+			productName = PXYFMWKLib;
+			productReference = E61EA8B9213D4FB800394FFF /* libPXYFMWKLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		E62C11A02121BCFF0020D199 /* PXYFMWK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E62C11B72121BD010020D199 /* Build configuration list for PBXNativeTarget "PXYFMWK" */;
@@ -226,6 +362,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E61EA886213D16C300394FFF /* PBXTargetDependency */,
 			);
 			name = PXYFMWK;
 			productName = FXYFMWK;
@@ -241,6 +378,12 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Pengxuyuan;
 				TargetAttributes = {
+					E61EA87F213D16C300394FFF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					E61EA8B8213D4FB800394FFF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					E62C11A02121BCFF0020D199 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -260,11 +403,20 @@
 			projectRoot = "";
 			targets = (
 				E62C11A02121BCFF0020D199 /* PXYFMWK */,
+				E61EA87F213D16C300394FFF /* PXYFMWKDYLIB */,
+				E61EA8B8213D4FB800394FFF /* PXYFMWKLib */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E61EA87E213D16C300394FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E62C119F2121BCFF0020D199 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +431,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E61EA87B213D16C300394FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61EA893213D18D700394FFF /* PXYMulticastDelegate.m in Sources */,
+				E61EA894213D18D700394FFF /* NSObject+PXYKVO.m in Sources */,
+				E61EA895213D18D700394FFF /* NSObject+PXYRuntimeHelper.m in Sources */,
+				E61EA896213D18D700394FFF /* PXYRuntimeMethodSwizzledHelper.m in Sources */,
+				E61EA897213D18D700394FFF /* PXYRuntimeNSCodingHelper.m in Sources */,
+				E61EA892213D18C900394FFF /* PXYAPMLoadMonitor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61EA8B5213D4FB800394FFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61EA8BD213D4FB800394FFF /* PXYFMWKLib.m in Sources */,
+				E61EA8C2213D4FD700394FFF /* PXYAPMLoadMonitor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E62C119D2121BCFF0020D199 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +470,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E61EA886213D16C300394FFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E61EA87F213D16C300394FFF /* PXYFMWKDYLIB */;
+			targetProxy = E61EA885213D16C300394FFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E61EA6AC21379AD300394FFF /* LaunchScreen.storyboard */ = {
@@ -317,6 +499,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E61EA889213D16C300394FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JQ65Q8X2ZJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PXYFMWKDYLIB/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pengxuyuan.PXYFMWKDYLIB;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E61EA88A213D16C300394FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JQ65Q8X2ZJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PXYFMWKDYLIB/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pengxuyuan.PXYFMWKDYLIB;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E61EA8C0213D4FB800394FFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQ65Q8X2ZJ;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E61EA8C1213D4FB800394FFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQ65Q8X2ZJ;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E62C11B52121BD010020D199 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -464,6 +724,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E61EA88B213D16C300394FFF /* Build configuration list for PBXNativeTarget "PXYFMWKDYLIB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E61EA889213D16C300394FFF /* Debug */,
+				E61EA88A213D16C300394FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E61EA8BF213D4FB800394FFF /* Build configuration list for PBXNativeTarget "PXYFMWKLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E61EA8C0213D4FB800394FFF /* Debug */,
+				E61EA8C1213D4FB800394FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E62C119C2121BCFF0020D199 /* Build configuration list for PBXProject "PXYFMWK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

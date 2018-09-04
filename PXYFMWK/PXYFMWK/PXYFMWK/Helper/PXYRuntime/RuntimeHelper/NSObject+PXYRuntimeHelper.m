@@ -17,18 +17,25 @@
  */
 + (void)pxy_swizzleMethodWithOriginalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector {
     Class class = [self class];
+    [self pxy_swizzleMethodWithOriginalClass:class originalSelector:originalSelector swizzledClass:class swizzledSelector:swizzledSelector];
+}
+
+/**
+ 交换方法，将 originalClass 中的 originalSelector 替换成 swizzledClass 类中的 swizzledSelector 方法
+ */
++ (void)pxy_swizzleMethodWithOriginalClass:(Class)originalClass originalSelector:(SEL)originalSelector swizzledClass:(Class)swizzledClass swizzledSelector:(SEL)swizzledSelector {
     
     SEL originalSeletor = originalSelector;
     SEL swizzledSeletor = swizzledSelector;
     
-    Method originMethod = class_getInstanceMethod(class, originalSeletor);
-    Method swizzledMethod = class_getInstanceMethod(class, swizzledSeletor);
+    Method originMethod = class_getInstanceMethod(originalClass, originalSeletor);
+    Method swizzledMethod = class_getInstanceMethod(swizzledClass, swizzledSeletor);
     
     //先尝试給源SEL添加IMP，这里是为了避免源SEL没有实现IMP的情况
-    BOOL didAddMethod = class_addMethod(class, originalSeletor, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+    BOOL didAddMethod = class_addMethod(originalClass, originalSeletor, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
     if (didAddMethod) {
         //添加成功：说明源SEL没有实现IMP，将源SEL的IMP替换到交换SEL的IMP
-        class_replaceMethod(class, swizzledSeletor, method_getImplementation(originMethod), method_getTypeEncoding(originMethod));
+        class_replaceMethod(swizzledClass, swizzledSeletor, method_getImplementation(originMethod), method_getTypeEncoding(originMethod));
     } else {
         //添加失败：说明源SEL已经有IMP，直接将两个SEL的IMP交换即可
         method_exchangeImplementations(originMethod, swizzledMethod);

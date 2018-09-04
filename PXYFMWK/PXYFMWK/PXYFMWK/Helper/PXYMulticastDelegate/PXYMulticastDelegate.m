@@ -7,6 +7,7 @@
 //
 
 #import "PXYMulticastDelegate.h"
+#import "NSObject+PXYKVO.h"
 
 @interface PXYMulticastDelegateNode : NSObject
 
