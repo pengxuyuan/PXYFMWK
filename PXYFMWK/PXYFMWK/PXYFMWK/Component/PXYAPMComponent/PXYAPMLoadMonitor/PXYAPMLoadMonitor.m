@@ -17,12 +17,17 @@
 #include <mach-o/nlist.h>
 #include <string.h>
 
-#define TIMESTAMP_NUMBER(interval)  [NSNumber numberWithLongLong:interval*1000*1000]
+#define TIMESTAMP_NUMBER(interval)  [NSNumber numberWithLongLong:interval*1000]
+
+#define kStartTime @"kStartTime"
+#define kEndTime @"kEndTime"
+#define kSpendTime @"kSpendTime"
+#define kClassName @"kClassName"
 
 unsigned int count;
 const char **classes;
 
-static NSMutableArray *_loadInfoArray;
+static NSMutableArray *PXYAPM_LoadInfoArray;
 
 @interface PXYAPMLoadMonitor ()
 
@@ -31,9 +36,8 @@ static NSMutableArray *_loadInfoArray;
 @implementation PXYAPMLoadMonitor
 
 + (void)load {
-//    return;
     NSLog(@"%s",__func__);
-    _loadInfoArray = [[NSMutableArray alloc] init];
+    PXYAPM_LoadInfoArray = [[NSMutableArray alloc] init];
     
     CFAbsoluteTime time1 =CFAbsoluteTimeGetCurrent();
     
@@ -59,25 +63,6 @@ static NSMutableArray *_loadInfoArray;
                     SEL swizzledSelector = @selector(PXYAPM_Load);
                     
                     [self pxy_swizzleMethodWithOriginalClass:class originalSelector:originalSelector swizzledClass:[PXYAPMLoadMonitor class] swizzledSelector:swizzledSelector isInstanceMethod:NO];
-                    
-//                    Method originalMethod = class_getClassMethod(class, originalSelector);
-//                    Method swizzledMethod = class_getClassMethod([PXYAPMLoadMonitor class], swizzledSelector);
-//
-//                    BOOL hasMethod = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
-//
-//                    if (!hasMethod) {
-//                        BOOL didAddMethod = class_addMethod(class,
-//                                                            swizzledSelector,
-//                                                            method_getImplementation(swizzledMethod),
-//                                                            method_getTypeEncoding(swizzledMethod));
-//
-//                        if (didAddMethod) {
-//                            swizzledMethod = class_getClassMethod(class, swizzledSelector);
-//
-//                            method_exchangeImplementations(originalMethod, swizzledMethod);
-//                        }
-//                    }
-                    
                 }
             }
         }
@@ -95,15 +80,29 @@ static NSMutableArray *_loadInfoArray;
     
     CFAbsoluteTime end =CFAbsoluteTimeGetCurrent();
     
-    NSString *spendTStr = [NSString stringWithFormat:@"%.3f 秒",(end - start)];
-    // 时间精度 us
-    NSDictionary *infoDic = @{@"st":TIMESTAMP_NUMBER(start),
-                              @"et":TIMESTAMP_NUMBER(end),
-                              @"name":NSStringFromClass([self class]),
-                              @"spendTime":spendTStr
+    // 时间精度 ms
+    NSDictionary *infoDic = @{kStartTime:TIMESTAMP_NUMBER(start),
+                              kEndTime:TIMESTAMP_NUMBER(end),
+                              kClassName:NSStringFromClass([self class]),
+                              kSpendTime:TIMESTAMP_NUMBER((end - start))
                               };
-    NSLog(@"-- %@",infoDic);
-    [_loadInfoArray addObject:infoDic];
+    
+    [PXYAPM_LoadInfoArray addObject:infoDic];
+}
+
+/**
+ 打印 Load 函数消耗的时间
+ */
++ (void)pxy_printLoadTimeConsuming {
+    double totalSpendTime = 0;
+    for (NSDictionary *infoDict in PXYAPM_LoadInfoArray) {
+        NSNumber *spendTime = infoDict[kSpendTime];
+        NSString *className = infoDict[kClassName];
+        
+        NSLog(@"类：%@ Load 方法耗时：%.3f ms",className,[spendTime doubleValue]);
+        totalSpendTime += [spendTime doubleValue];
+    }
+    NSLog(@"Load 方法总共耗时：%.3f ms",totalSpendTime);
 }
 
 

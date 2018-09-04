@@ -13,4 +13,9 @@
  */
 @interface PXYAPMLoadMonitor : NSObject
 
+/**
+ 打印 Load 函数消耗的时间
+ */
++ (void)pxy_printLoadTimeConsuming;
+
 @end
