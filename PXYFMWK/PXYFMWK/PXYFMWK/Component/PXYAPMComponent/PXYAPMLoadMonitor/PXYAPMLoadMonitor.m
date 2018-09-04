@@ -58,7 +58,7 @@ static NSMutableArray *_loadInfoArray;
                     SEL originalSelector = @selector(load);
                     SEL swizzledSelector = @selector(PXYAPM_Load);
                     
-                    [self pxy_swizzleMethodWithOriginalClass:class originalSelector:originalSelector swizzledClass:[PXYAPMLoadMonitor class] swizzledSelector:swizzledSelector];
+                    [self pxy_swizzleMethodWithOriginalClass:class originalSelector:originalSelector swizzledClass:[PXYAPMLoadMonitor class] swizzledSelector:swizzledSelector isInstanceMethod:NO];
                     
 //                    Method originalMethod = class_getClassMethod(class, originalSelector);
 //                    Method swizzledMethod = class_getClassMethod([PXYAPMLoadMonitor class], swizzledSelector);

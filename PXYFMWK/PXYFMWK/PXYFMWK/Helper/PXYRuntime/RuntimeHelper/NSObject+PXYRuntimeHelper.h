@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/message.h>
 
 /**
  利用 Runtime 打印
@@ -14,15 +15,16 @@
 @interface NSObject (PXYRuntimeHelper)
 
 /**
- 交换方法，替换本类中的方法
+ 交换方法，替换本类中的实例方法
  可以在本类的分类中调用
  */
 + (void)pxy_swizzleMethodWithOriginalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector;
 
 /**
  交换方法，将 originalClass 中的 originalSelector 替换成 swizzledClass 类中的 swizzledSelector 方法
+ isInstanceMethod 选择判断时候是实例方法
  */
-+ (void)pxy_swizzleMethodWithOriginalClass:(Class)originalClass originalSelector:(SEL)originalSelector swizzledClass:(Class)swizzledClass swizzledSelector:(SEL)swizzledSelector;
++ (void)pxy_swizzleMethodWithOriginalClass:(Class)originalClass originalSelector:(SEL)originalSelector swizzledClass:(Class)swizzledClass swizzledSelector:(SEL)swizzledSelector isInstanceMethod:(BOOL)isInstanceMethod;
 
 /**
  获取类中的所有属性
