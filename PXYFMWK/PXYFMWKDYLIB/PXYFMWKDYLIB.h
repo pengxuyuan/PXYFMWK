@@ -18,6 +18,8 @@ FOUNDATION_EXPORT const unsigned char PXYFMWKDYLIBVersionString[];
 
 #pragma mark - APM
 #import "PXYAPMLoadMonitor.h"
+//#import "LoadRuler.h"
+//#include "LoadRuler.h"
 
 #pragma mark - Runtime
 #import "NSObject+PXYKVO.h"
