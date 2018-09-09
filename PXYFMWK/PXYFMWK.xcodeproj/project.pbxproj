@@ -39,6 +39,10 @@
 		E61EA8BE213D4FB800394FFF /* PXYFMWKLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61EA8BB213D4FB800394FFF /* PXYFMWKLib.h */; };
 		E61EA8C2213D4FD700394FFF /* PXYAPMLoadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */; };
 		E61EA8C3213D4FE100394FFF /* PXYAPMLoadMonitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61EA843213CD79100394FFF /* PXYAPMLoadMonitor.h */; };
+		E644A77D21457670008C60AC /* PXYStartupTimeMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = E644A77B21457670008C60AC /* PXYStartupTimeMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E644A77E21457670008C60AC /* PXYStartupTimeMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */; };
+		E644A77F21457670008C60AC /* PXYStartupTimeMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */; };
+		E644A78021457670008C60AC /* PXYStartupTimeMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,8 @@
 		E61EA8BB213D4FB800394FFF /* PXYFMWKLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYFMWKLib.h; sourceTree = "<group>"; };
 		E61EA8BC213D4FB800394FFF /* PXYFMWKLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYFMWKLib.m; sourceTree = "<group>"; };
 		E62C11A12121BCFF0020D199 /* PXYFMWK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXYFMWK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E644A77B21457670008C60AC /* PXYStartupTimeMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXYStartupTimeMonitor.h; sourceTree = "<group>"; };
+		E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXYStartupTimeMonitor.m; sourceTree = "<group>"; };
 		E673D85F2142683F0030117B /* LoadRuler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LoadRuler.mm; sourceTree = "<group>"; };
 		E673D8602142683F0030117B /* LoadRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadRuler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -245,6 +251,7 @@
 		E61EA840213CD74F00394FFF /* PXYAPMComponent */ = {
 			isa = PBXGroup;
 			children = (
+				E644A77A21457670008C60AC /* PXYStartupTimeMonitor */,
 				E61EA842213CD77600394FFF /* PXYAPMLoadMonitor */,
 			);
 			path = PXYAPMComponent;
@@ -299,6 +306,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E644A77A21457670008C60AC /* PXYStartupTimeMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				E644A77B21457670008C60AC /* PXYStartupTimeMonitor.h */,
+				E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */,
+			);
+			path = PXYStartupTimeMonitor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -306,6 +322,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E644A77D21457670008C60AC /* PXYStartupTimeMonitor.h in Headers */,
 				E61EA88C213D185500394FFF /* PXYAPMLoadMonitor.h in Headers */,
 				E61EA88D213D185C00394FFF /* PXYMulticastDelegate.h in Headers */,
 				E61EA884213D16C300394FFF /* PXYFMWKDYLIB.h in Headers */,
@@ -442,6 +459,7 @@
 				E61EA893213D18D700394FFF /* PXYMulticastDelegate.m in Sources */,
 				E61EA894213D18D700394FFF /* NSObject+PXYKVO.m in Sources */,
 				E61EA895213D18D700394FFF /* NSObject+PXYRuntimeHelper.m in Sources */,
+				E644A77F21457670008C60AC /* PXYStartupTimeMonitor.m in Sources */,
 				E61EA896213D18D700394FFF /* PXYRuntimeMethodSwizzledHelper.m in Sources */,
 				E61EA897213D18D700394FFF /* PXYRuntimeNSCodingHelper.m in Sources */,
 				E61EA892213D18C900394FFF /* PXYAPMLoadMonitor.m in Sources */,
@@ -452,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E644A78021457670008C60AC /* PXYStartupTimeMonitor.m in Sources */,
 				E61EA8BD213D4FB800394FFF /* PXYFMWKLib.m in Sources */,
 				E61EA8C2213D4FD700394FFF /* PXYAPMLoadMonitor.m in Sources */,
 			);
@@ -468,6 +487,7 @@
 				E61EA6CC21379AD400394FFF /* ViewController.m in Sources */,
 				E61EA846213CD79100394FFF /* PXYAPMLoadMonitor.m in Sources */,
 				E61EA6CE21379AD400394FFF /* AppDelegate.m in Sources */,
+				E644A77E21457670008C60AC /* PXYStartupTimeMonitor.m in Sources */,
 				E61EA6CF21379AD400394FFF /* PXYMulticastDelegate.m in Sources */,
 				E61EA6D321379AD400394FFF /* PXYRuntimeNSCodingHelper.m in Sources */,
 			);
