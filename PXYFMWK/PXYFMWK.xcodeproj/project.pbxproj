@@ -13,13 +13,7 @@
 		E61EA6CC21379AD400394FFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6B221379AD300394FFF /* ViewController.m */; };
 		E61EA6CD21379AD400394FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6B321379AD300394FFF /* main.m */; };
 		E61EA6CE21379AD400394FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6B421379AD300394FFF /* AppDelegate.m */; };
-		E61EA6CF21379AD400394FFF /* PXYMulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6BA21379AD400394FFF /* PXYMulticastDelegate.m */; };
-		E61EA6D021379AD400394FFF /* NSObject+PXYKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6BE21379AD400394FFF /* NSObject+PXYKVO.m */; };
-		E61EA6D121379AD400394FFF /* NSObject+PXYRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C021379AD400394FFF /* NSObject+PXYRuntimeHelper.m */; };
-		E61EA6D221379AD400394FFF /* PXYRuntimeMethodSwizzledHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C421379AD400394FFF /* PXYRuntimeMethodSwizzledHelper.m */; };
-		E61EA6D321379AD400394FFF /* PXYRuntimeNSCodingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C721379AD400394FFF /* PXYRuntimeNSCodingHelper.m */; };
 		E61EA6D421379AD400394FFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E61EA6C821379AD400394FFF /* Info.plist */; };
-		E61EA846213CD79100394FFF /* PXYAPMLoadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */; };
 		E61EA884213D16C300394FFF /* PXYFMWKDYLIB.h in Headers */ = {isa = PBXBuildFile; fileRef = E61EA882213D16C300394FFF /* PXYFMWKDYLIB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E61EA887213D16C300394FFF /* PXYFMWKDYLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61EA880213D16C300394FFF /* PXYFMWKDYLIB.framework */; };
 		E61EA888213D16C300394FFF /* PXYFMWKDYLIB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E61EA880213D16C300394FFF /* PXYFMWKDYLIB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -37,12 +31,9 @@
 		E61EA897213D18D700394FFF /* PXYRuntimeNSCodingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6C721379AD400394FFF /* PXYRuntimeNSCodingHelper.m */; };
 		E61EA8BD213D4FB800394FFF /* PXYFMWKLib.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA8BC213D4FB800394FFF /* PXYFMWKLib.m */; };
 		E61EA8BE213D4FB800394FFF /* PXYFMWKLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61EA8BB213D4FB800394FFF /* PXYFMWKLib.h */; };
-		E61EA8C2213D4FD700394FFF /* PXYAPMLoadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA844213CD79100394FFF /* PXYAPMLoadMonitor.m */; };
 		E61EA8C3213D4FE100394FFF /* PXYAPMLoadMonitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61EA843213CD79100394FFF /* PXYAPMLoadMonitor.h */; };
 		E644A77D21457670008C60AC /* PXYStartupTimeMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = E644A77B21457670008C60AC /* PXYStartupTimeMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E644A77E21457670008C60AC /* PXYStartupTimeMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */; };
 		E644A77F21457670008C60AC /* PXYStartupTimeMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */; };
-		E644A78021457670008C60AC /* PXYStartupTimeMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -470,9 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E644A78021457670008C60AC /* PXYStartupTimeMonitor.m in Sources */,
 				E61EA8BD213D4FB800394FFF /* PXYFMWKLib.m in Sources */,
-				E61EA8C2213D4FD700394FFF /* PXYAPMLoadMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,16 +469,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61EA6D121379AD400394FFF /* NSObject+PXYRuntimeHelper.m in Sources */,
-				E61EA6D021379AD400394FFF /* NSObject+PXYKVO.m in Sources */,
-				E61EA6D221379AD400394FFF /* PXYRuntimeMethodSwizzledHelper.m in Sources */,
 				E61EA6CD21379AD400394FFF /* main.m in Sources */,
 				E61EA6CC21379AD400394FFF /* ViewController.m in Sources */,
-				E61EA846213CD79100394FFF /* PXYAPMLoadMonitor.m in Sources */,
 				E61EA6CE21379AD400394FFF /* AppDelegate.m in Sources */,
-				E644A77E21457670008C60AC /* PXYStartupTimeMonitor.m in Sources */,
-				E61EA6CF21379AD400394FFF /* PXYMulticastDelegate.m in Sources */,
-				E61EA6D321379AD400394FFF /* PXYRuntimeNSCodingHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
