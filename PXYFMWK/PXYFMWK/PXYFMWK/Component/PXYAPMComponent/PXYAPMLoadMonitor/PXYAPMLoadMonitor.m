@@ -34,7 +34,7 @@ static NSMutableArray *PXYAPM_LoadInfoArray;
 @end
 
 @implementation PXYAPMLoadMonitor
-
+/* !!!: 这里 Hook 还是有点问题，当 Load 调用了 super 的时候，死循环了 */
 + (void)load {
     PXYAPM_LoadInfoArray = [[NSMutableArray alloc] init];
     
