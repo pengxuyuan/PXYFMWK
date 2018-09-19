@@ -38,6 +38,7 @@
 		E61EA7D321379B9D00394FFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E61EA7AE21379B9D00394FFF /* Info.plist */; };
 		E636FD99213E24DB00B50A74 /* PXYFMWKDYLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */; };
 		E636FD9A213E24DB00B50A74 /* PXYFMWKDYLIB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E663CB85215250B000D0304F /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */; };
 		E6F21D7721465E5800424470 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F21D7621465E5800424470 /* Father.m */; };
 		E6F21D7A21465E6300424470 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F21D7921465E6300424470 /* Son.m */; };
 		E6F21D7D21465F1800424470 /* Son+Son1.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F21D7C21465F1800424470 /* Son+Son1.m */; };
@@ -132,6 +133,8 @@
 		E61EA8C4213D506900394FFF /* libPXYFMWKLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libPXYFMWKLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6225A052112FE36003BFE79 /* PXYFMWKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXYFMWKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PXYFMWKDYLIB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E663CB83215250B000D0304F /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
+		E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
 		E6F21D7521465E5800424470 /* Father.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
 		E6F21D7621465E5800424470 /* Father.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
 		E6F21D7821465E6300424470 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
@@ -155,6 +158,7 @@
 		E61EA75621379B9D00394FFF /* PXYFMWKTest */ = {
 			isa = PBXGroup;
 			children = (
+				E663CB82215250B000D0304F /* DLIntrospection */,
 				E61EA77921379B9D00394FFF /* PXYPerformanceMonitor */,
 				E61EA76721379B9D00394FFF /* PXYUIImageViewHelper */,
 				E61EA75A21379B9D00394FFF /* AppDelegate.h */,
@@ -390,6 +394,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E663CB82215250B000D0304F /* DLIntrospection */ = {
+			isa = PBXGroup;
+			children = (
+				E663CB83215250B000D0304F /* NSObject+DLIntrospection.h */,
+				E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */,
+			);
+			path = DLIntrospection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -493,6 +506,7 @@
 				E61EA7CA21379B9D00394FFF /* PXYMonitorDataListController.m in Sources */,
 				E61EA7D021379B9D00394FFF /* PXYMainThreadMonitorHelper.m in Sources */,
 				E61EA7CE21379B9D00394FFF /* YYMemoryCache.m in Sources */,
+				E663CB85215250B000D0304F /* NSObject+DLIntrospection.m in Sources */,
 				E61EA7BF21379B9D00394FFF /* PXYDeviceCpuHelper.m in Sources */,
 				E61EA7CC21379B9D00394FFF /* YYCache.m in Sources */,
 				E61EA7CF21379B9D00394FFF /* BSBacktraceLogger.m in Sources */,
