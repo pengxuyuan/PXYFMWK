@@ -135,6 +135,7 @@
 		E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PXYFMWKDYLIB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E663CB83215250B000D0304F /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
+		E663CB862152551000D0304F /* libsystem_blocks.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libsystem_blocks.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F21D7521465E5800424470 /* Father.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
 		E6F21D7621465E5800424470 /* Father.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
 		E6F21D7821465E6300424470 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
@@ -357,6 +358,7 @@
 		E61EA7EB2137C44B00394FFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E663CB862152551000D0304F /* libsystem_blocks.dylib */,
 				E61EA8C4213D506900394FFF /* libPXYFMWKLib.a */,
 				E61EA8B1213D4EA700394FFF /* PXYFMWKDYLIB.framework */,
 				E61EA869213CDDB600394FFF /* libPXYFMWKLib.a */,
