@@ -8,12 +8,14 @@
 
 #import "ViewController.h"
 #import "UIImageView+ImageCorner.h"
-#import "Son.h"
 #import <PXYFMWKDYLIB/PXYFMWKDYLIB.h>
-#import <objc/runtime.h>
 #import "NSObject+DLIntrospection.h"
 
+
+
 @interface ViewController ()
+
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -22,14 +24,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    imageView.backgroundColor = [UIColor redColor];
-    imageView.center = self.view.center;
-    imageView.image = [UIImage imageNamed:@"icon.jpeg"];
-    [self.view addSubview:imageView];
-    [imageView settingCornerWithCornerRadius:100];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    _imageView.backgroundColor = [UIColor redColor];
+    _imageView.center = self.view.center;
+    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
+    [self.view addSubview:_imageView];
+    [_imageView settingCornerWithCornerRadius:100];
+
+//    func();
     
-    func();
+    UIView *view = [UIView makeView:^(UIView *view) {
+        view.setBackgroundColor([UIColor blueColor]).setFrame(0, 0, 100, 100);
+    }];
+    [self.view addSubview:view];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    _imageView.setBackgroundColor([UIColor yellowColor]).setFrame(0, 0, 300, 300);
 }
 
 void pr(int (^block)(void)) {
