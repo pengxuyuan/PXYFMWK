@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+/*
+ 实例代码：
+     UIView *view = [UIView makeView:^(UIView *view) {
+        view.setBackgroundColor([UIColor blueColor]).setFrame(0, 0, 100, 100);
+     }];
+ */
+
 typedef void(^UIViewBlock)(UIView *view);
 typedef UIView *(^SetFrameBlock)(CGFloat x, CGFloat y, CGFloat w, CGFloat h);
 typedef UIView *(^SetBackgroundColorBlock)(UIColor *color);

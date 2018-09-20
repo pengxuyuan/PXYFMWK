@@ -314,8 +314,8 @@
 		E638CE75215380380070ABB0 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				E638CE76215380380070ABB0 /* UIView+PXYChainProgramming.m */,
 				E638CE77215380380070ABB0 /* UIView+PXYChainProgramming.h */,
+				E638CE76215380380070ABB0 /* UIView+PXYChainProgramming.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
