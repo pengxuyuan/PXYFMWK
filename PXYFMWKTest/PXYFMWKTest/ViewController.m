@@ -31,16 +31,11 @@
     [self.view addSubview:_imageView];
     [_imageView settingCornerWithCornerRadius:100];
 
-//    func();
     
-    UIView *view = [UIView makeView:^(UIView *view) {
-        view.setBackgroundColor([UIColor blueColor]).setFrame(0, 0, 100, 100);
-    }];
-    [self.view addSubview:view];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    _imageView.setBackgroundColor([UIColor yellowColor]).setFrame(0, 0, 300, 300);
+    func();
 }
 
 void pr(int (^block)(void)) {
