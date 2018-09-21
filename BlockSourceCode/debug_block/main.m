@@ -21,29 +21,53 @@ typedef void(^EOCBlock)(void);
 //2、非__block修饰的外部变量
 //这个过程会明白到block结构里的一些变量到底起什么作用
 
+void pr(int (^block)(void)) {
+    printf("%d\n",block());
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
         
-        int a[5] = {1,2,3,4,5};
-        int *ptr = (int *)(&a + 1);
-        printf("%d", *(ptr-1));
-        
-        __block NSButton *btn = [[NSButton alloc] init];
-        
-        void (^block)(void) = Block_copy( ^{
-            
-            NSLog(@"这是自己的block %@", btn);
-            
-        });
-        
-        block();
-        
+        int (^block[1022222])(void);
+        int i;
+        for (i = 1000; i < 10010; i ++) {
+            block[i] = ^{
+                return i;
+            };
+        }
+
+        for (int j = 1000; j < 10010; j ++) {
+            pr(block[j]);
+        }
     }
+
     return 0;
 }
 
 
+//int main(int argc, const char * argv[]) {
+//    @autoreleasepool {
+//        // insert code here...
+//        
+//        int a[5] = {1,2,3,4,5};
+//        int *ptr = (int *)(&a + 1);
+//        printf("%d", *(ptr-1));
+//        
+//        __block NSButton *btn = [[NSButton alloc] init];
+//        
+//        void (^block)(void) = Block_copy( ^{
+//            
+//            NSLog(@"这是自己的block %@", btn);
+//            
+//        });
+//        
+//        block();
+//        
+//    }
+//    return 0;
+//}
+//
+//
 
 
 
