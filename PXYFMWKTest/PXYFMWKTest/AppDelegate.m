@@ -10,6 +10,8 @@
 #import "PXYMonitorManager.h"
 #import <PXYFMWKDYLIB/PXYFMWKDYLIB.h>
 
+#import <JSPatchPlatform/JSPatch.h>
+
 @interface AppDelegate ()
 
 @end
@@ -24,6 +26,10 @@
 //    [[PXYMonitorManager shareInstance] showStatusBarMonitorView];
 ////    PXY_TOCK
 //    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"didFinishLaunchingWithOptions End"];
+    
+    [JSPatch startWithAppKey:@"8a7373ceea8edada"];
+    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCufJD163unTsEKzMGkCIoN5mop\ngGv8XXxRmXcMUxlPwH4ay9MSeJNsRjpQKv7/npjrEAAflMLiEbECsaIzn5R9Vsyb\n0ZgdQSki1oUojrR7mMU7h/Bs+tR4qSARksG87LvJv59v3eSpN3C6gxByGdSDRo02\n0VhGz3Mc4eHS2xkmywIDAQAB\n-----END PUBLIC KEY-----"];
+    [JSPatch sync];
     
     return YES;
 }
