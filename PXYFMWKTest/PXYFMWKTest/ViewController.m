@@ -12,6 +12,18 @@
 #import "NSObject+DLIntrospection.h"
 
 
+#import <objc/runtime.h>
+#import <dlfcn.h>
+#import <mach-o/ldsyms.h>
+#include <limits.h>
+#include <mach-o/dyld.h>
+#include <mach-o/nlist.h>
+#include <string.h>
+
+#import "Aspects.h"
+
+unsigned int count;
+const char **classes;
 
 @interface ViewController ()
 
@@ -20,6 +32,60 @@
 @end
 
 @implementation ViewController
+
+//+ (void)load {
+//    //1.获取到所有的类
+//    int imageCount = (int)_dyld_image_count();
+//
+//    for(int iImg = 0; iImg < imageCount; iImg++) {
+//
+//        const char* path = _dyld_get_image_name((unsigned)iImg);
+//        NSString *imagePath = [NSString stringWithUTF8String:path];
+//
+//        NSBundle* mainBundle = [NSBundle mainBundle];
+//        NSString* bundlePath = [mainBundle bundlePath];
+//
+//        if ([imagePath containsString:bundlePath] && ![imagePath containsString:@".dylib"]) {
+//            classes = objc_copyClassNamesForImage(path, &count);
+//
+//            for (int i = 0; i < count; i++) {
+//                NSString *className = [NSString stringWithCString:classes[i] encoding:NSUTF8StringEncoding];
+//                if (![className isEqualToString:@""] && className) {
+//                    NSLog(@"============= Class %@ Start =============",className);
+//                    Class class = object_getClass(NSClassFromString(className));
+////                    NSLog(@"%@",className);
+//
+//                    if ([className isEqualToString:@"ViewController"]) {
+//                        unsigned int count = 0;
+//                        Class realClass = NSClassFromString(className);
+//                        id obj = [realClass new];
+//                        Method *methodList = class_copyMethodList([obj class], &count);
+//                        for (int i = 0; i < count; i ++) {
+//                            Method method = methodList[i];
+//                            NSLog(@"Method: ---- %@",NSStringFromSelector(method_getName(method)));
+//
+//                            SEL hookSEL = method_getName(method);
+//                            [obj aspect_hookSelector:hookSEL withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, BOOL animated) {
+//                                NSLog(@"!!!!");
+//                            } error:NULL];
+//
+//                        }
+//                    }
+//
+//
+//                    NSLog(@"============= Class %@ End ============= \n",className);
+//
+//                }
+//            }
+//        }
+//    }
+//
+//
+//    //2.获取类中的所有方法
+//    //3.交换方法
+//    //4.Log 调用的方法，当前类，当前函数，当前线程等信息
+//}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +97,6 @@
     [self.view addSubview:_imageView];
     [_imageView settingCornerWithCornerRadius:100];
 
-    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -57,6 +122,13 @@ void func() {
 }
 
 
+- (void)testDemo {
+    NSLog(@"%s",__func__);
+}
+
++ (void)test1Demo {
+    
+}
 
 
 

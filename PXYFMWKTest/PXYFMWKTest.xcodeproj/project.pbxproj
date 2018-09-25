@@ -41,6 +41,7 @@
 		E663CB85215250B000D0304F /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */; };
 		E67DEA732154D95500AE5895 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DEA722154D95400AE5895 /* JSPatchPlatform.framework */; };
 		E67DEA752154D9C200AE5895 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */; };
+		E67DEA792154E66400AE5895 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = E67DEA782154E66300AE5895 /* Aspects.m */; };
 		E6F21D7721465E5800424470 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F21D7621465E5800424470 /* Father.m */; };
 		E6F21D7A21465E6300424470 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F21D7921465E6300424470 /* Son.m */; };
 		E6F21D7D21465F1800424470 /* Son+Son1.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F21D7C21465F1800424470 /* Son+Son1.m */; };
@@ -140,6 +141,8 @@
 		E663CB862152551000D0304F /* libsystem_blocks.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libsystem_blocks.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67DEA722154D95400AE5895 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		E67DEA772154E66300AE5895 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		E67DEA782154E66300AE5895 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		E6F21D7521465E5800424470 /* Father.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
 		E6F21D7621465E5800424470 /* Father.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
 		E6F21D7821465E6300424470 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 		E61EA75621379B9D00394FFF /* PXYFMWKTest */ = {
 			isa = PBXGroup;
 			children = (
+				E67DEA762154E66300AE5895 /* Aspects */,
 				E67DEA722154D95400AE5895 /* JSPatchPlatform.framework */,
 				E663CB82215250B000D0304F /* DLIntrospection */,
 				E61EA77921379B9D00394FFF /* PXYPerformanceMonitor */,
@@ -413,6 +417,15 @@
 			path = DLIntrospection;
 			sourceTree = "<group>";
 		};
+		E67DEA762154E66300AE5895 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				E67DEA772154E66300AE5895 /* Aspects.h */,
+				E67DEA782154E66300AE5895 /* Aspects.m */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -513,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6F21D7A21465E6300424470 /* Son.m in Sources */,
+				E67DEA792154E66400AE5895 /* Aspects.m in Sources */,
 				E61EA7CA21379B9D00394FFF /* PXYMonitorDataListController.m in Sources */,
 				E61EA7D021379B9D00394FFF /* PXYMainThreadMonitorHelper.m in Sources */,
 				E61EA7CE21379B9D00394FFF /* YYMemoryCache.m in Sources */,
