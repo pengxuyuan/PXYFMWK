@@ -22,8 +22,8 @@
 
 #import "Aspects.h"
 
-unsigned int count;
-const char **classes;
+
+
 
 @interface ViewController ()
 
@@ -33,6 +33,54 @@ const char **classes;
 
 @implementation ViewController
 
+
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    _imageView.backgroundColor = [UIColor redColor];
+    _imageView.center = self.view.center;
+    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
+    [self.view addSubview:_imageView];
+    [_imageView settingCornerWithCornerRadius:100];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    func();
+}
+
+void pr(int (^block)(void)) {
+    printf("%d\n",block());
+}
+
+void func() {
+    int (^block[10])(void);
+    int i;
+    for (i = 0; i < 10; i ++) {
+        block[i] = ^{
+            return i;
+        };
+    }
+    
+    for (int j = 0; j < 10; j ++) {
+        pr(block[j]);
+    }
+}
+
+
+- (void)testDemo {
+    NSLog(@"%s",__func__);
+}
+
++ (void)test1Demo {
+    
+}
+
+
+//unsigned int count;
+//const char **classes;
 //+ (void)load {
 //    //1.获取到所有的类
 //    int imageCount = (int)_dyld_image_count();
@@ -85,53 +133,5 @@ const char **classes;
 //    //3.交换方法
 //    //4.Log 调用的方法，当前类，当前函数，当前线程等信息
 //}
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    _imageView.backgroundColor = [UIColor redColor];
-    _imageView.center = self.view.center;
-    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
-    [self.view addSubview:_imageView];
-    [_imageView settingCornerWithCornerRadius:100];
-
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    func();
-}
-
-void pr(int (^block)(void)) {
-    printf("%d\n",block());
-}
-
-void func() {
-    int (^block[10])(void);
-    int i;
-    for (i = 0; i < 10; i ++) {
-        block[i] = ^{
-            return i;
-        };
-    }
-    
-    for (int j = 0; j < 10; j ++) {
-        pr(block[j]);
-    }
-}
-
-
-- (void)testDemo {
-    NSLog(@"%s",__func__);
-}
-
-+ (void)test1Demo {
-    
-}
-
-
-
-
 @end
 
