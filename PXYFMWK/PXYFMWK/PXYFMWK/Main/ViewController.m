@@ -55,8 +55,27 @@
     
     TabelViewCellModel *model0 = [TabelViewCellModel creatWithTitle:@"01·iOS 面试题·项目中用过 Runtime 吗？" operationBlock:^{
         
-    }] ;
+    }];
+    
+    TabelViewCellModel *model1 = [TabelViewCellModel creatWithTitle:@"02·iOS 面试题·Category 的实现原理，以及 Category 为什么只能加方法不能加属性？" operationBlock:nil];
+    
+    TabelViewCellModel *model2 = [TabelViewCellModel creatWithTitle:@"03·iOS 面试题·main()之前的过程有哪些?" operationBlock:nil];
+    
+    TabelViewCellModel *model3 = [TabelViewCellModel creatWithTitle:@"04·iOS 面试题·Block 的原理，Block 的属性修饰词为什么用 copy，使用 Block 时有哪些要注意的？" operationBlock:nil];
+    
+    TabelViewCellModel *model4 = [TabelViewCellModel creatWithTitle:@"05·iOS 面试题·Sizeof与Strlen的区别与联系" operationBlock:nil];
+    
+    TabelViewCellModel *model5 = [TabelViewCellModel creatWithTitle:@"06·iOS 面试题·Category 中有 load 方法吗？load 方法是什么时候调用的？load 方法能继承吗？" operationBlock:nil];
+
+    TabelViewCellModel *model6 = [TabelViewCellModel creatWithTitle:@"07·iOS 面试题·class A 继承 class B，class B 继承 NSObject，请画出完整的类图" operationBlock:nil];
+    
     [self.cellModelArray addObject:model0];
+    [self.cellModelArray addObject:model1];
+    [self.cellModelArray addObject:model2];
+    [self.cellModelArray addObject:model3];
+    [self.cellModelArray addObject:model4];
+    [self.cellModelArray addObject:model5];
+    [self.cellModelArray addObject:model6];
     
 }
 
