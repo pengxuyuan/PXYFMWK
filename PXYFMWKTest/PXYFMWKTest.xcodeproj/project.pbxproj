@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E60B971C216F55B900F43B27 /* PXYDesHelper.m */; };
 		E61EA7B121379B9D00394FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EA75C21379B9D00394FFF /* Assets.xcassets */; };
 		E61EA7B221379B9D00394FFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA75D21379B9D00394FFF /* ViewController.m */; };
 		E61EA7B321379B9D00394FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61EA75E21379B9D00394FFF /* LaunchScreen.storyboard */; };
@@ -79,6 +80,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E60B971B216F55B900F43B27 /* PXYDesHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYDesHelper.h; sourceTree = "<group>"; };
+		E60B971C216F55B900F43B27 /* PXYDesHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYDesHelper.m; sourceTree = "<group>"; };
 		E61EA75A21379B9D00394FFF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E61EA75C21379B9D00394FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61EA75D21379B9D00394FFF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -165,9 +168,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E60B971A216F55A500F43B27 /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				E60B971B216F55B900F43B27 /* PXYDesHelper.h */,
+				E60B971C216F55B900F43B27 /* PXYDesHelper.m */,
+			);
+			path = Cryptography;
+			sourceTree = "<group>";
+		};
 		E61EA75621379B9D00394FFF /* PXYFMWKTest */ = {
 			isa = PBXGroup;
 			children = (
+				E60B971A216F55A500F43B27 /* Cryptography */,
 				E67DEA762154E66300AE5895 /* Aspects */,
 				E67DEA722154D95400AE5895 /* JSPatchPlatform.framework */,
 				E663CB82215250B000D0304F /* DLIntrospection */,
@@ -549,6 +562,7 @@
 				E6F21D7D21465F1800424470 /* Son+Son1.m in Sources */,
 				E61EA7C221379B9D00394FFF /* PXYFPSHelper.m in Sources */,
 				E61EA7C321379B9D00394FFF /* PXYMonitorDataCacheHelper.m in Sources */,
+				E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */,
 				E61EA7C021379B9D00394FFF /* PXYDeviceMemoryHelper.m in Sources */,
 				E61EA7B921379B9D00394FFF /* AppDelegate.m in Sources */,
 			);

@@ -11,19 +11,13 @@
 #import <PXYFMWKDYLIB/PXYFMWKDYLIB.h>
 #import "NSObject+DLIntrospection.h"
 
+#import "PXYDesHelper.h"
 
-#import <objc/runtime.h>
-#import <dlfcn.h>
-#import <mach-o/ldsyms.h>
-#include <limits.h>
-#include <mach-o/dyld.h>
-#include <mach-o/nlist.h>
-#include <string.h>
-
-#import "Aspects.h"
-
-
-
+/*
+ 对称加密（共享密钥）：AES、DES
+ 非对称加密（公开密钥）：RSA、DH、椭圆曲线加密
+ 
+ */
 
 @interface ViewController ()
 
@@ -45,40 +39,26 @@
     _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
     [self.view addSubview:_imageView];
     [_imageView settingCornerWithCornerRadius:100];
+    
+
 }
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    func();
-}
-
-void pr(int (^block)(void)) {
-    printf("%d\n",block());
-}
-
-void func() {
-    int (^block[10])(void);
-    int i;
-    for (i = 0; i < 10; i ++) {
-        block[i] = ^{
-            return i;
-        };
-    }
-    
-    for (int j = 0; j < 10; j ++) {
-        pr(block[j]);
-    }
+    NSString *str = [PXYDesHelper stringWithDesEncryptString:@"A" withKey:@"B"];
+    NSLog(@"str %@",str);
 }
 
 
-- (void)testDemo {
-    NSLog(@"%s",__func__);
-}
-
-+ (void)test1Demo {
-    
-}
-
-
+//#import <objc/runtime.h>
+//#import <dlfcn.h>
+//#import <mach-o/ldsyms.h>
+//#include <limits.h>
+//#include <mach-o/dyld.h>
+//#include <mach-o/nlist.h>
+//#include <string.h>
+//
+//#import "Aspects.h"
 //unsigned int count;
 //const char **classes;
 //+ (void)load {
@@ -133,5 +113,48 @@ void func() {
 //    //3.交换方法
 //    //4.Log 调用的方法，当前类，当前函数，当前线程等信息
 //}
+
+
+
+
+
+
+
+
+/*
+ 
+ - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+ func();
+ }
+ 
+ void pr(int (^block)(void)) {
+ printf("%d\n",block());
+ }
+ 
+ void func() {
+ int (^block[10])(void);
+ int i;
+ for (i = 0; i < 10; i ++) {
+ block[i] = ^{
+ return i;
+ };
+ }
+ 
+ for (int j = 0; j < 10; j ++) {
+ pr(block[j]);
+ }
+ }
+ 
+ 
+ - (void)testDemo {
+ NSLog(@"%s",__func__);
+ }
+ 
+ + (void)test1Demo {
+ 
+ }
+ 
+ 
+ */
 @end
 
