@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E60B971C216F55B900F43B27 /* PXYDesHelper.m */; };
+		E61705632170947C00EDAF1E /* PXYBase64Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61705622170947C00EDAF1E /* PXYBase64Helper.m */; };
 		E61EA7B121379B9D00394FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EA75C21379B9D00394FFF /* Assets.xcassets */; };
 		E61EA7B221379B9D00394FFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA75D21379B9D00394FFF /* ViewController.m */; };
 		E61EA7B321379B9D00394FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61EA75E21379B9D00394FFF /* LaunchScreen.storyboard */; };
@@ -82,6 +83,8 @@
 /* Begin PBXFileReference section */
 		E60B971B216F55B900F43B27 /* PXYDesHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYDesHelper.h; sourceTree = "<group>"; };
 		E60B971C216F55B900F43B27 /* PXYDesHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYDesHelper.m; sourceTree = "<group>"; };
+		E61705612170947C00EDAF1E /* PXYBase64Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYBase64Helper.h; sourceTree = "<group>"; };
+		E61705622170947C00EDAF1E /* PXYBase64Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYBase64Helper.m; sourceTree = "<group>"; };
 		E61EA75A21379B9D00394FFF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E61EA75C21379B9D00394FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61EA75D21379B9D00394FFF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 			children = (
 				E60B971B216F55B900F43B27 /* PXYDesHelper.h */,
 				E60B971C216F55B900F43B27 /* PXYDesHelper.m */,
+				E61705612170947C00EDAF1E /* PXYBase64Helper.h */,
+				E61705622170947C00EDAF1E /* PXYBase64Helper.m */,
 			);
 			path = Cryptography;
 			sourceTree = "<group>";
@@ -556,6 +561,7 @@
 				E61EA7B821379B9D00394FFF /* UIImageView+ImageCorner.m in Sources */,
 				E61EA7D121379B9D00394FFF /* PXYStatusBarView.m in Sources */,
 				E61EA7B521379B9D00394FFF /* main.m in Sources */,
+				E61705632170947C00EDAF1E /* PXYBase64Helper.m in Sources */,
 				E61EA7C821379B9D00394FFF /* PXYMonitorManager.m in Sources */,
 				E61EA7CB21379B9D00394FFF /* YYDiskCache.m in Sources */,
 				E61EA7C421379B9D00394FFF /* PXYDataMonitorManager.m in Sources */,

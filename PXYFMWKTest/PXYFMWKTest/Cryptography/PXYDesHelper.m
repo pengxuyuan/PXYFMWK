@@ -62,8 +62,6 @@
             &movedBytes);
     if (ccStatus == kCCSuccess) {
         NSData *outData = [NSData dataWithBytes:bufferPtr length:movedBytes];
-        NSData *base64Data = [outData base64EncodedDataWithOptions:NSDataBase64Encoding64CharacterLineLength];
-        NSString *outDataStr = [[NSString alloc] initWithData:base64Data encoding:NSUTF8StringEncoding];
         return outData;
     }
     
@@ -80,8 +78,9 @@
  */
 +(NSString *)stringWithDesEncryptString:(NSString *)string withKey:(NSString *)key {
     NSData *data = [self dataWithDesEncryptString:string withKey:key];
-    NSString *dataStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    return dataStr;
+    NSData *base64Data = [data base64EncodedDataWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    NSString *outDataStr = [[NSString alloc] initWithData:base64Data encoding:NSUTF8StringEncoding];
+    return outDataStr;
 }
 
 @end

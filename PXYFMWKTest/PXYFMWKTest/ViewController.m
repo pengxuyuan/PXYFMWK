@@ -12,6 +12,7 @@
 #import "NSObject+DLIntrospection.h"
 
 #import "PXYDesHelper.h"
+#import "PXYBase64Helper.h"
 
 /*
  对称加密（共享密钥）：AES、DES
@@ -47,6 +48,31 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSString *str = [PXYDesHelper stringWithDesEncryptString:@"A" withKey:@"B"];
     NSLog(@"str %@",str);
+    
+    // String Base64编码解码
+    NSString *base641 = [PXYBase64Helper stringEncodeBase64WithString:@"AAA"];
+    NSString *base642 = [PXYBase64Helper stringEncodeBase64WithString:@"ABC"];
+    NSString *base643 = [PXYBase64Helper stringEncodeBase64WithString:@"111"];
+    
+    NSString *base6411 = [PXYBase64Helper stringDecodeBase64WithString:base641];
+    NSString *base6422 = [PXYBase64Helper stringDecodeBase64WithString:base642];
+    NSString *base6433 = [PXYBase64Helper stringDecodeBase64WithString:base643];
+    
+    //NSData Base64编码
+    char *str1 = "123456789";
+    NSData *data = [NSData dataWithBytes:str1 length:strlen(str1)];
+    
+    //data 编码
+    NSData *base644 = [PXYBase64Helper dataEncodeBase64WithData:data];
+    NSString *base64S = [PXYBase64Helper stringEncodeBase64WithData:data];
+    
+    //string 解码
+    NSString *base6444 = [PXYBase64Helper stringDecodeBase64WithData:base644];
+    
+    //data 解码
+    NSData *decodeData = [PXYBase64Helper dataDecodeBase64WithData:base644];
+    NSString *decodeDataStr = [[NSString alloc] initWithData:decodeData encoding:NSUTF8StringEncoding];
+    
 }
 
 
