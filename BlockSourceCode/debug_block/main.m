@@ -9,7 +9,7 @@
 #import <AppKit/AppKit.h>
 #import <Block.h>
 
-typedef void(^EOCBlock)(void);
+typedef void(^Block)(void);
 
 //block源代码：https://opensource.apple.com/source/libclosure/libclosure-65/
 //工程的搭建参考：http://blog.csdn.net/wotors/article/details/52489464
@@ -21,24 +21,41 @@ typedef void(^EOCBlock)(void);
 //2、非__block修饰的外部变量
 //这个过程会明白到block结构里的一些变量到底起什么作用
 
-void pr(int (^block)(void)) {
-    printf("%d\n",block());
-}
+//void pr(int (^block)(void)) {
+//    printf("%d\n",block());
+//}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        int (^block[1022222])(void);
-        int i;
-        for (i = 1000; i < 10010; i ++) {
-            block[i] = ^{
-                return i;
-            };
-        }
-
-        for (int j = 1000; j < 10010; j ++) {
-            pr(block[j]);
-        }
+        int i = 0;
+        Block block = ^{
+            NSLog(@"%d", i);
+        };
+        Block blk = Block_copy(block);
+        Block_copy(blk);
+        Block_copy(blk);
+        Block_release(blk);
+        
+        [blk retain];
+        NSLog(@"%lu", [blk retainCount]);
+        [blk retain];
+        NSLog(@"%lu", [blk retainCount]);
+        [blk release];
+        NSLog(@"%lu", [blk retainCount]);
+        
+        
+//        int (^block[1022222])(void);
+//        int i;
+//        for (i = 1000; i < 10010; i ++) {
+//            block[i] = ^{
+//                return i;
+//            };
+//        }
+//
+//        for (int j = 1000; j < 10010; j ++) {
+//            pr(block[j]);
+//        }
     }
 
     return 0;
