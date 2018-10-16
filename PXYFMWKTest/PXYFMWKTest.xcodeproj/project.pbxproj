@@ -179,10 +179,10 @@
 			children = (
 				E6D62F94217587CE005554AF /* PXYHashHelper.h */,
 				E6D62F95217587CE005554AF /* PXYHashHelper.m */,
-				E60B971B216F55B900F43B27 /* PXYDesHelper.h */,
-				E60B971C216F55B900F43B27 /* PXYDesHelper.m */,
 				E61705612170947C00EDAF1E /* PXYBase64Helper.h */,
 				E61705622170947C00EDAF1E /* PXYBase64Helper.m */,
+				E60B971B216F55B900F43B27 /* PXYDesHelper.h */,
+				E60B971C216F55B900F43B27 /* PXYDesHelper.m */,
 			);
 			path = Cryptography;
 			sourceTree = "<group>";

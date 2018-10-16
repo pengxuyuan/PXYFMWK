@@ -71,6 +71,16 @@ TTPerson PersonMake(int age, NSString *name) {
     
     NSString *str1 = [PXYHashHelper MD5EncryptWithString:@"11"];
     NSString *str2 = [PXYHashHelper MD516ByteEncryptWithString:@"11"];
+    NSString *str3 = [PXYHashHelper SHA1EncryptWithString:@"11"];
+    
+    NSString *a = @"11";
+    const char *char1 = [a UTF8String];
+    
+    NSString *str4 = [PXYHashHelper SHAEncryptWithBytes:char1 length:strlen(char1) flag:CC_SHA1_DIGEST_LENGTH];
+    NSString *str5 = [PXYHashHelper SHAEncryptWithBytes:char1 length:strlen(char1) flag:CC_SHA224_DIGEST_LENGTH];
+    NSString *str6 = [PXYHashHelper SHAEncryptWithBytes:char1 length:strlen(char1) flag:CC_SHA256_DIGEST_LENGTH];
+    NSString *str7 = [PXYHashHelper SHAEncryptWithBytes:char1 length:strlen(char1) flag:CC_SHA384_DIGEST_LENGTH];
+    NSString *str8 = [PXYHashHelper SHAEncryptWithBytes:char1 length:strlen(char1) flag:CC_SHA512_DIGEST_LENGTH];
     
     
 }
