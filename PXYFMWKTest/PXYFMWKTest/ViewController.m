@@ -13,6 +13,7 @@
 
 #import "PXYDesHelper.h"
 #import "PXYBase64Helper.h"
+#import "PXYHashHelper.h"
 
 /*
  对称加密（共享密钥）：AES、DES
@@ -20,16 +21,30 @@
  
  */
 
+typedef struct Person {
+    int age;
+//    NSString *name;
+}Person;
+
+typedef Person* TTPerson;
+
+TTPerson PersonMake(int age, NSString *name) {
+    Person person;
+    person.age = age;
+//    person.name = name;
+    
+    Person *p = &person;
+    return p;
+}
+
 @interface ViewController ()
 
 @property (nonatomic, strong) UIImageView *imageView;
+//@property (nonatomic, assign) Person *person;
 
 @end
 
 @implementation ViewController
-
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,37 +56,22 @@
     [self.view addSubview:_imageView];
     [_imageView settingCornerWithCornerRadius:100];
     
-
+//    __block Person *person = PersonMake(10, @"1");
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSLog(@"age:%d", (person->age));
+//    });
+    
 }
 
 
+
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSString *str = [PXYDesHelper stringWithDesEncryptString:@"A" withKey:@"B"];
-    NSLog(@"str %@",str);
     
-    // String Base64编码解码
-    NSString *base641 = [PXYBase64Helper stringEncodeBase64WithString:@"AAA"];
-    NSString *base642 = [PXYBase64Helper stringEncodeBase64WithString:@"ABC"];
-    NSString *base643 = [PXYBase64Helper stringEncodeBase64WithString:@"111"];
     
-    NSString *base6411 = [PXYBase64Helper stringDecodeBase64WithString:base641];
-    NSString *base6422 = [PXYBase64Helper stringDecodeBase64WithString:base642];
-    NSString *base6433 = [PXYBase64Helper stringDecodeBase64WithString:base643];
+    NSString *str1 = [PXYHashHelper MD5EncryptWithString:@"11"];
+    NSString *str2 = [PXYHashHelper MD516ByteEncryptWithString:@"11"];
     
-    //NSData Base64编码
-    char *str1 = "123456789";
-    NSData *data = [NSData dataWithBytes:str1 length:strlen(str1)];
-    
-    //data 编码
-    NSData *base644 = [PXYBase64Helper dataEncodeBase64WithData:data];
-    NSString *base64S = [PXYBase64Helper stringEncodeBase64WithData:data];
-    
-    //string 解码
-    NSString *base6444 = [PXYBase64Helper stringDecodeBase64WithData:base644];
-    
-    //data 解码
-    NSData *decodeData = [PXYBase64Helper dataDecodeBase64WithData:base644];
-    NSString *decodeDataStr = [[NSString alloc] initWithData:decodeData encoding:NSUTF8StringEncoding];
     
 }
 
