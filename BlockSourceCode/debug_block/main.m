@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AppKit/AppKit.h>
+//#import <AppKit/AppKit.h>
 #import <Block.h>
 
 typedef void(^Block)(void);
@@ -27,64 +27,20 @@ typedef void(^Block)(void);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
-        int i = 0;
+
+        __strong NSObject *myObject = [NSObject new];
+        __weak __typeof(myObject)weakObject = myObject;
         Block block = ^{
-            NSLog(@"%d", i);
+//            __weak __typeof(myObject)weakMyObject1 = myObject;
+            __strong __typeof(myObject)strongMyObject = weakObject;
+//            __strong __typeof(myObject)strongMyObject1 = myObject;
+            NSLog(@"QQQQQ %@",weakObject);
         };
-        Block blk = Block_copy(block);
-        Block_copy(blk);
-        Block_copy(blk);
-        Block_release(blk);
-        
-        [blk retain];
-        NSLog(@"%lu", [blk retainCount]);
-        [blk retain];
-        NSLog(@"%lu", [blk retainCount]);
-        [blk release];
-        NSLog(@"%lu", [blk retainCount]);
-        
-        
-//        int (^block[1022222])(void);
-//        int i;
-//        for (i = 1000; i < 10010; i ++) {
-//            block[i] = ^{
-//                return i;
-//            };
-//        }
-//
-//        for (int j = 1000; j < 10010; j ++) {
-//            pr(block[j]);
-//        }
+        block();
     }
 
     return 0;
 }
-
-
-//int main(int argc, const char * argv[]) {
-//    @autoreleasepool {
-//        // insert code here...
-//        
-//        int a[5] = {1,2,3,4,5};
-//        int *ptr = (int *)(&a + 1);
-//        printf("%d", *(ptr-1));
-//        
-//        __block NSButton *btn = [[NSButton alloc] init];
-//        
-//        void (^block)(void) = Block_copy( ^{
-//            
-//            NSLog(@"这是自己的block %@", btn);
-//            
-//        });
-//        
-//        block();
-//        
-//    }
-//    return 0;
-//}
-//
-//
 
 
 

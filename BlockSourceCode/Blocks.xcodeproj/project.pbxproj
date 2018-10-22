@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AC940FD1FA976210053C96E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC940FC1FA976210053C96E /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5AC940FD1FA976210053C96E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC940FC1FA976210053C96E /* main.m */; };
 		5AC941011FA976550053C96E /* data.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E1EC111543C0B0055083F /* data.c */; };
 		5AC941021FA976550053C96E /* runtime.c in Sources */ = {isa = PBXBuildFile; fileRef = E86E1EC211543C0B0055083F /* runtime.c */; };
 		5AC941691FA9DF1B0053C96E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC941681FA9DF1B0053C96E /* AppKit.framework */; };
