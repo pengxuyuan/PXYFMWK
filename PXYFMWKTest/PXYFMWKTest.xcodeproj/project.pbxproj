@@ -12,6 +12,7 @@
 		E60815C92177291B00C7D241 /* AImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60815C82177291B00C7D241 /* AImageView.m */; };
 		E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E60B971C216F55B900F43B27 /* PXYDesHelper.m */; };
 		E61705632170947C00EDAF1E /* PXYBase64Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61705622170947C00EDAF1E /* PXYBase64Helper.m */; };
+		E6180E47219C02E900C221F7 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6180E46219C02E900C221F7 /* TestViewController.m */; };
 		E61EA7B121379B9D00394FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E61EA75C21379B9D00394FFF /* Assets.xcassets */; };
 		E61EA7B221379B9D00394FFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA75D21379B9D00394FFF /* ViewController.m */; };
 		E61EA7B321379B9D00394FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E61EA75E21379B9D00394FFF /* LaunchScreen.storyboard */; };
@@ -98,6 +99,8 @@
 		E60B971C216F55B900F43B27 /* PXYDesHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYDesHelper.m; sourceTree = "<group>"; };
 		E61705612170947C00EDAF1E /* PXYBase64Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYBase64Helper.h; sourceTree = "<group>"; };
 		E61705622170947C00EDAF1E /* PXYBase64Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYBase64Helper.m; sourceTree = "<group>"; };
+		E6180E45219C02E900C221F7 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		E6180E46219C02E900C221F7 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		E61EA75A21379B9D00394FFF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E61EA75C21379B9D00394FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E61EA75D21379B9D00394FFF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				E61EA76A21379B9D00394FFF /* AppDelegate.m */,
 				E61EA7AF21379B9D00394FFF /* ViewController.h */,
 				E61EA75D21379B9D00394FFF /* ViewController.m */,
+				E6180E45219C02E900C221F7 /* TestViewController.h */,
+				E6180E46219C02E900C221F7 /* TestViewController.m */,
 				E6F21D7521465E5800424470 /* Father.h */,
 				E6F21D7621465E5800424470 /* Father.m */,
 				E6F21D7821465E6300424470 /* Son.h */,
@@ -602,6 +607,7 @@
 				E663CB85215250B000D0304F /* NSObject+DLIntrospection.m in Sources */,
 				E61EA7BF21379B9D00394FFF /* PXYDeviceCpuHelper.m in Sources */,
 				E61EA7CC21379B9D00394FFF /* YYCache.m in Sources */,
+				E6180E47219C02E900C221F7 /* TestViewController.m in Sources */,
 				E61EA7CF21379B9D00394FFF /* BSBacktraceLogger.m in Sources */,
 				E61EA7D221379B9D00394FFF /* PXYFPSLabel.m in Sources */,
 				E61EA7C921379B9D00394FFF /* PXYMonitorDataDetailController.m in Sources */,

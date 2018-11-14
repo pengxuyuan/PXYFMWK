@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface Father : NSObject
 
 - (void)fatherMethod;
 
+@property (nonatomic, strong) id delegate;
 
 @end

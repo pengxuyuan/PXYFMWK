@@ -10,11 +10,11 @@
 #import "UIImageView+ImageCorner.h"
 #import <PXYFMWKDYLIB/PXYFMWKDYLIB.h>
 #import "AImageView.h"
+#import "TestViewController.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) AImageView *imageView;
-
 
 @end
 
@@ -35,7 +35,8 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
+    TestViewController *textVC = [TestViewController new];
+    [self.navigationController pushViewController:textVC animated:YES];
 }
 
 
