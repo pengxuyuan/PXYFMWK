@@ -10,19 +10,13 @@
 
 @implementation Son
 
-//+ (void)load {
-////    [super load];
-//    NSLog(@"%s",__func__);
-//}
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        NSLog(@"111%@",NSStringFromClass([self class]));
-        NSLog(@"222%@",NSStringFromClass([super class]));
-        NSLog(@"333%@",NSStringFromClass([self superclass]));
-    }
-    return self;
+- (void)sonMethod {
+    NSLog(@"--------------------");
+    NSLog(@"%s",__func__);
+    NSLog(@"%@",NSStringFromClass([self class]));
+    NSLog(@"%@",NSStringFromClass([super class]));
+    NSLog(@"%@",NSStringFromClass([self superclass]));
+    NSLog(@"--------------------");
 }
 
 @end

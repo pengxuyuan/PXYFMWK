@@ -10,4 +10,6 @@
 
 @interface Son : Father
 
+- (void)sonMethod;
+
 @end

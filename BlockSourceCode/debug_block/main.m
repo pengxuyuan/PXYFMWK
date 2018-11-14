@@ -25,16 +25,17 @@ typedef void(^Block)(void);
 //    printf("%d\n",block());
 //}
 
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        __strong NSObject *myObject = [NSObject new];
-        __weak __typeof(myObject)weakObject = myObject;
+        __block NSObject *myObject = [NSObject new];
+//        __weak __typeof(myObject)weakObject = myObject;
         Block block = ^{
 //            __weak __typeof(myObject)weakMyObject1 = myObject;
-            __strong __typeof(myObject)strongMyObject = weakObject;
+//            __strong __typeof(myObject)strongMyObject = weakObject;
 //            __strong __typeof(myObject)strongMyObject1 = myObject;
-            NSLog(@"QQQQQ %@",weakObject);
+            NSLog(@"QQQQQ %@",myObject);
         };
         block();
     }

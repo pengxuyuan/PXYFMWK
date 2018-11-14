@@ -106,13 +106,22 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static void __Block_byref_id_object_copy_131(void *dst, void *src) {
- _Block_object_assign((char*)dst + 40, *(void * *) ((char*)src + 40), 131);
-}
-static void __Block_byref_id_object_dispose_131(void *src) {
- _Block_object_dispose(*(void * *) ((char*)src + 40), 131);
-}
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_main_0adae1_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"QQQQQ %@",8};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"--------------------",20};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%s",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"--------------------",20};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_6 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"dealloc %@",10};
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97781,56 +97790,205 @@ typedef void (*NSUserAutomatorTaskCompletionHandler)(id _Nullable result, NSErro
 
 
 
+#ifndef _REWRITER_typedef_Father
+#define _REWRITER_typedef_Father
+typedef struct objc_object Father;
+typedef struct {} _objc_exc_Father;
+#endif
 
-typedef void(*Block)(void);
-struct __Block_byref_myObject_0 {
-  void *__isa;
-__Block_byref_myObject_0 *__forwarding;
- int __flags;
- int __size;
- void (*__Block_byref_id_object_copy)(void*, void*);
- void (*__Block_byref_id_object_dispose)(void*);
- NSObject *__strong myObject;
+extern "C" unsigned long OBJC_IVAR_$_Father$_strongObject;
+struct Father_IMPL {
+	struct NSObject_IMPL NSObject_IVARS;
+	NSObject *__strong _strongObject;
 };
 
-struct __main_block_impl_0 {
-  struct __block_impl impl;
-  struct __main_block_desc_0* Desc;
-  __Block_byref_myObject_0 *myObject; // by ref
-  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, __Block_byref_myObject_0 *_myObject, int flags=0) : myObject(_myObject->__forwarding) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
-};
-static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-  __Block_byref_myObject_0 *myObject = __cself->myObject; // bound by ref
+
+// - (void)fatherMethod;
 
 
+/* @end */
 
 
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_main_0adae1_mi_0,(myObject->__forwarding->myObject));
-        }
-static void __main_block_copy_0(struct __main_block_impl_0*dst, struct __main_block_impl_0*src) {_Block_object_assign((void*)&dst->myObject, (void*)src->myObject, 8/*BLOCK_FIELD_IS_BYREF*/);}
+// @interface Father ()
 
-static void __main_block_dispose_0(struct __main_block_impl_0*src) {_Block_object_dispose((void*)src->myObject, 8/*BLOCK_FIELD_IS_BYREF*/);}
+// @property (nonatomic, strong) NSObject *strongObject;
 
-static struct __main_block_desc_0 {
-  size_t reserved;
-  size_t Block_size;
-  void (*copy)(struct __main_block_impl_0*, struct __main_block_impl_0*);
-  void (*dispose)(struct __main_block_impl_0*);
-} __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0), __main_block_copy_0, __main_block_dispose_0};
-int main(int argc, const char * argv[]) {
-    /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
+/* @end */
 
-        __attribute__((__blocks__(byref))) __Block_byref_myObject_0 myObject = {(void*)0,(__Block_byref_myObject_0 *)&myObject, 33554432, sizeof(__Block_byref_myObject_0), __Block_byref_id_object_copy_131, __Block_byref_id_object_dispose_131, ((NSObject *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSObject"), sel_registerName("new"))};
 
-        Block block = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, (__Block_byref_myObject_0 *)&myObject, 570425344));
-        ((void (*)(__block_impl *))((__block_impl *)block)->FuncPtr)((__block_impl *)block);
-    }
+// @implementation Father
 
-    return 0;
+
+static void _I_Father_fatherMethod(Father * self, SEL _cmd) {
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_0);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_1,__func__);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_2,NSStringFromClass(((Class (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("class"))));
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_3,NSStringFromClass(((Class (*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("Father"))}, sel_registerName("class"))));
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_4,NSStringFromClass(((Class (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("superclass"))));
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_5);
 }
+
+
+static void _I_Father_dealloc(Father * self, SEL _cmd) {
+
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_l3_fvc9fyz96yb28xg6g_jqc0qr0000gn_T_Father_ee32f2_mi_6,((Class (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("class")));
+
+}
+
+
+static NSObject * _I_Father_strongObject(Father * self, SEL _cmd) { return (*(NSObject *__strong *)((char *)self + OBJC_IVAR_$_Father$_strongObject)); }
+static void _I_Father_setStrongObject_(Father * self, SEL _cmd, NSObject *strongObject) { (*(NSObject *__strong *)((char *)self + OBJC_IVAR_$_Father$_strongObject)) = strongObject; }
+// @end
+
+struct _prop_t {
+	const char *name;
+	const char *attributes;
+};
+
+struct _protocol_t;
+
+struct _objc_method {
+	struct objc_selector * _cmd;
+	const char *method_type;
+	void  *_imp;
+};
+
+struct _protocol_t {
+	void * isa;  // NULL
+	const char *protocol_name;
+	const struct _protocol_list_t * protocol_list; // super protocols
+	const struct method_list_t *instance_methods;
+	const struct method_list_t *class_methods;
+	const struct method_list_t *optionalInstanceMethods;
+	const struct method_list_t *optionalClassMethods;
+	const struct _prop_list_t * properties;
+	const unsigned int size;  // sizeof(struct _protocol_t)
+	const unsigned int flags;  // = 0
+	const char ** extendedMethodTypes;
+};
+
+struct _ivar_t {
+	unsigned long int *offset;  // pointer to ivar offset location
+	const char *name;
+	const char *type;
+	unsigned int alignment;
+	unsigned int  size;
+};
+
+struct _class_ro_t {
+	unsigned int flags;
+	unsigned int instanceStart;
+	unsigned int instanceSize;
+	unsigned int reserved;
+	const unsigned char *ivarLayout;
+	const char *name;
+	const struct _method_list_t *baseMethods;
+	const struct _objc_protocol_list *baseProtocols;
+	const struct _ivar_list_t *ivars;
+	const unsigned char *weakIvarLayout;
+	const struct _prop_list_t *properties;
+};
+
+struct _class_t {
+	struct _class_t *isa;
+	struct _class_t *superclass;
+	void *cache;
+	void *vtable;
+	struct _class_ro_t *ro;
+};
+
+struct _category_t {
+	const char *name;
+	struct _class_t *cls;
+	const struct _method_list_t *instance_methods;
+	const struct _method_list_t *class_methods;
+	const struct _protocol_list_t *protocols;
+	const struct _prop_list_t *properties;
+};
+extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
+#pragma warning(disable:4273)
+
+extern "C" unsigned long int OBJC_IVAR_$_Father$_strongObject __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct Father, _strongObject);
+
+static struct /*_ivar_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _prop_t)
+	unsigned int count;
+	struct _ivar_t ivar_list[1];
+} _OBJC_$_INSTANCE_VARIABLES_Father __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_ivar_t),
+	1,
+	{{(unsigned long int *)&OBJC_IVAR_$_Father$_strongObject, "_strongObject", "@\"NSObject\"", 3, 8}}
+};
+
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[4];
+} _OBJC_$_INSTANCE_METHODS_Father __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	4,
+	{{(struct objc_selector *)"fatherMethod", "v16@0:8", (void *)_I_Father_fatherMethod},
+	{(struct objc_selector *)"dealloc", "v16@0:8", (void *)_I_Father_dealloc},
+	{(struct objc_selector *)"strongObject", "@16@0:8", (void *)_I_Father_strongObject},
+	{(struct objc_selector *)"setStrongObject:", "v24@0:8@16", (void *)_I_Father_setStrongObject_}}
+};
+
+static struct _class_ro_t _OBJC_METACLASS_RO_$_Father __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	1, sizeof(struct _class_t), sizeof(struct _class_t), 
+	(unsigned int)0, 
+	0, 
+	"Father",
+	0, 
+	0, 
+	0, 
+	0, 
+	0, 
+};
+
+static struct _class_ro_t _OBJC_CLASS_RO_$_Father __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	0, __OFFSETOFIVAR__(struct Father, _strongObject), sizeof(struct Father_IMPL), 
+	(unsigned int)0, 
+	0, 
+	"Father",
+	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_Father,
+	0, 
+	(const struct _ivar_list_t *)&_OBJC_$_INSTANCE_VARIABLES_Father,
+	0, 
+	0, 
+};
+
+extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
+
+extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_Father __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_METACLASS_RO_$_Father,
+};
+
+extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSObject;
+
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_Father __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_Father,
+	0, // &OBJC_CLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_CLASS_RO_$_Father,
+};
+static void OBJC_CLASS_SETUP_$_Father(void ) {
+	OBJC_METACLASS_$_Father.isa = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_Father.superclass = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_Father.cache = &_objc_empty_cache;
+	OBJC_CLASS_$_Father.isa = &OBJC_METACLASS_$_Father;
+	OBJC_CLASS_$_Father.superclass = &OBJC_CLASS_$_NSObject;
+	OBJC_CLASS_$_Father.cache = &_objc_empty_cache;
+}
+#pragma section(".objc_inithooks$B", long, read, write)
+__declspec(allocate(".objc_inithooks$B")) static void *OBJC_CLASS_SETUP[] = {
+	(void *)&OBJC_CLASS_SETUP_$_Father,
+};
+static struct _class_t *L_OBJC_LABEL_CLASS_$ [1] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
+	&OBJC_CLASS_$_Father,
+};
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };

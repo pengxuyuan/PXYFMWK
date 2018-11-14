@@ -10,9 +10,9 @@
 
 @implementation PXYApplication
 
-- (void)sendEvent:(UIEvent *)event {
-    NSLog(@"%s",__func__);
-    [super sendEvent:event];
-}
+//- (void)sendEvent:(UIEvent *)event {
+//    NSLog(@"%s",__func__);
+//    [super sendEvent:event];
+//}
 
 @end
