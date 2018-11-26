@@ -12,10 +12,16 @@
 #import "AImageView.h"
 #import "TestViewController.h"
 
+#import <objc/runtime.h>
+#import <objc/message.h>
+#import <libkern/OSAtomic.h>
+#import <pthread.h>
+
+#import "UIImageView+CornerRadius.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) AImageView *imageView;
-
 @end
 
 
@@ -24,19 +30,101 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.translucent = NO;
     _imageView = [[AImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     _imageView.backgroundColor = [UIColor redColor];
     _imageView.center = self.view.center;
-    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
     [self.view addSubview:_imageView];
-    _imageView.userInteractionEnabled = YES;
+    
+//    [_imageView zy_cornerRadiusRoundingRect];
+
+    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
+//    _imageView.image = [UIImage imageNamed:@"222.png"];
+    
+    
+    
+    //1.layer 直接设置圆角
+//    _imageView.layer.cornerRadius = 100;
+//    _imageView.layer.masksToBounds = YES;
+    
+    //2.画布的方式增加圆角
     [_imageView settingCornerWithCornerRadius:100];
+//    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
+    
+    
+    //3.第三方库设置圆角
+//    [_imageView zy_cornerRadiusRoundingRect];
+    
+    
+    //测试性能
+//    for (int i = 0; i < 1000; i++) {
+//         [_imageView settingCornerWithCornerRadius:100];
+////        [_imageView zy_cornerRadiusRoundingRect];
+////        [_imageView zy_cornerRadiusWithImage:_imageView.image cornerRadius:100 rectCornerType:UIRectEdgeAll];
+//    }
+    
+    NSLog(@"111111");
+    
+    
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    view.backgroundColor = [UIColor redColor];
+//    view.layer.backgroundColor = [UIColor yellowColor].CGColor;
+//    view.center = self.view.center;
+//    [self.view addSubview:view];
+//    NSLog(@"layer:%@",view.layer);
+//
+//    CALayer *layer = [[CALayer alloc] init];
+//    layer.frame = CGRectMake(0, 0, 100, 100);
+//    layer.backgroundColor = [UIColor blueColor].CGColor;
+//    [self.view.layer addSublayer:layer];
+    
+    
+    //后台销毁对象
+//    self.father = [Father new];
+//    Father *temp = self.father;
+//    self.father = nil;
+//
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        [temp class];
+////         self.father = nil;
+//    });
+    
+    [[NSNotificationCenter defaultCenter ] addObserver:self selector:@selector(ANotification) name:@"A" object:nil];
+//    [[NSNotificationCenter defaultCenter ] addObserver:self selector:@selector(ANotification) name:@"A" object:nil];
+//    NSNotificationQueue eq
     
 }
 
+- (void)ANotification {
+    NSLog(@"%s，thread:%@",__func__,[NSThread currentThread]);
+    sleep(2);
+}
+
+
+
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    TestViewController *textVC = [TestViewController new];
-    [self.navigationController pushViewController:textVC animated:YES];
+//    self.view.backgroundColor = [UIColor redColor];
+    
+//    TestViewController *textVC = [TestViewController new];
+//    [self.navigationController pushViewController:textVC animated:YES];
+    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"A" object:nil];
+//    NSLog(@"111");
+//    sleep(2);
+//    NSLog(@"222");
+//
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"A" object:nil];
+//    });
+    
+    _imageView.image = [UIImage imageNamed:@"222.png"];
+    
+//    NSNotification *notification1 = [[NSNotification alloc] initWithName:@"A" object:nil userInfo:nil];
+//    [[NSNotificationQueue defaultQueue] enqueueNotification:notification1 postingStyle:NSPostWhenIdle];
+//    NSLog(@"111");
+//    sleep(2);
+//    NSLog(@"222");
 }
 
 

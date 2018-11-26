@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E60815C22177107100C7D241 /* PXYApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = E60815C12177107100C7D241 /* PXYApplication.m */; };
 		E60815C62177261E00C7D241 /* UIResponder+PXYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E60815C52177261E00C7D241 /* UIResponder+PXYRouter.m */; };
 		E60815C92177291B00C7D241 /* AImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60815C82177291B00C7D241 /* AImageView.m */; };
 		E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E60B971C216F55B900F43B27 /* PXYDesHelper.m */; };
@@ -42,6 +41,9 @@
 		E61EA7D121379B9D00394FFF /* PXYStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA7AA21379B9D00394FFF /* PXYStatusBarView.m */; };
 		E61EA7D221379B9D00394FFF /* PXYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA7AC21379B9D00394FFF /* PXYFPSLabel.m */; };
 		E61EA7D321379B9D00394FFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E61EA7AE21379B9D00394FFF /* Info.plist */; };
+		E635911721A7CC8F008D534B /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = E635911521A7CC8E008D534B /* UIImageView+CornerRadius.m */; };
+		E635911921A7D108008D534B /* 1111.png in Resources */ = {isa = PBXBuildFile; fileRef = E635911821A7D108008D534B /* 1111.png */; };
+		E635911B21A7D226008D534B /* 222.png in Resources */ = {isa = PBXBuildFile; fileRef = E635911A21A7D225008D534B /* 222.png */; };
 		E636FD99213E24DB00B50A74 /* PXYFMWKDYLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */; };
 		E636FD9A213E24DB00B50A74 /* PXYFMWKDYLIB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E63ADEE5217976B3000104F4 /* NSData+PXYFileType.m in Sources */ = {isa = PBXBuildFile; fileRef = E63ADEE4217976B3000104F4 /* NSData+PXYFileType.m */; };
@@ -52,9 +54,6 @@
 		E67DEA752154D9C200AE5895 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */; };
 		E67DEA792154E66400AE5895 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = E67DEA782154E66300AE5895 /* Aspects.m */; };
 		E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D62F95217587CE005554AF /* PXYHashHelper.m */; };
-		E6F21D7721465E5800424470 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F21D7621465E5800424470 /* Father.m */; };
-		E6F21D7A21465E6300424470 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F21D7921465E6300424470 /* Son.m */; };
-		E6F21D7D21465F1800424470 /* Son+Son1.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F21D7C21465F1800424470 /* Son+Son1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +88,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E60815C02177107000C7D241 /* PXYApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYApplication.h; sourceTree = "<group>"; };
-		E60815C12177107100C7D241 /* PXYApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYApplication.m; sourceTree = "<group>"; };
 		E60815C42177261E00C7D241 /* UIResponder+PXYRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+PXYRouter.h"; sourceTree = "<group>"; };
 		E60815C52177261E00C7D241 /* UIResponder+PXYRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+PXYRouter.m"; sourceTree = "<group>"; };
 		E60815C72177291B00C7D241 /* AImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AImageView.h; sourceTree = "<group>"; };
@@ -157,6 +154,10 @@
 		E61EA8B1213D4EA700394FFF /* PXYFMWKDYLIB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PXYFMWKDYLIB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61EA8C4213D506900394FFF /* libPXYFMWKLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libPXYFMWKLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6225A052112FE36003BFE79 /* PXYFMWKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXYFMWKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E635911521A7CC8E008D534B /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
+		E635911621A7CC8E008D534B /* UIImageView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CornerRadius.h"; sourceTree = "<group>"; };
+		E635911821A7D108008D534B /* 1111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1111.png; sourceTree = "<group>"; };
+		E635911A21A7D225008D534B /* 222.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 222.png; sourceTree = "<group>"; };
 		E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PXYFMWKDYLIB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63ADEE3217976B3000104F4 /* NSData+PXYFileType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+PXYFileType.h"; sourceTree = "<group>"; };
 		E63ADEE4217976B3000104F4 /* NSData+PXYFileType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+PXYFileType.m"; sourceTree = "<group>"; };
@@ -172,12 +173,6 @@
 		E67DEA782154E66300AE5895 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		E6D62F94217587CE005554AF /* PXYHashHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYHashHelper.h; sourceTree = "<group>"; };
 		E6D62F95217587CE005554AF /* PXYHashHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYHashHelper.m; sourceTree = "<group>"; };
-		E6F21D7521465E5800424470 /* Father.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
-		E6F21D7621465E5800424470 /* Father.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
-		E6F21D7821465E6300424470 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
-		E6F21D7921465E6300424470 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
-		E6F21D7B21465F1800424470 /* Son+Son1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Son+Son1.h"; sourceTree = "<group>"; };
-		E6F21D7C21465F1800424470 /* Son+Son1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Son+Son1.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,18 +226,12 @@
 				E61EA76A21379B9D00394FFF /* AppDelegate.m */,
 				E61EA7AF21379B9D00394FFF /* ViewController.h */,
 				E61EA75D21379B9D00394FFF /* ViewController.m */,
+				E635911621A7CC8E008D534B /* UIImageView+CornerRadius.h */,
+				E635911521A7CC8E008D534B /* UIImageView+CornerRadius.m */,
 				E6180E45219C02E900C221F7 /* TestViewController.h */,
 				E6180E46219C02E900C221F7 /* TestViewController.m */,
-				E6F21D7521465E5800424470 /* Father.h */,
-				E6F21D7621465E5800424470 /* Father.m */,
-				E6F21D7821465E6300424470 /* Son.h */,
-				E6F21D7921465E6300424470 /* Son.m */,
-				E6F21D7B21465F1800424470 /* Son+Son1.h */,
-				E6F21D7C21465F1800424470 /* Son+Son1.m */,
 				E60815C72177291B00C7D241 /* AImageView.h */,
 				E60815C82177291B00C7D241 /* AImageView.m */,
-				E60815C02177107000C7D241 /* PXYApplication.h */,
-				E60815C12177107100C7D241 /* PXYApplication.m */,
 				E63ADEEC21798401000104F4 /* NSData+ImageContentType.h */,
 				E63ADEEB21798400000104F4 /* NSData+ImageContentType.m */,
 				E61EA75E21379B9D00394FFF /* LaunchScreen.storyboard */,
@@ -250,6 +239,8 @@
 				E61EA76221379B9D00394FFF /* main.m */,
 				E61EA76B21379B9D00394FFF /* icon.jpeg */,
 				E63ADEE621797F15000104F4 /* icon1.png */,
+				E635911821A7D108008D534B /* 1111.png */,
+				E635911A21A7D225008D534B /* 222.png */,
 				E61EA7AE21379B9D00394FFF /* Info.plist */,
 				E61EA75C21379B9D00394FFF /* Assets.xcassets */,
 			);
@@ -259,8 +250,8 @@
 		E61EA76721379B9D00394FFF /* PXYUIImageViewHelper */ = {
 			isa = PBXGroup;
 			children = (
-				E61EA76821379B9D00394FFF /* UIImageView+ImageCorner.m */,
 				E61EA76921379B9D00394FFF /* UIImageView+ImageCorner.h */,
+				E61EA76821379B9D00394FFF /* UIImageView+ImageCorner.m */,
 			);
 			path = PXYUIImageViewHelper;
 			sourceTree = "<group>";
@@ -583,9 +574,11 @@
 				E61EA7B421379B9D00394FFF /* Main.storyboard in Resources */,
 				E61EA7B121379B9D00394FFF /* Assets.xcassets in Resources */,
 				E61EA7C721379B9D00394FFF /* hq_chart_back@2x.png in Resources */,
+				E635911B21A7D226008D534B /* 222.png in Resources */,
 				E61EA7BA21379B9D00394FFF /* icon.jpeg in Resources */,
 				E61EA7C521379B9D00394FFF /* hq_nav_back@2x.png in Resources */,
 				E61EA7B321379B9D00394FFF /* LaunchScreen.storyboard in Resources */,
+				E635911921A7D108008D534B /* 1111.png in Resources */,
 				E61EA7C621379B9D00394FFF /* btn_back.png in Resources */,
 				E63ADEE721797F15000104F4 /* icon1.png in Resources */,
 			);
@@ -599,7 +592,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E60815C62177261E00C7D241 /* UIResponder+PXYRouter.m in Sources */,
-				E6F21D7A21465E6300424470 /* Son.m in Sources */,
 				E67DEA792154E66400AE5895 /* Aspects.m in Sources */,
 				E61EA7CA21379B9D00394FFF /* PXYMonitorDataListController.m in Sources */,
 				E61EA7D021379B9D00394FFF /* PXYMainThreadMonitorHelper.m in Sources */,
@@ -611,10 +603,10 @@
 				E61EA7CF21379B9D00394FFF /* BSBacktraceLogger.m in Sources */,
 				E61EA7D221379B9D00394FFF /* PXYFPSLabel.m in Sources */,
 				E61EA7C921379B9D00394FFF /* PXYMonitorDataDetailController.m in Sources */,
-				E6F21D7721465E5800424470 /* Father.m in Sources */,
 				E61EA7C121379B9D00394FFF /* PXYWeakProxy.m in Sources */,
 				E61EA7B221379B9D00394FFF /* ViewController.m in Sources */,
 				E61EA7CD21379B9D00394FFF /* YYKVStorage.m in Sources */,
+				E635911721A7CC8F008D534B /* UIImageView+CornerRadius.m in Sources */,
 				E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */,
 				E61EA7B821379B9D00394FFF /* UIImageView+ImageCorner.m in Sources */,
 				E61EA7D121379B9D00394FFF /* PXYStatusBarView.m in Sources */,
@@ -624,14 +616,12 @@
 				E61EA7CB21379B9D00394FFF /* YYDiskCache.m in Sources */,
 				E61EA7C421379B9D00394FFF /* PXYDataMonitorManager.m in Sources */,
 				E63ADEED21798401000104F4 /* NSData+ImageContentType.m in Sources */,
-				E6F21D7D21465F1800424470 /* Son+Son1.m in Sources */,
 				E61EA7C221379B9D00394FFF /* PXYFPSHelper.m in Sources */,
 				E61EA7C321379B9D00394FFF /* PXYMonitorDataCacheHelper.m in Sources */,
 				E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */,
 				E61EA7C021379B9D00394FFF /* PXYDeviceMemoryHelper.m in Sources */,
 				E63ADEE5217976B3000104F4 /* NSData+PXYFileType.m in Sources */,
 				E61EA7B921379B9D00394FFF /* AppDelegate.m in Sources */,
-				E60815C22177107100C7D241 /* PXYApplication.m in Sources */,
 				E60815C92177291B00C7D241 /* AImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

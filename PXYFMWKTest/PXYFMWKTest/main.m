@@ -9,11 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import <PXYFMWKDYLIB/PXYFMWKDYLIB.h>
-#import "PXYApplication.h"
 
 int main(int argc, char * argv[]) {
     [[PXYStartupTimeMonitor shareInstance] appStartRecordingTime];
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, NSStringFromClass([PXYApplication class]), NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
