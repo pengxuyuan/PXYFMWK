@@ -32,9 +32,6 @@
 		E61EA8BD213D4FB800394FFF /* PXYFMWKLib.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA8BC213D4FB800394FFF /* PXYFMWKLib.m */; };
 		E61EA8BE213D4FB800394FFF /* PXYFMWKLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61EA8BB213D4FB800394FFF /* PXYFMWKLib.h */; };
 		E61EA8C3213D4FE100394FFF /* PXYAPMLoadMonitor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61EA843213CD79100394FFF /* PXYAPMLoadMonitor.h */; };
-		E63B4D142159E0B300DD104E /* UIView+PXYChainProgramming.h in Headers */ = {isa = PBXBuildFile; fileRef = E63B4D122159E0B300DD104E /* UIView+PXYChainProgramming.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E63B4D152159E0B300DD104E /* UIView+PXYChainProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B4D132159E0B300DD104E /* UIView+PXYChainProgramming.m */; };
-		E63B4D162159E0B300DD104E /* UIView+PXYChainProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B4D132159E0B300DD104E /* UIView+PXYChainProgramming.m */; };
 		E644A77D21457670008C60AC /* PXYStartupTimeMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = E644A77B21457670008C60AC /* PXYStartupTimeMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E644A77F21457670008C60AC /* PXYStartupTimeMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */; };
 /* End PBXBuildFile section */
@@ -103,8 +100,6 @@
 		E61EA8BB213D4FB800394FFF /* PXYFMWKLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYFMWKLib.h; sourceTree = "<group>"; };
 		E61EA8BC213D4FB800394FFF /* PXYFMWKLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYFMWKLib.m; sourceTree = "<group>"; };
 		E62C11A12121BCFF0020D199 /* PXYFMWK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXYFMWK.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E63B4D122159E0B300DD104E /* UIView+PXYChainProgramming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PXYChainProgramming.h"; sourceTree = "<group>"; };
-		E63B4D132159E0B300DD104E /* UIView+PXYChainProgramming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PXYChainProgramming.m"; sourceTree = "<group>"; };
 		E644A77B21457670008C60AC /* PXYStartupTimeMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXYStartupTimeMonitor.h; sourceTree = "<group>"; };
 		E644A77C21457670008C60AC /* PXYStartupTimeMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXYStartupTimeMonitor.m; sourceTree = "<group>"; };
 		E673D85F2142683F0030117B /* LoadRuler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LoadRuler.mm; sourceTree = "<group>"; };
@@ -239,7 +234,6 @@
 		E61EA83E213CD4C900394FFF /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				E638CE74215380380070ABB0 /* PXYChainProgramming */,
 				E61EA840213CD74F00394FFF /* PXYAPMComponent */,
 			);
 			path = Component;
@@ -303,23 +297,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E638CE74215380380070ABB0 /* PXYChainProgramming */ = {
-			isa = PBXGroup;
-			children = (
-				E638CE75215380380070ABB0 /* UIView */,
-			);
-			path = PXYChainProgramming;
-			sourceTree = "<group>";
-		};
-		E638CE75215380380070ABB0 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				E63B4D122159E0B300DD104E /* UIView+PXYChainProgramming.h */,
-				E63B4D132159E0B300DD104E /* UIView+PXYChainProgramming.m */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
 		E644A77A21457670008C60AC /* PXYStartupTimeMonitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,7 +320,6 @@
 				E61EA88E213D186400394FFF /* NSObject+PXYKVO.h in Headers */,
 				E61EA890213D187500394FFF /* PXYRuntimeMethodSwizzledHelper.h in Headers */,
 				E61EA891213D187C00394FFF /* PXYRuntimeNSCodingHelper.h in Headers */,
-				E63B4D142159E0B300DD104E /* UIView+PXYChainProgramming.h in Headers */,
 				E61EA88F213D186D00394FFF /* NSObject+PXYRuntimeHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +449,6 @@
 			files = (
 				E61EA893213D18D700394FFF /* PXYMulticastDelegate.m in Sources */,
 				E61EA894213D18D700394FFF /* NSObject+PXYKVO.m in Sources */,
-				E63B4D162159E0B300DD104E /* UIView+PXYChainProgramming.m in Sources */,
 				E61EA895213D18D700394FFF /* NSObject+PXYRuntimeHelper.m in Sources */,
 				E644A77F21457670008C60AC /* PXYStartupTimeMonitor.m in Sources */,
 				E61EA896213D18D700394FFF /* PXYRuntimeMethodSwizzledHelper.m in Sources */,
@@ -496,7 +471,6 @@
 			files = (
 				E61EA6CD21379AD400394FFF /* main.m in Sources */,
 				E61EA6CC21379AD400394FFF /* ViewController.m in Sources */,
-				E63B4D152159E0B300DD104E /* UIView+PXYChainProgramming.m in Sources */,
 				E61EA6CE21379AD400394FFF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

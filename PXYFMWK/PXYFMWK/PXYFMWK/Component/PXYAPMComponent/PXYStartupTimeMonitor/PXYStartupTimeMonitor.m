@@ -88,6 +88,7 @@
                                    delegate:nil
                           cancelButtonTitle:@"确定"
                           otherButtonTitles:nil] show];
+        [self stopRecordingTime];
 #pragma clang disagnostic pop
         
     });
@@ -96,6 +97,7 @@
 #pragma mark - Private Methods
 - (void)stopRecordingTime {
     [self.timeRecordArray removeAllObjects];
+    self.tagTime = 0;
 }
 
 @end
