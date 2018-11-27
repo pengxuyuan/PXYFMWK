@@ -39,16 +39,23 @@
         //先尝试給源SEL添加IMP，这里是为了避免源SEL没有实现IMP的情况
         BOOL didAddMethod = class_addMethod(originalClass, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
         if (didAddMethod) {
+            // class_addMethod 添加成功则说明：originalClass 没有实现 originalSelector 对应的方法，并且将此时已经将 originalSelector 对应实现改成 swizzledMethod 的实现。
             //添加成功：说明源SEL没有实现IMP，将源SEL的IMP替换到交换SEL的IMP
             class_replaceMethod(swizzledClass, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
         } else {
+            // class_addMethod 添加失败则说明：originalClass 已经实现 originalSelector 对应的方法，不能再加了，这里直接交换实现就可以了。
             //添加失败：说明源SEL已经有IMP，直接将两个SEL的IMP交换即可
             method_exchangeImplementations(originalMethod, swizzledMethod);
         }
     } else {
         //先尝试給源SEL添加IMP，这里是为了避免源SEL没有实现IMP的情况
         BOOL hasMethod = class_addMethod(originalClass, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
-        if (!hasMethod) {
+        if (hasMethod) {
+            // class_addMethod 添加成功则说明：originalClass 没有实现 originalSelector 对应的方法，并且将此时已经将 originalSelector 对应实现改成 swizzledMethod 的实现。
+            //添加成功：说明源SEL没有实现IMP，将源SEL的IMP替换到交换SEL的IMP
+            
+        } else {
+            // class_addMethod 添加失败则说明：originalClass 已经实现 originalSelector 对应的方法，不能再加了，这里直接交换实现就可以了。
             BOOL didAddMethod = class_addMethod(originalClass,
                                                 swizzledSelector,
                                                 method_getImplementation(swizzledMethod),
@@ -60,8 +67,6 @@
                 } else {
                     swizzledMethod = class_getClassMethod(originalClass, swizzledSelector);
                 }
-                
-                
                 method_exchangeImplementations(originalMethod, swizzledMethod);
             }
         }
