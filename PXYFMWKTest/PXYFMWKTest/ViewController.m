@@ -40,25 +40,67 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%s",__func__);
-//    [PXYAPMLoadMonitor pxy_printLoadTimeConsuming];
     
     self.navigationController.navigationBar.translucent = NO;
     _imageView = [[AImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     _imageView.backgroundColor = [UIColor redColor];
     _imageView.center = self.view.center;
     [self.view addSubview:_imageView];
+    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
+     
+     
+     
+     //1.layer 直接设置圆角
+//     _imageView.layer.cornerRadius = 100;
+//     _imageView.layer.masksToBounds = YES;
     
-//    [self test1];
+     //2.画布的方式增加圆角
+//     [_imageView settingCornerWithCornerRadius:100];
+//    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
     
-    self.person = [Person new];
-    self.son = [Son new];
+     
+     //3.第三方库设置圆角
+//     [_imageView zy_cornerRadiusRoundingRect];
     
-//    [self.person test];
-//    [self.son test];
-//    [self.son performSelector:@selector(sayHello)];
-    
+     
+     //测试性能
+     for (int i = 0; i < 1000; i++) {
+         [self func1WithOrigialImage:[UIImage imageNamed:@"icon.jpeg"]];
+//         [_imageView settingCornerWithCornerRadius:100];
+//         [_imageView zy_cornerRadiusRoundingRect];
+//         [_imageView zy_cornerRadiusWithImage:_imageView.image cornerRadius:100 rectCornerType:UIRectEdgeAll];
+     }
 }
+
+//测试圆角图片的性能
+/*
+ 绘图几种方式：
+ 1.UIKit：UIGraphicsBeginImageContextWithOptions
+ 2.CoreGraphics：CGBitmapContextCreate & CGContextDrawImage
+ 3.ImageIO：CGImageSourceCreateThumbnailAtIndex
+ 4.CoreImage：CIContext
+ */
+
+//UIKit：UIGraphicsBeginImageContextWithOptions
+- (UIImage *)func1WithOrigialImage:(UIImage *)originalImage {
+    UIImage *cornerImage = originalImage;
+    CGSize canvasSize = originalImage.size;
+    CGFloat cornerRadius = canvasSize.width/2;
+    
+    CGRect rect = CGRectMake(0, 0, canvasSize.width, canvasSize.height);
+    UIGraphicsBeginImageContextWithOptions(canvasSize, NO, [UIScreen mainScreen].scale);
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+    CGContextAddPath(contextRef,path.CGPath);
+    CGContextClip(contextRef);
+    [cornerImage drawInRect:rect];
+    CGContextDrawPath(contextRef, kCGPathFillStroke);
+    cornerImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return cornerImage;
+}
+
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -74,35 +116,7 @@
 
 
 
-/*
- //    [_imageView zy_cornerRadiusRoundingRect];
- 
- _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
- //    _imageView.image = [UIImage imageNamed:@"222.png"];
- 
- 
- 
- //1.layer 直接设置圆角
- //    _imageView.layer.cornerRadius = 100;
- //    _imageView.layer.masksToBounds = YES;
- 
- //2.画布的方式增加圆角
- [_imageView settingCornerWithCornerRadius:100];
- //    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
- 
- 
- //3.第三方库设置圆角
- //    [_imageView zy_cornerRadiusRoundingRect];
- 
- 
- //测试性能
- //    for (int i = 0; i < 1000; i++) {
- //         [_imageView settingCornerWithCornerRadius:100];
- ////        [_imageView zy_cornerRadiusRoundingRect];
- ////        [_imageView zy_cornerRadiusWithImage:_imageView.image cornerRadius:100 rectCornerType:UIRectEdgeAll];
- //    }
- 
- */
+
 
 
 
