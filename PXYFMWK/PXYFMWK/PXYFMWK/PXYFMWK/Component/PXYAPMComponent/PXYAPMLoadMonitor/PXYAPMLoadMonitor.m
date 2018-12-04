@@ -36,6 +36,10 @@ static NSMutableArray *PXYAPM_LoadInfoArray;
 @implementation PXYAPMLoadMonitor
 /* !!!: 这里 Hook 还是有点问题，当 Load 调用了 super 的时候，死循环了 */
 + (void)load {
+    if (IsOpenLoadMonitor == 0) {
+        return;
+    }
+    
     PXYAPM_LoadInfoArray = [[NSMutableArray alloc] init];
     
     CFAbsoluteTime time1 =CFAbsoluteTimeGetCurrent();

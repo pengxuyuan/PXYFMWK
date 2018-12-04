@@ -31,7 +31,6 @@
 		E61EA8BE213D4FB800394FFF /* PXYFMWKLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E61EA8BB213D4FB800394FFF /* PXYFMWKLib.h */; };
 		E63B4D142159E0B300DD104E /* UIView+PXYChainProgramming.h in Headers */ = {isa = PBXBuildFile; fileRef = E63B4D122159E0B300DD104E /* UIView+PXYChainProgramming.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E63B4D162159E0B300DD104E /* UIView+PXYChainProgramming.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B4D132159E0B300DD104E /* UIView+PXYChainProgramming.m */; };
-		E6D1201021AC2F35004CB445 /* LoadRuler.mm in Sources */ = {isa = PBXBuildFile; fileRef = E6D1200821AC2F35004CB445 /* LoadRuler.mm */; };
 		E6D1201221AC2F35004CB445 /* LoadRuler.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D1200921AC2F35004CB445 /* LoadRuler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6D1201321AC2F35004CB445 /* PXYAPMLoadMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D1200A21AC2F35004CB445 /* PXYAPMLoadMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6D1201521AC2F35004CB445 /* PXYAPMLoadMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D1200B21AC2F35004CB445 /* PXYAPMLoadMonitor.m */; };
@@ -471,7 +470,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6D1201021AC2F35004CB445 /* LoadRuler.mm in Sources */,
 				E61EA893213D18D700394FFF /* PXYMulticastDelegate.m in Sources */,
 				E61EA894213D18D700394FFF /* NSObject+PXYKVO.m in Sources */,
 				E6D1201921AC2F35004CB445 /* PXYStartupTimeMonitor.m in Sources */,

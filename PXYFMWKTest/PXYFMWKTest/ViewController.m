@@ -19,26 +19,29 @@
 
 #import "UIImageView+CornerRadius.h"
 
+#import "Person.h"
+#import "Son.h"
+
+#import "RSSwizzle.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) AImageView *imageView;
+
+@property (nonatomic, strong) Person *person;
+@property (nonatomic, strong) Son *son;
+
 @end
 
 
 @implementation ViewController
 
 
-+ (void)load {
-    [self pxy_swizzleMethodWithOriginalSelector:@selector(viewDidLoad) swizzledSelector:@selector(viewDidLoad111)];
-    [self pxy_swizzleMethodWithOriginalSelector:@selector(viewWillAppear:) swizzledSelector:@selector(viewWillAppear111:)];
-    
-    [self pxy_swizzleMethodWithOriginalClass:[AImageView class] originalSelector:@selector(test) swizzledClass:self swizzledSelector:@selector(test1) isInstanceMethod:YES];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     NSLog(@"%s",__func__);
+//    [PXYAPMLoadMonitor pxy_printLoadTimeConsuming];
     
     self.navigationController.navigationBar.translucent = NO;
     _imageView = [[AImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
@@ -46,23 +49,16 @@
     _imageView.center = self.view.center;
     [self.view addSubview:_imageView];
     
-    [self test1];
-}
-
-- (void)viewDidLoad111 {
-    NSLog(@"%s",__func__);
-    [self viewDidLoad111];
-}
-
-- (void)viewWillAppear111:(BOOL)animated {
-    NSLog(@"%s",__func__);
-    [self viewWillAppear111:animated];
-}
-
-- (void)test1 {
+//    [self test1];
+    
+    self.person = [Person new];
+    self.son = [Son new];
+    
+//    [self.person test];
+//    [self.son test];
+//    [self.son performSelector:@selector(sayHello)];
     
 }
-
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

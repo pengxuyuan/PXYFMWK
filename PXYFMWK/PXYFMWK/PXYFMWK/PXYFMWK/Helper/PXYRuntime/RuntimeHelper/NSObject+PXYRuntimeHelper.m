@@ -24,7 +24,7 @@
  交换方法，将 originalClass 中的 originalSelector 替换成 swizzledClass 类中的 swizzledSelector 方法
  */
 + (void)pxy_swizzleMethodWithOriginalClass:(Class)originalClass originalSelector:(SEL)originalSelector swizzledClass:(Class)swizzledClass swizzledSelector:(SEL)swizzledSelector isInstanceMethod:(BOOL)isInstanceMethod {
-    
+    NSLog(@"即将交换方法：将 %@ 类的 %@ 方法与 %@ 类的 %@ 方法交换",NSStringFromClass(originalClass),NSStringFromSelector(originalSelector),NSStringFromClass(swizzledClass),NSStringFromSelector(swizzledSelector));
     SEL originalSeletor = originalSelector;
     SEL swizzledSeletor = swizzledSelector;
     
@@ -34,6 +34,19 @@
         originalMethod = class_getClassMethod(originalClass, originalSeletor);
         swizzledMethod = class_getClassMethod(swizzledClass, swizzledSeletor);
     }
+    
+    
+    //先尝试給源SEL添加IMP，这里是为了避免源SEL没有实现IMP的情况
+//    BOOL didAddMethod = class_addMethod(originalClass, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+//    if (didAddMethod) {
+//        // class_addMethod 添加成功则说明：originalClass 没有实现 originalSelector 对应的方法，并且将此时已经将 originalSelector 对应实现改成 swizzledMethod 的实现。
+//        //添加成功：说明源SEL没有实现IMP，将源SEL的IMP替换到交换SEL的IMP
+//        class_replaceMethod(swizzledClass, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+//    } else {
+//        // class_addMethod 添加失败则说明：originalClass 已经实现 originalSelector 对应的方法，不能再加了，这里直接交换实现就可以了。
+//        //添加失败：说明源SEL已经有IMP，直接将两个SEL的IMP交换即可
+//        method_exchangeImplementations(originalMethod, swizzledMethod);
+//    }
     
     if (originalClass == swizzledClass) {
         //先尝试給源SEL添加IMP，这里是为了避免源SEL没有实现IMP的情况
@@ -53,14 +66,14 @@
         if (hasMethod) {
             // class_addMethod 添加成功则说明：originalClass 没有实现 originalSelector 对应的方法，并且将此时已经将 originalSelector 对应实现改成 swizzledMethod 的实现。
             //添加成功：说明源SEL没有实现IMP，将源SEL的IMP替换到交换SEL的IMP
-            
+            class_replaceMethod(swizzledClass, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
         } else {
             // class_addMethod 添加失败则说明：originalClass 已经实现 originalSelector 对应的方法，不能再加了，这里直接交换实现就可以了。
             BOOL didAddMethod = class_addMethod(originalClass,
                                                 swizzledSelector,
                                                 method_getImplementation(swizzledMethod),
                                                 method_getTypeEncoding(swizzledMethod));
-            
+
             if (didAddMethod) {
                 if (isInstanceMethod) {
                     swizzledMethod = class_getInstanceMethod(originalClass, swizzledSelector);
