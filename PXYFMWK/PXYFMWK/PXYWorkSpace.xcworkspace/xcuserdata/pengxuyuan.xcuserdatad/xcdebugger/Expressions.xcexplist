@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "(Block)blk">
+            </PersistentString>
+            <PersistentString
+               value = "(Block)block">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
