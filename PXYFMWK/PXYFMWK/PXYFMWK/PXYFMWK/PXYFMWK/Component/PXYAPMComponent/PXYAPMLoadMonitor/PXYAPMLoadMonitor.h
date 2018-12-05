@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 
 /**
+ 是否开启 PXYAPMLoadMonitor 功能
+ 0：关闭
+ 1：开启
+ */
+static const int IsOpenLoadMonitor = 0;
+
+/**
  启动 Load 函数监测
  */
 @interface PXYAPMLoadMonitor : NSObject

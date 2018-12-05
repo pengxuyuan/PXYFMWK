@@ -7,21 +7,30 @@
 //
 
 #import "UIImageView+ImageCorner.h"
+#import <objc/runtime.h>
+
+//标示是否处理过的图片
+static const char kProcessedImage;
 
 typedef void(^CornerImageCompleteBlock)(UIImage *cornerImage);
 
 @interface UIImageView ()
 
+//是否添加了 image 的观察者
+@property (nonatomic, assign) BOOL hadImageChangedOberver;
 
 @end
 
 @implementation UIImageView (ImageCorner)
 
 - (void)settingCornerWithCornerRadius:(CGFloat)cornerRadius {
-    [self p_addObserver];
+    if (!self.hadImageChangedOberver) {
+        [self p_addObserver];
+    }
     
     
     [self p_settingCornerWithImage:self.image canvasSize:self.frame.size cornerRadius:cornerRadius completeBlock:^(UIImage *cornerImage) {
+        objc_setAssociatedObject(cornerImage, &kProcessedImage, @(1), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         self.image = cornerImage;
     }];
 }
@@ -66,15 +75,26 @@ typedef void(^CornerImageCompleteBlock)(UIImage *cornerImage);
 
 #pragma mark -
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-//    if ([keyPath isEqualToString:@"image"]) {
-//        UIImage *newImage = change[NSKeyValueChangeNewKey];
-//        if (newImage == nil ||  newImage == self.image) {
-//            return;
-//        }
-//
-//        [self settingCornerWithCornerRadius:100];
-//    }
+    if ([keyPath isEqualToString:@"image"]) {
+        UIImage *newImage = change[NSKeyValueChangeNewKey];
+        if (newImage == nil) return;
+        if ([objc_getAssociatedObject(newImage, &kProcessedImage) integerValue] == 1) {
+            return;
+        }
+
+        [self settingCornerWithCornerRadius:100];
+    }
 }
+
+#pragma mark - Getter & Setter
+- (BOOL)hadImageChangedOberver {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
+
+- (void)setHadImageChangedOberver:(BOOL)hadImageChangedOberver {
+    objc_setAssociatedObject(self, @selector(hadImageChangedOberver), @(hadImageChangedOberver), OBJC_ASSOCIATION_ASSIGN);
+}
+
 
 /*
  绘图几种方式：

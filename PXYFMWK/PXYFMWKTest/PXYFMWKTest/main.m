@@ -11,6 +11,7 @@
 #import <PXYFMWKDYLIB/PXYFMWKDYLIB.h>
 
 int main(int argc, char * argv[]) {
+    NSLog(@"main-----------");
     [[PXYStartupTimeMonitor shareInstance] appStartRecordingTime];
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));

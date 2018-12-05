@@ -10,4 +10,6 @@
 
 @interface AImageView : UIImageView
 
+- (void)test;
+
 @end

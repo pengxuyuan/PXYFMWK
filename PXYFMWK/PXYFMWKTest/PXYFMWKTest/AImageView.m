@@ -28,6 +28,10 @@
 //    return CGRectContainsPoint(hitFrame, point);
 //}
 
+- (void)test {
+    NSLog(@"%s",__func__);
+}
+
 
 @end
 
