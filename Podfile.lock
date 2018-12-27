@@ -1,0 +1,17 @@
+PODS:
+  - Graver (1.0.0):
+    - SDWebImage (= 4.2.1)
+  - SDWebImage (4.2.1):
+    - SDWebImage/Core (= 4.2.1)
+  - SDWebImage/Core (4.2.1)
+
+DEPENDENCIES:
+  - Graver
+
+SPEC CHECKSUMS:
+  Graver: e158dbc27f50fa012b2e8a9b64b7fd4b8f3d9139
+  SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
+
+PODFILE CHECKSUM: ebf18ce01412e2128abe04c61e3bb8cc120152fd
+
+COCOAPODS: 1.4.0
