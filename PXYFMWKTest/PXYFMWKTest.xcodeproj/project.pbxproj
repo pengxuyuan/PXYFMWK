@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28DAE1148854376F2321414F /* libPods-PXYFMWKTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 016A70C038F7F2333590465C /* libPods-PXYFMWKTest.a */; };
 		E6011F7C21AFFB0D00FE7D3F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E6011F7B21AFFB0D00FE7D3F /* Person.m */; };
 		E6011F7F21AFFB4600FE7D3F /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = E6011F7E21AFFB4600FE7D3F /* Son.m */; };
 		E60815C62177261E00C7D241 /* UIResponder+PXYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E60815C52177261E00C7D241 /* UIResponder+PXYRouter.m */; };
@@ -98,6 +99,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		016A70C038F7F2333590465C /* libPods-PXYFMWKTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PXYFMWKTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A2D428996827407303DDD31 /* Pods-PXYFMWKTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXYFMWKTest.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest.release.xcconfig"; sourceTree = "<group>"; };
 		E6011F7A21AFFB0D00FE7D3F /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E6011F7B21AFFB0D00FE7D3F /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E6011F7D21AFFB4600FE7D3F /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 		E692FA4621B7D2D7008F6C68 /* TestLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLayer.m; sourceTree = "<group>"; };
 		E6D62F94217587CE005554AF /* PXYHashHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYHashHelper.h; sourceTree = "<group>"; };
 		E6D62F95217587CE005554AF /* PXYHashHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYHashHelper.m; sourceTree = "<group>"; };
+		F1D220B63AF65D2AD97FF878 /* Pods-PXYFMWKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXYFMWKTest.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,12 +217,22 @@
 				E67DEA752154D9C200AE5895 /* JavaScriptCore.framework in Frameworks */,
 				E636FD99213E24DB00B50A74 /* PXYFMWKDYLIB.framework in Frameworks */,
 				E67DEA732154D95500AE5895 /* JSPatchPlatform.framework in Frameworks */,
+				28DAE1148854376F2321414F /* libPods-PXYFMWKTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A1DAC3C04364C3590A2CD5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1D220B63AF65D2AD97FF878 /* Pods-PXYFMWKTest.debug.xcconfig */,
+				1A2D428996827407303DDD31 /* Pods-PXYFMWKTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E60815C32177260900C7D241 /* PXYRouter */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +495,7 @@
 				E61EA8142137CDF000394FFF /* libPXYFMWKLib.a */,
 				E61EA7F52137C55000394FFF /* libPXYFWMKLib.a */,
 				E61EA7EC2137C44C00394FFF /* WSLibraryFirst.xcodeproj */,
+				016A70C038F7F2333590465C /* libPods-PXYFMWKTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -501,6 +516,7 @@
 				E61EA75621379B9D00394FFF /* PXYFMWKTest */,
 				E6225A062112FE36003BFE79 /* Products */,
 				E61EA7EB2137C44B00394FFF /* Frameworks */,
+				6A1DAC3C04364C3590A2CD5B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -546,10 +562,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6225A1B2112FE39003BFE79 /* Build configuration list for PBXNativeTarget "PXYFMWKTest" */;
 			buildPhases = (
+				04D73324303EC21721147603 /* [CP] Check Pods Manifest.lock */,
 				E6225A012112FE36003BFE79 /* Sources */,
 				E6225A022112FE36003BFE79 /* Frameworks */,
 				E6225A032112FE36003BFE79 /* Resources */,
 				E636FD9B213E24DB00B50A74 /* Embed Frameworks */,
+				BD07556D2CB2A0F2B6E1092F /* [CP] Embed Pods Frameworks */,
+				4EF0D7271684C6517F72371D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -635,6 +654,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04D73324303EC21721147603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PXYFMWKTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF0D7271684C6517F72371D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD07556D2CB2A0F2B6E1092F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E6225A012112FE36003BFE79 /* Sources */ = {
@@ -820,6 +890,7 @@
 		};
 		E6225A1C2112FE39003BFE79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D220B63AF65D2AD97FF878 /* Pods-PXYFMWKTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -831,10 +902,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PXYFMWKTest/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC33";
 				PRODUCT_BUNDLE_IDENTIFIER = pengxuyuan.ImageCorner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -844,6 +912,7 @@
 		};
 		E6225A1D2112FE39003BFE79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A2D428996827407303DDD31 /* Pods-PXYFMWKTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -855,10 +924,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PXYFMWKTest/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC33";
 				PRODUCT_BUNDLE_IDENTIFIER = pengxuyuan.ImageCorner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
