@@ -24,9 +24,9 @@ typedef void(^CornerImageCompleteBlock)(UIImage *cornerImage);
 @implementation UIImageView (ImageCorner)
 
 - (void)settingCornerWithCornerRadius:(CGFloat)cornerRadius {
-    if (!self.hadImageChangedOberver) {
-        [self p_addObserver];
-    }
+//    if (!self.hadImageChangedOberver) {
+//        [self p_addObserver];
+//    }
     
     
     [self p_settingCornerWithImage:self.image canvasSize:self.frame.size cornerRadius:cornerRadius completeBlock:^(UIImage *cornerImage) {
@@ -40,6 +40,7 @@ typedef void(^CornerImageCompleteBlock)(UIImage *cornerImage);
 // 将图片转成成圆角图片
 // 使用 @autoreleasepool 是为了降低内存的峰值
 - (void)p_settingCornerWithImage:(UIImage *)image canvasSize:(CGSize)canvasSize cornerRadius:(CGFloat)cornerRadius completeBlock:(CornerImageCompleteBlock)completeBlock {
+    
     __block UIImage *cornerImage = image;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

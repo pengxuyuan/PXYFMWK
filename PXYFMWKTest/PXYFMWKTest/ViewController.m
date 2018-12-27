@@ -23,6 +23,7 @@
 #import "Son.h"
 
 #import "RSSwizzle.h"
+#import "TestView.h"
 
 @interface ViewController ()
 
@@ -30,6 +31,10 @@
 
 @property (nonatomic, strong) Person *person;
 @property (nonatomic, strong) Son *son;
+
+@property (nonatomic, strong) TestView *testView;
+@property (nonatomic, strong) CALayer *layer1;
+
 
 @end
 
@@ -40,37 +45,55 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationController.navigationBar.translucent = NO;
-    _imageView = [[AImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    _imageView.backgroundColor = [UIColor redColor];
-    _imageView.center = self.view.center;
-    [self.view addSubview:_imageView];
-    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
-     
-     
-     
-     //1.layer 直接设置圆角
-//     _imageView.layer.cornerRadius = 100;
-//     _imageView.layer.masksToBounds = YES;
-    
-     //2.画布的方式增加圆角
-//     [_imageView settingCornerWithCornerRadius:100];
+//    [self.navigationController.navigationBar setHidden:YES];
+//    self.navigationController.navigationBar.translucent = NO;
+//    _imageView = [[AImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+//    _imageView.backgroundColor = [UIColor redColor];
+//    _imageView.center = self.view.center;
+//    [self.view addSubview:_imageView];
 //    _imageView.image = [UIImage imageNamed:@"icon.jpeg"];
     
-     
-     //3.第三方库设置圆角
+    //    1.layer 直接设置圆角
+//     _imageView.layer.cornerRadius = 100;
+//     _imageView.layer.masksToBounds = YES;
+
+    //    2.画布的方式增加圆角
+     [_imageView settingCornerWithCornerRadius:100];
+//    _imageView.image = [UIImage imageNamed:@"222.png"];
+
+
+    //    3.第三方库设置圆角
 //     [_imageView zy_cornerRadiusRoundingRect];
+
+
+//     //测试性能
+//     for (int i = 0; i < 1000; i++) {
+//         [self func1WithOrigialImage:[UIImage imageNamed:@"icon.jpeg"]];
+////         [_imageView settingCornerWithCornerRadius:100];
+////         [_imageView zy_cornerRadiusRoundingRect];
+////         [_imageView zy_cornerRadiusWithImage:_imageView.image cornerRadius:100 rectCornerType:UIRectEdgeAll];
+//     }
     
-     
-     //测试性能
-     for (int i = 0; i < 1000; i++) {
-         [self func1WithOrigialImage:[UIImage imageNamed:@"icon.jpeg"]];
-//         [_imageView settingCornerWithCornerRadius:100];
-//         [_imageView zy_cornerRadiusRoundingRect];
-//         [_imageView zy_cornerRadiusWithImage:_imageView.image cornerRadius:100 rectCornerType:UIRectEdgeAll];
-     }
+    
+    self.testView = [[TestView alloc] initWithFrame:self.view.bounds];
+    self.testView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.testView];
+    //
+    
 }
+
+/*
+ 性能方案测试： CPU 内存 线程 耗时
+ 1、第三方框架 zy_cornerRadiusWithImage：CPU持续上涨、内存持续上涨，卡住主线程
+ 2、settingCornerWithCornerRadius:CPU 持续上涨、内存稳定、不卡主线程
+ 
+ 
+ 3、UIKit：UIGraphicsBeginImageContextWithOptions：CPU 持续上涨、内存持续上涨，卡主主线程
+ 4、CoreGraphics
+ 
+ 
+ 
+ */
 
 //测试圆角图片的性能
 /*
@@ -96,32 +119,109 @@
     [cornerImage drawInRect:rect];
     CGContextDrawPath(contextRef, kCGPathFillStroke);
     cornerImage = UIGraphicsGetImageFromCurrentImageContext();
+    
     UIGraphicsEndImageContext();
     
     return cornerImage;
 }
 
-
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    self.view.backgroundColor = [UIColor redColor];
+//2.CoreGraphics：CGBitmapContextCreate & CGContextDrawImage
+- (void)func2WithOrigialImage:(UIImage *)originalImage {
     
-//    TestViewController *textVC = [TestViewController new];
-//    [self.navigationController pushViewController:textVC animated:YES];
-
     
-    _imageView.image = [UIImage imageNamed:@"222.png"];
-
+    
+    
 }
 
 
+//self.testView = [[TestView alloc] initWithFrame:self.view.bounds];
+//self.testView.backgroundColor = [UIColor redColor];
+////    self.testView.layer.backgroundColor = [UIColor yellowColor].CGColor;
+//[self.view addSubview:self.testView];
+//
+//    NSLog(@"self.testView fram:%@ --- self.testView.layer.contentsScale: %f", NSStringFromCGRect(self.testView.frame),self.testView.layer.contentsScale);
+
+//    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    view1.backgroundColor = [UIColor yellowColor];
+//    [self.testView addSubview:view1];
+
+//    self.layer1 = [[CALayer alloc] init];
+//    self.layer1.frame = CGRectMake(0, 0, 100, 100);
+//    self.layer1.backgroundColor = [UIColor yellowColor].CGColor;
+//    [self.testView.layer addSublayer:self.layer1];
 
 
-
-
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    //    self.view.backgroundColor = [UIColor redColor];
+//
+//    //    TestViewController *textVC = [TestViewController new];
+//    //    [self.navigationController pushViewController:textVC animated:YES];
+//
+////    NSLog(@"%s",__func__);
+////    _imageView.image = [UIImage imageNamed:@"222.png"];
+//
+////    self.testView.frame = CGRectMake(self.testView.frame.origin.x, self.testView.frame.origin.y + 100, self.testView.frame.size.width, self.testView.frame.size.height);
+////    self.testView.layer.frame = CGRectMake(self.testView.layer.frame.origin.x, self.testView.layer.frame.origin.y + 100, self.testView.layer.frame.size.width, self.testView.layer.frame.size.height);
+////    self.layer1.frame = CGRectMake(self.layer1.frame.origin.x, self.layer1.frame.origin.y + 100, self.layer1.frame.size.width, self.layer1.frame.size.height);
+//
+//
+////    NSLog(@"block outside:%@",[self.testView actionForLayer:self.testView.layer forKey:@"position"]);
+////
+////    [UIView animateWithDuration:0.2 animations:^{
+////        self.testView.frame = CGRectMake(self.testView.frame.origin.x, self.testView.frame.origin.y + 100, self.testView.frame.size.width, self.testView.frame.size.height);
+////
+////        NSLog(@"block inside:%@",[self.testView actionForLayer:self.testView.layer forKey:@"position"]);
+////    }];
+////
+////
+//////    self.layer1 addAnimation:<#(nonnull CAAnimation *)#> forKey:<#(nullable NSString *)#>
+////
+//
+//
+////    self.testView = [[TestView alloc] initWithFrame:self.view.bounds];
+////    //    self.testView.frame = CGRectMake(0, 0, 300, 300);
+////    self.testView.backgroundColor = [UIColor redColor];
+////    //    self.testView.layer.backgroundColor = [UIColor yellowColor].CGColor;
+////    [self.view addSubview:self.testView];
+////
+////    CGFloat memoryCost = self.testView.frame.size.width * self.testView.frame.size.height * self.testView.layer.contentsScale * 4 / 1024 / 1024;
+////    NSLog(@"self.testView fram:%@ --- self.testView.layer.contentsScale: %f memory:%f", NSStringFromCGRect(self.testView.frame),self.testView.layer.contentsScale,memoryCost);
+//
+//    UILabel *label = [[UILabel alloc] initWithFrame:self.view.bounds];
+//    label.text = @"我😀😀我我问我我我";
+////    label.textColor = [UIColor yellowColor];
+//    [self.view addSubview:label];
+//
+//
+//
+//
+//    //1. Block 输出结果
+////    __block NSString *key = @"AAA";
+////    objc_setAssociatedObject(self, &key, @1, OBJC_ASSOCIATION_ASSIGN);
+////    id a = objc_getAssociatedObject(self, &key);
+////
+////    void (^block)(void) = ^ {
+////        objc_setAssociatedObject(self, &key, @2, OBJC_ASSOCIATION_ASSIGN);
+////    };
+////
+////    id m = objc_getAssociatedObject(self, &key);
+////    block();
+////    id n = objc_getAssociatedObject(self, &key);
+////    objc_setAssociatedObject(self, &key, @3, OBJC_ASSOCIATION_ASSIGN);
+////    id p = objc_getAssociatedObject(self, &key);
+////    NSLog(@"%@ --- %@ --- %@ --- %@",a,m,n,p);
+//
+//
+//    //2. __Block 在 ARC 和 MRC 环境的区别
+//    //3. isEqual 和 hash 方法
+//}
 
 
 @end
+
+
+
+
 
 //1.pthread
 //    pthread_t pthread;

@@ -61,6 +61,8 @@
 		E67DEA732154D95500AE5895 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DEA722154D95400AE5895 /* JSPatchPlatform.framework */; };
 		E67DEA752154D9C200AE5895 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */; };
 		E67DEA792154E66400AE5895 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = E67DEA782154E66300AE5895 /* Aspects.m */; };
+		E692FA4421B7D2C9008F6C68 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = E692FA4321B7D2C9008F6C68 /* TestView.m */; };
+		E692FA4721B7D2D7008F6C68 /* TestLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E692FA4621B7D2D7008F6C68 /* TestLayer.m */; };
 		E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D62F95217587CE005554AF /* PXYHashHelper.m */; };
 /* End PBXBuildFile section */
 
@@ -195,6 +197,10 @@
 		E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		E67DEA772154E66300AE5895 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		E67DEA782154E66300AE5895 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		E692FA4221B7D2C9008F6C68 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		E692FA4321B7D2C9008F6C68 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		E692FA4521B7D2D7008F6C68 /* TestLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLayer.h; sourceTree = "<group>"; };
+		E692FA4621B7D2D7008F6C68 /* TestLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLayer.m; sourceTree = "<group>"; };
 		E6D62F94217587CE005554AF /* PXYHashHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYHashHelper.h; sourceTree = "<group>"; };
 		E6D62F95217587CE005554AF /* PXYHashHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYHashHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,6 +256,10 @@
 				E61EA76A21379B9D00394FFF /* AppDelegate.m */,
 				E61EA7AF21379B9D00394FFF /* ViewController.h */,
 				E61EA75D21379B9D00394FFF /* ViewController.m */,
+				E692FA4221B7D2C9008F6C68 /* TestView.h */,
+				E692FA4321B7D2C9008F6C68 /* TestView.m */,
+				E692FA4521B7D2D7008F6C68 /* TestLayer.h */,
+				E692FA4621B7D2D7008F6C68 /* TestLayer.m */,
 				E6011F7A21AFFB0D00FE7D3F /* Person.h */,
 				E6011F7B21AFFB0D00FE7D3F /* Person.m */,
 				E625CE7821B01BE1005A7F14 /* Person+PXY.h */,
@@ -646,6 +656,7 @@
 				E61EA7BF21379B9D00394FFF /* PXYDeviceCpuHelper.m in Sources */,
 				E61EA7CC21379B9D00394FFF /* YYCache.m in Sources */,
 				E6180E47219C02E900C221F7 /* TestViewController.m in Sources */,
+				E692FA4721B7D2D7008F6C68 /* TestLayer.m in Sources */,
 				E61EA7D221379B9D00394FFF /* PXYFPSLabel.m in Sources */,
 				E61EA7C921379B9D00394FFF /* PXYMonitorDataDetailController.m in Sources */,
 				E61EA7C121379B9D00394FFF /* PXYWeakProxy.m in Sources */,
@@ -663,6 +674,7 @@
 				E61EA7CB21379B9D00394FFF /* YYDiskCache.m in Sources */,
 				E61EA7C421379B9D00394FFF /* PXYDataMonitorManager.m in Sources */,
 				E6011F7C21AFFB0D00FE7D3F /* Person.m in Sources */,
+				E692FA4421B7D2C9008F6C68 /* TestView.m in Sources */,
 				E63ADEED21798401000104F4 /* NSData+ImageContentType.m in Sources */,
 				E61EA7C221379B9D00394FFF /* PXYFPSHelper.m in Sources */,
 				E61EA7C321379B9D00394FFF /* PXYMonitorDataCacheHelper.m in Sources */,
