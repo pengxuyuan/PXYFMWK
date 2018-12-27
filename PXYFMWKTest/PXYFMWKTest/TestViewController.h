@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, TestViewType) {
+    TestViewType1,
+    TestViewType2
+};
+
 @interface TestViewController : UIViewController
+
+@property (nonatomic, assign) TestViewType type;
 
 @end

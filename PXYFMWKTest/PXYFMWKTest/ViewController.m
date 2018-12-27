@@ -58,7 +58,7 @@
 //     _imageView.layer.masksToBounds = YES;
 
     //    2.画布的方式增加圆角
-     [_imageView settingCornerWithCornerRadius:100];
+//     [_imageView settingCornerWithCornerRadius:100];
 //    _imageView.image = [UIImage imageNamed:@"222.png"];
 
 
@@ -75,12 +75,35 @@
 //     }
     
     
-    self.testView = [[TestView alloc] initWithFrame:self.view.bounds];
-    self.testView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:self.testView];
-    //
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 80)];
+    btn1.center = self.view.center;
+    [btn1 setTitle:@"UIView&CALayer" forState:UIControlStateNormal];
+    [btn1 setBackgroundColor:[UIColor redColor]];
+    [btn1 addTarget:self action:@selector(btn1Click) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn1];
+    
+    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(btn1.frame.origin.x, CGRectGetMaxY(btn1.frame) + 30, 200, 80)];
+    [btn2 setTitle:@"Graver" forState:UIControlStateNormal];
+    [btn2 setBackgroundColor:[UIColor redColor]];
+    [btn2 addTarget:self action:@selector(btn2Click) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn2];
+    
+
     
 }
+
+- (void)btn1Click {
+    TestViewController *testVC = [TestViewController new];
+    testVC.type = TestViewType1;
+    [self.navigationController pushViewController:testVC animated:YES];
+}
+
+- (void)btn2Click {
+    TestViewController *testVC = [TestViewController new];
+    testVC.type = TestViewType2;
+    [self.navigationController pushViewController:testVC animated:YES];
+}
+
 
 /*
  性能方案测试： CPU 内存 线程 耗时

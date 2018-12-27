@@ -60,6 +60,11 @@
     [super addAnimation:anim forKey:key];
 }
 
+- (void)setMasksToBounds:(BOOL)masksToBounds {
+    NSLog(@"%s",__func__);
+    return [super setMasksToBounds:masksToBounds];
+}
+
 
 
 @end

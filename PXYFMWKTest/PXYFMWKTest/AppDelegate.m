@@ -14,8 +14,6 @@
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) NSTimer *timer;
-
 @end
 
 @implementation AppDelegate
@@ -33,19 +31,10 @@
 //    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCufJD163unTsEKzMGkCIoN5mop\ngGv8XXxRmXcMUxlPwH4ay9MSeJNsRjpQKv7/npjrEAAflMLiEbECsaIzn5R9Vsyb\n0ZgdQSki1oUojrR7mMU7h/Bs+tR4qSARksG87LvJv59v3eSpN3C6gxByGdSDRo02\n0VhGz3Mc4eHS2xkmywIDAQAB\n-----END PUBLIC KEY-----"];
 //    [JSPatch sync];
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        NSLog(@"111");
-    }];
-    
-//    self.timer  = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(test) userInfo:nil repeats:YES];
-    
     
     return YES;
 }
 
-- (void)test {
-    NSLog(@"111");
-}
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
@@ -61,13 +50,6 @@
     
 //    [self.timer invalidate];
 }
-
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    [self.timer invalidate];
-}
-
 
 
 

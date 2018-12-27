@@ -38,13 +38,13 @@
 }
 
 
-- (void)drawRect:(CGRect)rect {
-    NSLog(@"%s",__func__);
-
-//    self.layer.contents = nil;
-
-    [super drawRect:rect];
-}
+//- (void)drawRect:(CGRect)rect {
+//    NSLog(@"%s",__func__);
+//
+////    self.layer.contents = nil;
+//
+//    [super drawRect:rect];
+//}
 
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
     NSLog(@"%s",__func__);
@@ -54,6 +54,11 @@
 - (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event {
     NSLog(@"%s",__func__);
     return [super actionForLayer:layer forKey:event];
+}
+
+- (void)setClipsToBounds:(BOOL)clipsToBounds {
+    NSLog(@"%s",__func__);
+    [super setClipsToBounds:clipsToBounds];
 }
 
 @end
