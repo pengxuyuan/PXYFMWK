@@ -9,10 +9,19 @@
 #import "AppDelegate.h"
 #import "PXYMonitorManager.h"
 #import <PXYFMWKDYLIB/PXYFMWKDYLIB.h>
-
 #import <JSPatchPlatform/JSPatch.h>
 
+#import "AppDelegate+AAppDelegate.h"
+#import "AppDelegate+BAppDelegate.h"
+#import "CAppDelegate.h"
+#import "DAppDelegate.h"
+
+#import <objc/runtime.h>
+
+
 @interface AppDelegate ()
+
+@property (nonatomic, strong) PXYMulticastDelegate<UIApplicationDelegate> *multicastDelegateManager;
 
 @end
 
@@ -32,6 +41,18 @@
 //    [JSPatch sync];
     
     
+    //AppDelegate 拆分
+    [self buildAAppDelegate];
+    [self buildBAppDelegate];
+    
+    CAppDelegate *c = [CAppDelegate new];
+    DAppDelegate *d = [DAppDelegate new];
+    
+    [self.multicastDelegateManager addDelegate:c delegateQueue:nil];
+    [self.multicastDelegateManager addDelegate:d delegateQueue:nil];
+    
+    [self.multicastDelegateManager application:application didFinishLaunchingWithOptions:launchOptions];
+    
     return YES;
 }
 
@@ -49,6 +70,16 @@
 //    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive End"];
     
 //    [self.timer invalidate];
+    
+    [self.multicastDelegateManager applicationDidBecomeActive:application];
+}
+
+#pragma mark - Lazzy load
+- (PXYMulticastDelegate *)multicastDelegateManager {
+    if (_multicastDelegateManager == nil) {
+        _multicastDelegateManager = [[PXYMulticastDelegate alloc] init];
+    }
+    return _multicastDelegateManager;
 }
 
 

@@ -10,6 +10,10 @@
 		28DAE1148854376F2321414F /* libPods-PXYFMWKTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 016A70C038F7F2333590465C /* libPods-PXYFMWKTest.a */; };
 		E6011F7C21AFFB0D00FE7D3F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E6011F7B21AFFB0D00FE7D3F /* Person.m */; };
 		E6011F7F21AFFB4600FE7D3F /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = E6011F7E21AFFB4600FE7D3F /* Son.m */; };
+		E60320AA2211DD8F0077D663 /* AppDelegate+AAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E60320A92211DD8F0077D663 /* AppDelegate+AAppDelegate.m */; };
+		E60320AD2211DDBC0077D663 /* AppDelegate+BAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E60320AC2211DDBC0077D663 /* AppDelegate+BAppDelegate.m */; };
+		E60320B02211DF410077D663 /* CAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E60320AF2211DF410077D663 /* CAppDelegate.m */; };
+		E60320B32211DF520077D663 /* DAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E60320B22211DF520077D663 /* DAppDelegate.m */; };
 		E60815C62177261E00C7D241 /* UIResponder+PXYRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E60815C52177261E00C7D241 /* UIResponder+PXYRouter.m */; };
 		E60815C92177291B00C7D241 /* AImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60815C82177291B00C7D241 /* AImageView.m */; };
 		E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E60B971C216F55B900F43B27 /* PXYDesHelper.m */; };
@@ -105,6 +109,14 @@
 		E6011F7B21AFFB0D00FE7D3F /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E6011F7D21AFFB4600FE7D3F /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
 		E6011F7E21AFFB4600FE7D3F /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
+		E60320A82211DD8F0077D663 /* AppDelegate+AAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AAppDelegate.h"; sourceTree = "<group>"; };
+		E60320A92211DD8F0077D663 /* AppDelegate+AAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AAppDelegate.m"; sourceTree = "<group>"; };
+		E60320AB2211DDBC0077D663 /* AppDelegate+BAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BAppDelegate.h"; sourceTree = "<group>"; };
+		E60320AC2211DDBC0077D663 /* AppDelegate+BAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BAppDelegate.m"; sourceTree = "<group>"; };
+		E60320AE2211DF410077D663 /* CAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAppDelegate.h; sourceTree = "<group>"; };
+		E60320AF2211DF410077D663 /* CAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAppDelegate.m; sourceTree = "<group>"; };
+		E60320B12211DF510077D663 /* DAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAppDelegate.h; sourceTree = "<group>"; };
+		E60320B22211DF520077D663 /* DAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAppDelegate.m; sourceTree = "<group>"; };
 		E60815C42177261E00C7D241 /* UIResponder+PXYRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+PXYRouter.h"; sourceTree = "<group>"; };
 		E60815C52177261E00C7D241 /* UIResponder+PXYRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+PXYRouter.m"; sourceTree = "<group>"; };
 		E60815C72177291B00C7D241 /* AImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AImageView.h; sourceTree = "<group>"; };
@@ -268,6 +280,14 @@
 				E61EA76721379B9D00394FFF /* PXYUIImageViewHelper */,
 				E61EA75A21379B9D00394FFF /* AppDelegate.h */,
 				E61EA76A21379B9D00394FFF /* AppDelegate.m */,
+				E60320A82211DD8F0077D663 /* AppDelegate+AAppDelegate.h */,
+				E60320A92211DD8F0077D663 /* AppDelegate+AAppDelegate.m */,
+				E60320AB2211DDBC0077D663 /* AppDelegate+BAppDelegate.h */,
+				E60320AC2211DDBC0077D663 /* AppDelegate+BAppDelegate.m */,
+				E60320AE2211DF410077D663 /* CAppDelegate.h */,
+				E60320AF2211DF410077D663 /* CAppDelegate.m */,
+				E60320B12211DF510077D663 /* DAppDelegate.h */,
+				E60320B22211DF520077D663 /* DAppDelegate.m */,
 				E61EA7AF21379B9D00394FFF /* ViewController.h */,
 				E61EA75D21379B9D00394FFF /* ViewController.m */,
 				E6180E45219C02E900C221F7 /* TestViewController.h */,
@@ -732,10 +752,13 @@
 				E61EA7C121379B9D00394FFF /* PXYWeakProxy.m in Sources */,
 				E61EA7B221379B9D00394FFF /* ViewController.m in Sources */,
 				E61EA7CD21379B9D00394FFF /* YYKVStorage.m in Sources */,
+				E60320AA2211DD8F0077D663 /* AppDelegate+AAppDelegate.m in Sources */,
 				E635911721A7CC8F008D534B /* UIImageView+CornerRadius.m in Sources */,
 				E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */,
 				E61EA7B821379B9D00394FFF /* UIImageView+ImageCorner.m in Sources */,
+				E60320B32211DF520077D663 /* DAppDelegate.m in Sources */,
 				E61EA7D121379B9D00394FFF /* PXYStatusBarView.m in Sources */,
+				E60320AD2211DDBC0077D663 /* AppDelegate+BAppDelegate.m in Sources */,
 				E625CE7421B017E4005A7F14 /* Super.m in Sources */,
 				E61EA7B521379B9D00394FFF /* main.m in Sources */,
 				E61705632170947C00EDAF1E /* PXYBase64Helper.m in Sources */,
@@ -746,6 +769,7 @@
 				E6011F7C21AFFB0D00FE7D3F /* Person.m in Sources */,
 				E692FA4421B7D2C9008F6C68 /* TestView.m in Sources */,
 				E63ADEED21798401000104F4 /* NSData+ImageContentType.m in Sources */,
+				E60320B02211DF410077D663 /* CAppDelegate.m in Sources */,
 				E61EA7C221379B9D00394FFF /* PXYFPSHelper.m in Sources */,
 				E61EA7C321379B9D00394FFF /* PXYMonitorDataCacheHelper.m in Sources */,
 				E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */,
@@ -902,8 +926,14 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PXYFMWKTest/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC33";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC33",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pengxuyuan.ImageCorner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -924,8 +954,14 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PXYFMWKTest/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC33";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC33",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pengxuyuan.ImageCorner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

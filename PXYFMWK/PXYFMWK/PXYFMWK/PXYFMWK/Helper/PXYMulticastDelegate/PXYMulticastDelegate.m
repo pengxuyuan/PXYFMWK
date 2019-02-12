@@ -11,7 +11,8 @@
 
 @interface PXYMulticastDelegateNode : NSObject
 
-@property (nonatomic, weak) id delegate;
+//Node 需要强持有目标对象，不然目标对象可能被销毁
+@property (nonatomic, strong) id delegate;
 @property (nonatomic, strong) dispatch_queue_t delegateQueue;
 
 - (instancetype)initNodeWithDelegate:(id)delegate delegateQueue:(dispatch_queue_t)delegateQueue;
@@ -61,6 +62,8 @@
     if (delegateQueue == nil) delegateQueue = dispatch_get_main_queue();
     
     PXYMulticastDelegateNode *node = [[PXYMulticastDelegateNode alloc] initNodeWithDelegate:delegate delegateQueue:delegateQueue];
+    node.delegate = nil;
+    node.delegateQueue = nil;
     [_observers removeObject:node];
 }
 
@@ -88,7 +91,8 @@
     }
     
 //    return [super methodSignatureForSelector:aSelector];
-    return [[self class] methodSignatureForSelector:@selector(doNothing)];
+//    return [[self class] methodSignatureForSelector:@selector(doNothing)];
+    return [[self class] instanceMethodSignatureForSelector:@selector(doNothing)];
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
@@ -103,6 +107,11 @@
             });
         }
     }
+}
+
+// 程序这时也就挂掉了
+- (void)doesNotRecognizeSelector:(SEL)aSelector {
+    NSLog(@"%s",__func__);
 }
 
 

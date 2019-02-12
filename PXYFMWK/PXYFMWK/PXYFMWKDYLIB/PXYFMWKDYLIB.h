@@ -27,3 +27,6 @@ FOUNDATION_EXPORT const unsigned char PXYFMWKDYLIBVersionString[];
 #import "NSObject+PXYKVO.h"
 #import "NSObject+PXYRuntimeHelper.h"
 #import "PXYRuntimeNSCodingHelper.h"
+
+#pragma mark - PXYMulticastDelegate
+#import "PXYMulticastDelegate.h"

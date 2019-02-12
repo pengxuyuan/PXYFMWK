@@ -127,6 +127,7 @@ NSString * const WMGCanvasViewBackgroundImageKey   = @"waimai-graver-canvas-back
 
 - (BOOL)drawInRect:(CGRect)rect withContext:(CGContextRef)context asynchronously:(BOOL)asynchronously userInfo:(NSDictionary *)userInfo
 {
+    NSLog(@"%s",__func__);
     [super drawInRect:rect withContext:context asynchronously:asynchronously userInfo:userInfo];
     
     UIColor *backgroundColor = (UIColor *)[userInfo valueForKey:WMGCanvasViewBackgroundColorKey];

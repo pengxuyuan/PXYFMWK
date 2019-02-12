@@ -189,17 +189,21 @@ static BOOL _globalAsyncDrawDisabled = NO;
 
 - (void)redraw
 {
+    NSLog(@"%s",__func__);
     [self displayLayer:self.layer];
 }
 
 - (void)setNeedsDisplayAsync
 {
+    NSLog(@"%s",__func__);
     self.contentsChangedAfterLastAsyncDrawing = YES;
     [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect
 {
+    NSLog(@"%s",__func__);
+    [super drawRect:rect];
     [self drawingWillStartAsynchronously:NO];
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -213,16 +217,20 @@ static BOOL _globalAsyncDrawDisabled = NO;
 
 - (void)setNeedsDisplay
 {
+//    [super setNeedsDisplay];
+    NSLog(@"%s",__func__);
     [self.layer setNeedsDisplay];
 }
 
 - (void)setNeedsDisplayInRect:(CGRect)rect
 {
+    NSLog(@"%s",__func__);
     [self.layer setNeedsDisplayInRect:rect];
 }
 
 - (void)displayLayer:(CALayer *)layer
 {
+    NSLog(@"%s",__func__);
     if (!layer) return;
     
     NSAssert([layer isKindOfClass:[WMGAsyncDrawLayer class]], @"WMGAsyncDrawingView can only display WMGAsyncDrawLayer");
@@ -244,6 +252,7 @@ static BOOL _globalAsyncDrawDisabled = NO;
       drawingFinished:(WMGAsyncDrawCallback)finishCallback
    drawingInterrupted:(WMGAsyncDrawCallback)interruptCallback
 {
+    NSLog(@"%s",__func__);
     BOOL drawInBackground = layer.isAsyncDrawsCurrentContent && ![[self class] globalAsyncDrawingDisabled];
     
     [layer increaseDrawingCount];
@@ -424,11 +433,13 @@ static BOOL _globalAsyncDrawDisabled = NO;
 
 - (BOOL)drawInRect:(CGRect)rect withContext:(CGContextRef)context asynchronously:(BOOL)asynchronously
 {
+    NSLog(@"%s",__func__);
     return YES;
 }
 
 - (BOOL)drawInRect:(CGRect)rect withContext:(CGContextRef)context asynchronously:(BOOL)asynchronously userInfo:(NSDictionary *)userInfo
 {
+    NSLog(@"%s",__func__);
     return [self drawInRect:rect withContext:context asynchronously:asynchronously];
 }
 

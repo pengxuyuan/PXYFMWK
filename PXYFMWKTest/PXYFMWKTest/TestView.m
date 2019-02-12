@@ -37,24 +37,32 @@
 //    [super touchesBegan:touches withEvent:event];
 }
 
-
-//- (void)drawRect:(CGRect)rect {
+//- (void)displayLayer:(CALayer *)layer {
 //    NSLog(@"%s",__func__);
-//
-////    self.layer.contents = nil;
-//
-//    [super drawRect:rect];
 //}
 
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
     NSLog(@"%s",__func__);
-    [super drawLayer:layer inContext:ctx];
+    
+//    layer.contents
+    
+//    [super drawLayer:layer inContext:ctx];
 }
+
+
+- (void)drawRect:(CGRect)rect {
+    NSLog(@"%s",__func__);
+    [super drawRect:rect];
+}
+
+
 
 - (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event {
     NSLog(@"%s",__func__);
     return [super actionForLayer:layer forKey:event];
 }
+
+
 
 - (void)setClipsToBounds:(BOOL)clipsToBounds {
     NSLog(@"%s",__func__);
