@@ -13,7 +13,7 @@
  0：关闭
  1：开启
  */
-static const int IsOpenLoadMonitor = 0;
+static const int IsOpenLoadMonitor = 1;
 
 /**
  启动 Load 函数监测

@@ -65,7 +65,7 @@
          <EnvironmentVariable
             key = "DYLD_PRINT_STATISTICS"
             value = "1"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "DYLD_PRINT_SEGMENTS"

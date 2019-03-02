@@ -28,9 +28,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"didFinishLaunchingWithOptions Start"];
-//    
-////    PXY_TICK
+    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"didFinishLaunchingWithOptions Start"];
+//
+//    PXY_TICK
 ////    [[PXYMonitorManager shareInstance] startMonitoring];
 //    [[PXYMonitorManager shareInstance] showStatusBarMonitorView];
 ////    PXY_TOCK
@@ -53,6 +53,10 @@
     
     [self.multicastDelegateManager application:application didFinishLaunchingWithOptions:launchOptions];
     
+    
+    //APMLoadMonitor
+    [PXYAPMLoadMonitor pxy_printLoadTimeConsuming];
+    
     return YES;
 }
 
@@ -60,16 +64,14 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
 //    [[PXYStartupTimeMonitor shareInstance] appEndRecordingTimeAndShowAlert];
-//
+////
 //    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive start"];
 //
 ////    PXY_TICK
-////    sleep(1);
+//    sleep(1);
 ////    PXY_TOCK
 //
 //    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive End"];
-    
-//    [self.timer invalidate];
     
     [self.multicastDelegateManager applicationDidBecomeActive:application];
 }
