@@ -53,10 +53,23 @@
 		E63B1EE5222AE6030019A435 /* RSSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1EE2222AE6030019A435 /* RSSwizzle.m */; };
 		E63B1EE6222AE6030019A435 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1EE3222AE6030019A435 /* NSData+ImageContentType.m */; };
 		E63B1EE7222AE6030019A435 /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1EE4222AE6030019A435 /* UIImageView+CornerRadius.m */; };
+		E63B1EEF222AEA220019A435 /* CTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1EEB222AEA220019A435 /* CTMediator.m */; };
+		E63B1EF4222AEC5A0019A435 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1EF2222AEC5A0019A435 /* HomeViewController.m */; };
+		E63B1EF5222AEC5A0019A435 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63B1EF3222AEC5A0019A435 /* HomeViewController.xib */; };
+		E63B1EFB222AEDC70019A435 /* Target_HomePageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1EFA222AEDC70019A435 /* Target_HomePageModule.m */; };
+		E63B1F01222AF0710019A435 /* CTMediator+HomePageModuleActions.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1F00222AF0710019A435 /* CTMediator+HomePageModuleActions.m */; };
+		E63B1F06222CBD910019A435 /* TKModuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1F05222CBD910019A435 /* TKModuleModel.m */; };
+		E63B1F0A222CC1330019A435 /* TKModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1F09222CC1330019A435 /* TKModuleManager.m */; };
+		E63B1F11222CC5720019A435 /* TKSSOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1F0F222CC5720019A435 /* TKSSOViewController.m */; };
+		E63B1F12222CC5720019A435 /* TKSSOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63B1F10222CC5720019A435 /* TKSSOViewController.xib */; };
+		E63B1F16222CC5820019A435 /* TKTradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1F14222CC5820019A435 /* TKTradeViewController.m */; };
+		E63B1F17222CC5820019A435 /* TKTradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63B1F15222CC5820019A435 /* TKTradeViewController.xib */; };
 		E663CB85215250B000D0304F /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */; };
 		E67DEA732154D95500AE5895 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DEA722154D95400AE5895 /* JSPatchPlatform.framework */; };
 		E67DEA752154D9C200AE5895 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */; };
 		E67DEA792154E66400AE5895 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = E67DEA782154E66300AE5895 /* Aspects.m */; };
+		E6C2B39B222E510300670AA5 /* UIViewController+PXYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2B39A222E510300670AA5 /* UIViewController+PXYBaseViewController.m */; };
+		E6C2B39E222E523900670AA5 /* PXYViewControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2B39D222E523900670AA5 /* PXYViewControllerHelper.m */; };
 		E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D62F95217587CE005554AF /* PXYHashHelper.m */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +189,26 @@
 		E63B1EE2222AE6030019A435 /* RSSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSwizzle.m; sourceTree = "<group>"; };
 		E63B1EE3222AE6030019A435 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		E63B1EE4222AE6030019A435 /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
+		E63B1EEB222AEA220019A435 /* CTMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTMediator.m; sourceTree = "<group>"; };
+		E63B1EEC222AEA220019A435 /* CTMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTMediator.h; sourceTree = "<group>"; };
+		E63B1EF1222AEC5A0019A435 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		E63B1EF2222AEC5A0019A435 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		E63B1EF3222AEC5A0019A435 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E63B1EF9222AEDC70019A435 /* Target_HomePageModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_HomePageModule.h; sourceTree = "<group>"; };
+		E63B1EFA222AEDC70019A435 /* Target_HomePageModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_HomePageModule.m; sourceTree = "<group>"; };
+		E63B1EFF222AF0710019A435 /* CTMediator+HomePageModuleActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+HomePageModuleActions.h"; sourceTree = "<group>"; };
+		E63B1F00222AF0710019A435 /* CTMediator+HomePageModuleActions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+HomePageModuleActions.m"; sourceTree = "<group>"; };
+		E63B1F04222CBD910019A435 /* TKModuleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKModuleModel.h; sourceTree = "<group>"; };
+		E63B1F05222CBD910019A435 /* TKModuleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKModuleModel.m; sourceTree = "<group>"; };
+		E63B1F07222CC0530019A435 /* TKModuleProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKModuleProtocol.h; sourceTree = "<group>"; };
+		E63B1F08222CC1330019A435 /* TKModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKModuleManager.h; sourceTree = "<group>"; };
+		E63B1F09222CC1330019A435 /* TKModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKModuleManager.m; sourceTree = "<group>"; };
+		E63B1F0E222CC5720019A435 /* TKSSOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKSSOViewController.h; sourceTree = "<group>"; };
+		E63B1F0F222CC5720019A435 /* TKSSOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKSSOViewController.m; sourceTree = "<group>"; };
+		E63B1F10222CC5720019A435 /* TKSSOViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TKSSOViewController.xib; sourceTree = "<group>"; };
+		E63B1F13222CC5820019A435 /* TKTradeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTradeViewController.h; sourceTree = "<group>"; };
+		E63B1F14222CC5820019A435 /* TKTradeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTradeViewController.m; sourceTree = "<group>"; };
+		E63B1F15222CC5820019A435 /* TKTradeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TKTradeViewController.xib; sourceTree = "<group>"; };
 		E663CB83215250B000D0304F /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
 		E663CB862152551000D0304F /* libsystem_blocks.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libsystem_blocks.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +216,10 @@
 		E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		E67DEA772154E66300AE5895 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		E67DEA782154E66300AE5895 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		E6C2B399222E510300670AA5 /* UIViewController+PXYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PXYBaseViewController.h"; sourceTree = "<group>"; };
+		E6C2B39A222E510300670AA5 /* UIViewController+PXYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PXYBaseViewController.m"; sourceTree = "<group>"; };
+		E6C2B39C222E523900670AA5 /* PXYViewControllerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYViewControllerHelper.h; sourceTree = "<group>"; };
+		E6C2B39D222E523900670AA5 /* PXYViewControllerHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYViewControllerHelper.m; sourceTree = "<group>"; };
 		E6D62F94217587CE005554AF /* PXYHashHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYHashHelper.h; sourceTree = "<group>"; };
 		E6D62F95217587CE005554AF /* PXYHashHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYHashHelper.m; sourceTree = "<group>"; };
 		F1D220B63AF65D2AD97FF878 /* Pods-PXYFMWKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXYFMWKTest.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				E63B1EDE222AE6030019A435 /* Learning */,
-				E63B1ED0222AE4990019A435 /* TestFunction */,
 				E63ADEE22179769D000104F4 /* PXYFileType */,
 				E60815C32177260900C7D241 /* PXYRouter */,
 				E60B971A216F55A500F43B27 /* Cryptography */,
@@ -247,6 +283,7 @@
 				E663CB82215250B000D0304F /* DLIntrospection */,
 				E61EA77921379B9D00394FFF /* PXYPerformanceMonitor */,
 				E61EA76721379B9D00394FFF /* PXYUIImageViewHelper */,
+				E63B1ED0222AE4990019A435 /* TestFunction */,
 				E61EA75A21379B9D00394FFF /* AppDelegate.h */,
 				E61EA76A21379B9D00394FFF /* AppDelegate.m */,
 				E61EA7AF21379B9D00394FFF /* ViewController.h */,
@@ -493,6 +530,9 @@
 		E63B1ED0222AE4990019A435 /* TestFunction */ = {
 			isa = PBXGroup;
 			children = (
+				E6C2B398222E50D500670AA5 /* TestRootViewController */,
+				E63B1F02222BB7530019A435 /* TestTKMessageModule */,
+				E63B1EE8222AE7FF0019A435 /* TestCTMediator */,
 				E63B1ED1222AE4990019A435 /* TestAppDelegate */,
 			);
 			path = TestFunction;
@@ -501,14 +541,14 @@
 		E63B1ED1222AE4990019A435 /* TestAppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				E63B1ED5222AE4990019A435 /* AppDelegate+AAppDelegate.h */,
+				E63B1ED9222AE4990019A435 /* AppDelegate+AAppDelegate.m */,
+				E63B1ED6222AE4990019A435 /* AppDelegate+BAppDelegate.h */,
 				E63B1ED2222AE4990019A435 /* AppDelegate+BAppDelegate.m */,
 				E63B1ED3222AE4990019A435 /* CAppDelegate.h */,
-				E63B1ED4222AE4990019A435 /* DAppDelegate.h */,
-				E63B1ED5222AE4990019A435 /* AppDelegate+AAppDelegate.h */,
-				E63B1ED6222AE4990019A435 /* AppDelegate+BAppDelegate.h */,
-				E63B1ED7222AE4990019A435 /* DAppDelegate.m */,
 				E63B1ED8222AE4990019A435 /* CAppDelegate.m */,
-				E63B1ED9222AE4990019A435 /* AppDelegate+AAppDelegate.m */,
+				E63B1ED4222AE4990019A435 /* DAppDelegate.h */,
+				E63B1ED7222AE4990019A435 /* DAppDelegate.m */,
 			);
 			path = TestAppDelegate;
 			sourceTree = "<group>";
@@ -524,6 +564,128 @@
 				E63B1EE4222AE6030019A435 /* UIImageView+CornerRadius.m */,
 			);
 			path = Learning;
+			sourceTree = "<group>";
+		};
+		E63B1EE8222AE7FF0019A435 /* TestCTMediator */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1EEE222AEA220019A435 /* CategoriesRepo */,
+				E63B1EE9222AEA220019A435 /* Compoment */,
+				E63B1EED222AEA220019A435 /* DemoModules */,
+			);
+			path = TestCTMediator;
+			sourceTree = "<group>";
+		};
+		E63B1EE9222AEA220019A435 /* Compoment */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1EEA222AEA220019A435 /* CTMediator */,
+			);
+			path = Compoment;
+			sourceTree = "<group>";
+		};
+		E63B1EEA222AEA220019A435 /* CTMediator */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1EEC222AEA220019A435 /* CTMediator.h */,
+				E63B1EEB222AEA220019A435 /* CTMediator.m */,
+			);
+			path = CTMediator;
+			sourceTree = "<group>";
+		};
+		E63B1EED222AEA220019A435 /* DemoModules */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1EF0222AEB050019A435 /* HomePageModule */,
+			);
+			path = DemoModules;
+			sourceTree = "<group>";
+		};
+		E63B1EEE222AEA220019A435 /* CategoriesRepo */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1EF7222AED370019A435 /* HomePageModule */,
+			);
+			path = CategoriesRepo;
+			sourceTree = "<group>";
+		};
+		E63B1EF0222AEB050019A435 /* HomePageModule */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1EF8222AEDA20019A435 /* Actions */,
+				E63B1EF1222AEC5A0019A435 /* HomeViewController.h */,
+				E63B1EF2222AEC5A0019A435 /* HomeViewController.m */,
+				E63B1EF3222AEC5A0019A435 /* HomeViewController.xib */,
+			);
+			path = HomePageModule;
+			sourceTree = "<group>";
+		};
+		E63B1EF7222AED370019A435 /* HomePageModule */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1EFF222AF0710019A435 /* CTMediator+HomePageModuleActions.h */,
+				E63B1F00222AF0710019A435 /* CTMediator+HomePageModuleActions.m */,
+			);
+			path = HomePageModule;
+			sourceTree = "<group>";
+		};
+		E63B1EF8222AEDA20019A435 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1EF9222AEDC70019A435 /* Target_HomePageModule.h */,
+				E63B1EFA222AEDC70019A435 /* Target_HomePageModule.m */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		E63B1F02222BB7530019A435 /* TestTKMessageModule */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1F0B222CC5350019A435 /* DemoModule */,
+				E63B1F03222CBB1E0019A435 /* Component */,
+			);
+			path = TestTKMessageModule;
+			sourceTree = "<group>";
+		};
+		E63B1F03222CBB1E0019A435 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1F04222CBD910019A435 /* TKModuleModel.h */,
+				E63B1F05222CBD910019A435 /* TKModuleModel.m */,
+				E63B1F07222CC0530019A435 /* TKModuleProtocol.h */,
+				E63B1F08222CC1330019A435 /* TKModuleManager.h */,
+				E63B1F09222CC1330019A435 /* TKModuleManager.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E63B1F0B222CC5350019A435 /* DemoModule */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1F0D222CC5560019A435 /* TKSSOModule */,
+				E63B1F0C222CC5560019A435 /* TKTradeModule */,
+			);
+			path = DemoModule;
+			sourceTree = "<group>";
+		};
+		E63B1F0C222CC5560019A435 /* TKTradeModule */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1F13222CC5820019A435 /* TKTradeViewController.h */,
+				E63B1F14222CC5820019A435 /* TKTradeViewController.m */,
+				E63B1F15222CC5820019A435 /* TKTradeViewController.xib */,
+			);
+			path = TKTradeModule;
+			sourceTree = "<group>";
+		};
+		E63B1F0D222CC5560019A435 /* TKSSOModule */ = {
+			isa = PBXGroup;
+			children = (
+				E63B1F0E222CC5720019A435 /* TKSSOViewController.h */,
+				E63B1F0F222CC5720019A435 /* TKSSOViewController.m */,
+				E63B1F10222CC5720019A435 /* TKSSOViewController.xib */,
+			);
+			path = TKSSOModule;
 			sourceTree = "<group>";
 		};
 		E663CB82215250B000D0304F /* DLIntrospection */ = {
@@ -542,6 +704,17 @@
 				E67DEA782154E66300AE5895 /* Aspects.m */,
 			);
 			path = Aspects;
+			sourceTree = "<group>";
+		};
+		E6C2B398222E50D500670AA5 /* TestRootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E6C2B399222E510300670AA5 /* UIViewController+PXYBaseViewController.h */,
+				E6C2B39A222E510300670AA5 /* UIViewController+PXYBaseViewController.m */,
+				E6C2B39C222E523900670AA5 /* PXYViewControllerHelper.h */,
+				E6C2B39D222E523900670AA5 /* PXYViewControllerHelper.m */,
+			);
+			path = TestRootViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -634,11 +807,14 @@
 				E61EA7C721379B9D00394FFF /* hq_chart_back@2x.png in Resources */,
 				E635911B21A7D226008D534B /* 222.png in Resources */,
 				E61EA7BA21379B9D00394FFF /* icon.jpeg in Resources */,
+				E63B1F12222CC5720019A435 /* TKSSOViewController.xib in Resources */,
 				E61EA7C521379B9D00394FFF /* hq_nav_back@2x.png in Resources */,
+				E63B1F17222CC5820019A435 /* TKTradeViewController.xib in Resources */,
 				E61EA7B321379B9D00394FFF /* LaunchScreen.storyboard in Resources */,
 				E635911921A7D108008D534B /* 1111.png in Resources */,
 				E61EA7C621379B9D00394FFF /* btn_back.png in Resources */,
 				E63ADEE721797F15000104F4 /* icon1.png in Resources */,
+				E63B1EF5222AEC5A0019A435 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +884,8 @@
 				E61EA7CE21379B9D00394FFF /* YYMemoryCache.m in Sources */,
 				E663CB85215250B000D0304F /* NSObject+DLIntrospection.m in Sources */,
 				E61EA7BF21379B9D00394FFF /* PXYDeviceCpuHelper.m in Sources */,
+				E63B1F16222CC5820019A435 /* TKTradeViewController.m in Sources */,
+				E63B1F06222CBD910019A435 /* TKModuleModel.m in Sources */,
 				E61EA7CC21379B9D00394FFF /* YYCache.m in Sources */,
 				E63B1EDD222AE4990019A435 /* AppDelegate+AAppDelegate.m in Sources */,
 				E61EA7D221379B9D00394FFF /* PXYFPSLabel.m in Sources */,
@@ -715,8 +893,10 @@
 				E61EA7C921379B9D00394FFF /* PXYMonitorDataDetailController.m in Sources */,
 				E61EA7C121379B9D00394FFF /* PXYWeakProxy.m in Sources */,
 				E61EA7B221379B9D00394FFF /* ViewController.m in Sources */,
+				E63B1EEF222AEA220019A435 /* CTMediator.m in Sources */,
 				E61EA7CD21379B9D00394FFF /* YYKVStorage.m in Sources */,
 				E63B1EDB222AE4990019A435 /* DAppDelegate.m in Sources */,
+				E63B1EFB222AEDC70019A435 /* Target_HomePageModule.m in Sources */,
 				E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */,
 				E61EA7B821379B9D00394FFF /* UIImageView+ImageCorner.m in Sources */,
 				E61EA7D121379B9D00394FFF /* PXYStatusBarView.m in Sources */,
@@ -726,11 +906,17 @@
 				E61705632170947C00EDAF1E /* PXYBase64Helper.m in Sources */,
 				E61EA7C821379B9D00394FFF /* PXYMonitorManager.m in Sources */,
 				E61EA7CB21379B9D00394FFF /* YYDiskCache.m in Sources */,
+				E63B1F11222CC5720019A435 /* TKSSOViewController.m in Sources */,
+				E6C2B39E222E523900670AA5 /* PXYViewControllerHelper.m in Sources */,
 				E63B1EE6222AE6030019A435 /* NSData+ImageContentType.m in Sources */,
 				E61EA7C421379B9D00394FFF /* PXYDataMonitorManager.m in Sources */,
 				E61EA7C221379B9D00394FFF /* PXYFPSHelper.m in Sources */,
+				E6C2B39B222E510300670AA5 /* UIViewController+PXYBaseViewController.m in Sources */,
 				E61EA7C321379B9D00394FFF /* PXYMonitorDataCacheHelper.m in Sources */,
+				E63B1EF4222AEC5A0019A435 /* HomeViewController.m in Sources */,
 				E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */,
+				E63B1F0A222CC1330019A435 /* TKModuleManager.m in Sources */,
+				E63B1F01222AF0710019A435 /* CTMediator+HomePageModuleActions.m in Sources */,
 				E61EA7C021379B9D00394FFF /* PXYDeviceMemoryHelper.m in Sources */,
 				E63ADEE5217976B3000104F4 /* NSData+PXYFileType.m in Sources */,
 				E61EA7B921379B9D00394FFF /* AppDelegate.m in Sources */,

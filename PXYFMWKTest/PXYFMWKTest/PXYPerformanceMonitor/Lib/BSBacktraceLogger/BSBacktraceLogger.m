@@ -75,6 +75,7 @@ static mach_port_t main_thread_id;
 @implementation BSBacktraceLogger
 
 + (void)load {
+    sleep(1);
     main_thread_id = mach_thread_self();
 }
 

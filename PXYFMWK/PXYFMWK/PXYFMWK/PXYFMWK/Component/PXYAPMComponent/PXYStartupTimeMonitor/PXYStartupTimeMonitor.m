@@ -68,18 +68,27 @@
  App 结束记录时间，并且 Alert 输出时间消耗
  */
 - (void)appEndRecordingTimeAndShowAlert {
+    CFAbsoluteTime call1T = CFAbsoluteTimeGetCurrent();
+    
     __weak typeof(self)weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
+        CFAbsoluteTime call2T = CFAbsoluteTimeGetCurrent();
+        
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         strongSelf.stopTime = CFAbsoluteTimeGetCurrent();
         
+        NSMutableString *logStr = [NSMutableString string];
         NSMutableString *recordStr = [NSMutableString string];
+        CGFloat totalT = 0.0;
         for (NSDictionary *dict in self.timeRecordArray) {
             NSString *recordKey = [[dict allKeys] firstObject];
             double recordValue = [[dict objectForKey:recordKey] doubleValue];
-            
+            [logStr appendFormat:@"%@", [NSString stringWithFormat:@"%@\n|\n| ---> duration: %.2f秒 \n|\n",recordKey,recordValue]];
             [recordStr appendFormat:@"%@", [NSString stringWithFormat:@"%@:%.2f秒\n",recordKey, recordValue]];
+            totalT += recordValue;
         }
+        NSLog(@"-------------------- PXYStartupTimeMonitor Start -------------------- \n%@延迟时间: %.2f 秒 \n统计时间: %.2f 秒 \n真实时间: %.2f 秒",logStr,(call2T - call1T),totalT,(strongSelf.stopTime - strongSelf.startTime));
+        NSLog(@"-------------------- PXYStartupTimeMonitor End -------------------- \n");
        
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"

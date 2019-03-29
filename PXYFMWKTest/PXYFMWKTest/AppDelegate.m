@@ -29,18 +29,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"didFinishLaunchingWithOptions Start"];
-//
-//    PXY_TICK
-////    [[PXYMonitorManager shareInstance] startMonitoring];
-//    [[PXYMonitorManager shareInstance] showStatusBarMonitorView];
-////    PXY_TOCK
-//    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"didFinishLaunchingWithOptions End"];
-    
-//    [JSPatch startWithAppKey:@"8a7373ceea8edada"];
-//    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCufJD163unTsEKzMGkCIoN5mop\ngGv8XXxRmXcMUxlPwH4ay9MSeJNsRjpQKv7/npjrEAAflMLiEbECsaIzn5R9Vsyb\n0ZgdQSki1oUojrR7mMU7h/Bs+tR4qSARksG87LvJv59v3eSpN3C6gxByGdSDRo02\n0VhGz3Mc4eHS2xkmywIDAQAB\n-----END PUBLIC KEY-----"];
-//    [JSPatch sync];
-    
-    
+
     //AppDelegate 拆分
     [self buildAAppDelegate];
     [self buildBAppDelegate];
@@ -63,23 +52,34 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
-//    [[PXYStartupTimeMonitor shareInstance] appEndRecordingTimeAndShowAlert];
 ////
-//    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive start"];
+    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive start"];
 //
-////    PXY_TICK
-//    sleep(1);
-////    PXY_TOCK
+//    PXY_TICK
+    sleep(1);
+//    PXY_TOCK
 //
-//    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive End"];
     
     [self.multicastDelegateManager applicationDidBecomeActive:application];
+    
+    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive End"];
+    
+    [[PXYStartupTimeMonitor shareInstance] appEndRecordingTimeAndShowAlert];
+    sleep(1);
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [self.multicastDelegateManager applicationDidEnterBackground:application];
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [self.multicastDelegateManager applicationWillResignActive:application];
 }
 
 #pragma mark - Lazzy load
 - (PXYMulticastDelegate *)multicastDelegateManager {
     if (_multicastDelegateManager == nil) {
-        _multicastDelegateManager = [[PXYMulticastDelegate alloc] init];
+        _multicastDelegateManager = (PXYMulticastDelegate <UIApplicationDelegate> *)[[PXYMulticastDelegate alloc] init];
     }
     return _multicastDelegateManager;
 }

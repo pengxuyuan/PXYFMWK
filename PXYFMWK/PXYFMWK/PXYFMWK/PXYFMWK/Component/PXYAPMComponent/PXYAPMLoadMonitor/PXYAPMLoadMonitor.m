@@ -97,7 +97,7 @@ static NSMutableArray *PXYAPM_LoadInfoArray;
  打印 Load 函数消耗的时间
  */
 + (void)pxy_printLoadTimeConsuming {
-    NSLog(@"====== PXYAPMLoadMonitor Load 耗时列表 ======");
+    NSLog(@"-------------------- PXYAPMLoadMonitor Load 耗时列表 --------------------");
     double totalSpendTime = 0;
     for (NSDictionary *infoDict in PXYAPM_LoadInfoArray) {
         NSNumber *spendTime = infoDict[kSpendTime];
@@ -107,7 +107,7 @@ static NSMutableArray *PXYAPM_LoadInfoArray;
         totalSpendTime += [spendTime doubleValue];
     }
     NSLog(@"Load 方法总共耗时：%.3f ms",totalSpendTime);
-    NSLog(@"====== PXYAPMLoadMonitor Load 耗时列表 ======\n");
+    NSLog(@"-------------------- PXYAPMLoadMonitor Load 耗时列表 --------------------\n");
 }
 
 

@@ -9,6 +9,7 @@
 #import "DAppDelegate.h"
 #import <UIKit/UIKit.h>
 
+#import <PXYFMWKDYLIB/PXYFMWKDYLIB.h>
 
 
 @implementation DAppDelegate
@@ -20,6 +21,10 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     NSLog(@"%s",__func__);
+    
+//    sleep(2);
+    
+    [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive DAppDelegate"];
 }
 
 
