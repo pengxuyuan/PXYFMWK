@@ -14,6 +14,14 @@
 
 #import "TKModuleManager.h"
 
+#import "TKFXBlurView.h"
+
+#import "WMGImage.h"
+#import "WMGTextAttachment.h"
+#import "WMGMixedView.h"
+
+#import "Person.h"
+
 @interface ViewController ()
 
 
@@ -29,6 +37,33 @@
     self.name = @"view";
     self.view.backgroundColor = [UIColor whiteColor];
 //    [[TKModuleManager sharedInstance] initModuleConfig];
+    
+    
+//    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+//    imageView.image = [UIImage imageNamed:@"1111.png"];
+//    [self.view addSubview:imageView];
+//
+//    TKFXBlurView *blur = [[TKFXBlurView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+//    blur.tintColor = [UIColor blackColor]; //前景颜色
+//    blur.blurRadius = 200; //模糊半径
+//    blur.dynamic = YES;      //动态改变模糊效果
+//
+//    [imageView addSubview:blur];
+    
+    WMGImage *image = [WMGImage new];
+    image.downloadUrl = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544007471380&di=b2100fe21076aec03f8cfced82099dd7&imgtype=0&src=http%3A%2F%2Fimage.xinmin.cn%2F2016%2F08%2F06%2F20160806172159913425.jpeg";
+    image.size = CGSizeMake(100, 100);
+    WMGTextAttachment *attac = [WMGTextAttachment textAttachmentWithContents:image type:WMGAttachmentTypeStaticImage size:CGSizeMake(100, 100)];
+    
+    WMMutableAttributedItem *item = [WMMutableAttributedItem itemWithText:@"初始值"];
+    [item appendImageWithUrl:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544007471380&di=b2100fe21076aec03f8cfced82099dd7&imgtype=0&src=http%3A%2F%2Fimage.xinmin.cn%2F2016%2F08%2F06%2F20160806172159913425.jpeg" size:CGSizeMake(100, 100)];
+    
+    
+    WMGMixedView *view = [[WMGMixedView alloc] initWithFrame:CGRectMake(10, 100, 200, 200)];
+    view.attributedItem = item;
+    view.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:view];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

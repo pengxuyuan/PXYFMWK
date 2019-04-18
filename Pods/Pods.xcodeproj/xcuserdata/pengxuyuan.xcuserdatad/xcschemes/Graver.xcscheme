@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "73F795C06ED7E5AE9F9A04A56A2AFC6F"
+               BlueprintIdentifier = "28732301747EFC5126E28E910004E669"
+               BuildableName = "libGraver.a"
                BlueprintName = "Graver"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libGraver.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

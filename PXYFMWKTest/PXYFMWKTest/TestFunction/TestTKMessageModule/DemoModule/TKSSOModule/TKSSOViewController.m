@@ -49,7 +49,66 @@
     }];
 }
 
+- (IBAction)push:(id)sender {
+    TKSSOViewController *sso = [TKSSOViewController new];
+    [self.navigationController pushViewController:sso animated:YES];
+}
+    
+- (IBAction)present:(id)sender {
+    TKSSOViewController *sso = [TKSSOViewController new];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:sso];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+    
+- (IBAction)pop:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+    
+- (IBAction)dismiss:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+    
+- (IBAction)goHome:(id)sender {
+    
+    UIViewController *root = [self findRootVCWith:self];
+    if (root.presentedViewController) {
+        [root dismissViewControllerAnimated:NO completion:^{
+            [root.navigationController popToRootViewControllerAnimated:YES];
+        }];
+    } else {
+        [root.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
 
-
-
+    
+- (UIViewController *)findRootVCWith:(UIViewController *)currentVC{
+    
+    if (currentVC == nil) return nil;
+    
+    UIViewController *dealVC = currentVC;
+    if (dealVC.presentingViewController == nil) {
+        if ([dealVC isKindOfClass:[UINavigationController class]]) {
+            dealVC = (UINavigationController *)[dealVC.childViewControllers firstObject];
+        }
+        
+        if (dealVC.navigationController.childViewControllers.count > 0) {
+            if (dealVC == [dealVC.navigationController.childViewControllers firstObject]) {
+                return dealVC;
+            }
+        } else {
+            return dealVC;
+        }
+    }
+    
+    if (dealVC.presentingViewController) {
+        dealVC = dealVC.presentingViewController;
+    } else if (dealVC.navigationController.childViewControllers.count > 0) {
+        dealVC = [dealVC.navigationController.childViewControllers firstObject];
+    }
+    
+    return [self findRootVCWith:dealVC];
+    
+}
+   
+    
 @end

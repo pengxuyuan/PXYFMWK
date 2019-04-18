@@ -39,7 +39,6 @@
 		E61EA7D021379B9D00394FFF /* PXYMainThreadMonitorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA7A721379B9D00394FFF /* PXYMainThreadMonitorHelper.m */; };
 		E61EA7D121379B9D00394FFF /* PXYStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA7AA21379B9D00394FFF /* PXYStatusBarView.m */; };
 		E61EA7D221379B9D00394FFF /* PXYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA7AC21379B9D00394FFF /* PXYFPSLabel.m */; };
-		E61EA7D321379B9D00394FFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E61EA7AE21379B9D00394FFF /* Info.plist */; };
 		E635911921A7D108008D534B /* 1111.png in Resources */ = {isa = PBXBuildFile; fileRef = E635911821A7D108008D534B /* 1111.png */; };
 		E635911B21A7D226008D534B /* 222.png in Resources */ = {isa = PBXBuildFile; fileRef = E635911A21A7D225008D534B /* 222.png */; };
 		E636FD99213E24DB00B50A74 /* PXYFMWKDYLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */; };
@@ -65,12 +64,16 @@
 		E63B1F16222CC5820019A435 /* TKTradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1F14222CC5820019A435 /* TKTradeViewController.m */; };
 		E63B1F17222CC5820019A435 /* TKTradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63B1F15222CC5820019A435 /* TKTradeViewController.xib */; };
 		E663CB85215250B000D0304F /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */; };
+		E665BDE5224DF9B7003BECB4 /* TKFXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = E665BDE3224DF9B7003BECB4 /* TKFXBlurView.m */; };
+		E669E0A522687D8200F5B11D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E669E0A422687D8200F5B11D /* Person.m */; };
 		E67DEA732154D95500AE5895 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DEA722154D95400AE5895 /* JSPatchPlatform.framework */; };
 		E67DEA752154D9C200AE5895 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */; };
 		E67DEA792154E66400AE5895 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = E67DEA782154E66300AE5895 /* Aspects.m */; };
 		E6C2B39B222E510300670AA5 /* UIViewController+PXYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2B39A222E510300670AA5 /* UIViewController+PXYBaseViewController.m */; };
 		E6C2B39E222E523900670AA5 /* PXYViewControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2B39D222E523900670AA5 /* PXYViewControllerHelper.m */; };
 		E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D62F95217587CE005554AF /* PXYHashHelper.m */; };
+		E6F2BC4E2254A46000546221 /* TestPushPrsentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2BC4C2254A46000546221 /* TestPushPrsentViewController.m */; };
+		E6F2BC4F2254A46000546221 /* TestPushPrsentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F2BC4D2254A46000546221 /* TestPushPrsentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +215,10 @@
 		E663CB83215250B000D0304F /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
 		E663CB862152551000D0304F /* libsystem_blocks.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libsystem_blocks.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		E665BDE3224DF9B7003BECB4 /* TKFXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKFXBlurView.m; sourceTree = "<group>"; };
+		E665BDE4224DF9B7003BECB4 /* TKFXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKFXBlurView.h; sourceTree = "<group>"; };
+		E669E0A322687D8200F5B11D /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E669E0A422687D8200F5B11D /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E67DEA722154D95400AE5895 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
 		E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		E67DEA772154E66300AE5895 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
@@ -222,6 +229,9 @@
 		E6C2B39D222E523900670AA5 /* PXYViewControllerHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYViewControllerHelper.m; sourceTree = "<group>"; };
 		E6D62F94217587CE005554AF /* PXYHashHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYHashHelper.h; sourceTree = "<group>"; };
 		E6D62F95217587CE005554AF /* PXYHashHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYHashHelper.m; sourceTree = "<group>"; };
+		E6F2BC4B2254A46000546221 /* TestPushPrsentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPushPrsentViewController.h; sourceTree = "<group>"; };
+		E6F2BC4C2254A46000546221 /* TestPushPrsentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPushPrsentViewController.m; sourceTree = "<group>"; };
+		E6F2BC4D2254A46000546221 /* TestPushPrsentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestPushPrsentViewController.xib; sourceTree = "<group>"; };
 		F1D220B63AF65D2AD97FF878 /* Pods-PXYFMWKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXYFMWKTest.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,6 +298,13 @@
 				E61EA76A21379B9D00394FFF /* AppDelegate.m */,
 				E61EA7AF21379B9D00394FFF /* ViewController.h */,
 				E61EA75D21379B9D00394FFF /* ViewController.m */,
+				E669E0A322687D8200F5B11D /* Person.h */,
+				E669E0A422687D8200F5B11D /* Person.m */,
+				E6F2BC4B2254A46000546221 /* TestPushPrsentViewController.h */,
+				E6F2BC4C2254A46000546221 /* TestPushPrsentViewController.m */,
+				E6F2BC4D2254A46000546221 /* TestPushPrsentViewController.xib */,
+				E665BDE4224DF9B7003BECB4 /* TKFXBlurView.h */,
+				E665BDE3224DF9B7003BECB4 /* TKFXBlurView.m */,
 				E61EA75E21379B9D00394FFF /* LaunchScreen.storyboard */,
 				E61EA76021379B9D00394FFF /* Main.storyboard */,
 				E61EA76221379B9D00394FFF /* main.m */,
@@ -729,8 +746,8 @@
 				E6225A022112FE36003BFE79 /* Frameworks */,
 				E6225A032112FE36003BFE79 /* Resources */,
 				E636FD9B213E24DB00B50A74 /* Embed Frameworks */,
-				BD07556D2CB2A0F2B6E1092F /* [CP] Embed Pods Frameworks */,
-				4EF0D7271684C6517F72371D /* [CP] Copy Pods Resources */,
+				E083752A821C6C1BEF70E2D1 /* [CP] Embed Pods Frameworks */,
+				E480F97E81991A2ACAC5C65E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -801,7 +818,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61EA7D321379B9D00394FFF /* Info.plist in Resources */,
+				E6F2BC4F2254A46000546221 /* TestPushPrsentViewController.xib in Resources */,
 				E61EA7B421379B9D00394FFF /* Main.storyboard in Resources */,
 				E61EA7B121379B9D00394FFF /* Assets.xcassets in Resources */,
 				E61EA7C721379B9D00394FFF /* hq_chart_back@2x.png in Resources */,
@@ -839,34 +856,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4EF0D7271684C6517F72371D /* [CP] Copy Pods Resources */ = {
+		E083752A821C6C1BEF70E2D1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD07556D2CB2A0F2B6E1092F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E480F97E81991A2ACAC5C65E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -888,6 +913,7 @@
 				E63B1F06222CBD910019A435 /* TKModuleModel.m in Sources */,
 				E61EA7CC21379B9D00394FFF /* YYCache.m in Sources */,
 				E63B1EDD222AE4990019A435 /* AppDelegate+AAppDelegate.m in Sources */,
+				E665BDE5224DF9B7003BECB4 /* TKFXBlurView.m in Sources */,
 				E61EA7D221379B9D00394FFF /* PXYFPSLabel.m in Sources */,
 				E63B1EE5222AE6030019A435 /* RSSwizzle.m in Sources */,
 				E61EA7C921379B9D00394FFF /* PXYMonitorDataDetailController.m in Sources */,
@@ -896,6 +922,7 @@
 				E63B1EEF222AEA220019A435 /* CTMediator.m in Sources */,
 				E61EA7CD21379B9D00394FFF /* YYKVStorage.m in Sources */,
 				E63B1EDB222AE4990019A435 /* DAppDelegate.m in Sources */,
+				E6F2BC4E2254A46000546221 /* TestPushPrsentViewController.m in Sources */,
 				E63B1EFB222AEDC70019A435 /* Target_HomePageModule.m in Sources */,
 				E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */,
 				E61EA7B821379B9D00394FFF /* UIImageView+ImageCorner.m in Sources */,
@@ -916,6 +943,7 @@
 				E63B1EF4222AEC5A0019A435 /* HomeViewController.m in Sources */,
 				E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */,
 				E63B1F0A222CC1330019A435 /* TKModuleManager.m in Sources */,
+				E669E0A522687D8200F5B11D /* Person.m in Sources */,
 				E63B1F01222AF0710019A435 /* CTMediator+HomePageModuleActions.m in Sources */,
 				E61EA7C021379B9D00394FFF /* PXYDeviceMemoryHelper.m in Sources */,
 				E63ADEE5217976B3000104F4 /* NSData+PXYFileType.m in Sources */,
@@ -1070,6 +1098,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PXYFMWKTest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1098,6 +1127,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PXYFMWKTest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

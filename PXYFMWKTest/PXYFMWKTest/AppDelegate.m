@@ -56,7 +56,7 @@
     [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive start"];
 //
 //    PXY_TICK
-    sleep(1);
+//    sleep(1);
 //    PXY_TOCK
 //
     
@@ -64,7 +64,7 @@
     
     [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive End"];
     
-    [[PXYStartupTimeMonitor shareInstance] appEndRecordingTimeAndShowAlert];
+//    [[PXYStartupTimeMonitor shareInstance] appEndRecordingTimeAndShowAlert];
     sleep(1);
 }
 

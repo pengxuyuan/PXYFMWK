@@ -13,7 +13,6 @@
 		E61EA6CC21379AD400394FFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6B221379AD300394FFF /* ViewController.m */; };
 		E61EA6CD21379AD400394FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6B321379AD300394FFF /* main.m */; };
 		E61EA6CE21379AD400394FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA6B421379AD300394FFF /* AppDelegate.m */; };
-		E61EA6D421379AD400394FFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E61EA6C821379AD400394FFF /* Info.plist */; };
 		E61EA884213D16C300394FFF /* PXYFMWKDYLIB.h in Headers */ = {isa = PBXBuildFile; fileRef = E61EA882213D16C300394FFF /* PXYFMWKDYLIB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E61EA887213D16C300394FFF /* PXYFMWKDYLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61EA880213D16C300394FFF /* PXYFMWKDYLIB.framework */; };
 		E61EA888213D16C300394FFF /* PXYFMWKDYLIB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E61EA880213D16C300394FFF /* PXYFMWKDYLIB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -456,7 +455,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61EA6D421379AD400394FFF /* Info.plist in Resources */,
 				E61EA6CB21379AD400394FFF /* Main.storyboard in Resources */,
 				E61EA6C921379AD400394FFF /* Assets.xcassets in Resources */,
 				E61EA6CA21379AD400394FFF /* LaunchScreen.storyboard in Resources */,
