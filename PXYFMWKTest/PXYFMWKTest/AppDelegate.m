@@ -18,10 +18,13 @@
 
 #import <objc/runtime.h>
 
+#import "PXYDeviceMemoryHelper.h"
 
 @interface AppDelegate ()
 
 @property (nonatomic, strong) PXYMulticastDelegate<UIApplicationDelegate> *multicastDelegateManager;
+
+@property (nonatomic, assign) __block UIBackgroundTaskIdentifier backgroundTaskIndentifier;
 
 @end
 
@@ -65,12 +68,40 @@
     [[PXYStartupTimeMonitor shareInstance] appMarkTimeWithDescription:@"applicationDidBecomeActive End"];
     
 //    [[PXYStartupTimeMonitor shareInstance] appEndRecordingTimeAndShowAlert];
-    sleep(1);
+//    sleep(1);
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     [self.multicastDelegateManager applicationDidEnterBackground:application];
+    
+    __weak typeof(self)weakSelf = self;
+    self.backgroundTaskIndentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [weakSelf endBackgroundWork];
+    }];
+    
+    [NSTimer scheduledTimerWithTimeInterval:25 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        NSLog(@"%s",__func__);
+        if ([UIApplication sharedApplication].backgroundTimeRemaining < 30) {
+            //后台线程即将结束，打印当前线程堆栈
+            NSLog(@"后台线程即将结束");
+            
+        }
+    }];
 }
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    NSLog(@"%s",__func__);
+    [PXYDeviceMemoryHelper printMemoryInfo];
+}
+
+- (void)endBackgroundWork {
+    NSLog(@"%s",__func__);
+    if (self.backgroundTaskIndentifier != UIBackgroundTaskInvalid) {
+        [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskIndentifier];
+        self.backgroundTaskIndentifier = UIBackgroundTaskInvalid;
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     [self.multicastDelegateManager applicationWillResignActive:application];

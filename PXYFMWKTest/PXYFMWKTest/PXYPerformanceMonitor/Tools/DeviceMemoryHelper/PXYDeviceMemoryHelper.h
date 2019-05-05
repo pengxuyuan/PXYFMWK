@@ -15,19 +15,24 @@
 @interface PXYDeviceMemoryHelper : NSObject
 
 /**
- 获取已使用内存
+ 获取 App 占用的物理内存 phys_footprint
+
+ @return phys_footprint
  */
-+ (long)fetchUsedMemory;
++ (uint64_t)fetchAppPhysicalMmory;
 
 /**
- 获取可用内存
+ 获取 App 占用的驻留内存 虚拟内存
+
+ @return resident_size
  */
-+ (long)fetchFreeMemory;
++ (uint64_t)fetchAppVirtualMemory;
 
 /**
- 打印内存信息
+ Log 内存相关信息
  */
-+ (void)fetchLogMemUsage;
++ (void)printMemoryInfo;
+
 
 
 @end

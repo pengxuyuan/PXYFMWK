@@ -89,5 +89,40 @@ float cpu_usage()
     return tot_cpu;
 }
 
+/**
+ 获取所有线程，将 cpu_usafge 累加，可以得到当前 App 所在进程的的 CPU 使用率
+ 戴銘老师的 Demo
+ @return 90
+ */
++ (float)fetchCPUsage {
+    thread_act_array_t threads;
+    mach_msg_type_number_t threadCount = 0;
+    const task_t thisTask = mach_task_self();
+    
+    //根据当前 task 获取所有线程
+    kern_return_t kr = task_threads(thisTask, &threads, &threadCount);
+    
+    if (kr != KERN_SUCCESS) {
+        return 0;
+    }
+    
+    float cpuUsage = 0;
+    
+    for (int i = 0; i < threadCount; i++) {
+        thread_info_data_t threadInfo;
+        thread_basic_info_t threadBaseInfo;
+        mach_msg_type_number_t threadInCount = THREAD_INFO_MAX;
+        
+        if (thread_info((thread_act_t)threads[i], THREAD_BASIC_INFO, (thread_info_t)threadInfo, &threadInCount) == KERN_SUCCESS) {
+            threadBaseInfo = (thread_basic_info_t)threadInfo;
+            if (!(threadBaseInfo->flags & TH_FLAGS_IDLE)) {
+                cpuUsage += threadBaseInfo->cpu_usage;
+            }
+        }
+    }
+    assert(vm_deallocate(mach_task_self(), (vm_address_t)threads, threadCount * sizeof(thread_t)) == KERN_SUCCESS);
+    return cpuUsage / (float)TH_USAGE_SCALE * 100.0;
+}
+
 
 @end

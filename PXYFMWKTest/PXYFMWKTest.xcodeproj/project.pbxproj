@@ -39,6 +39,8 @@
 		E61EA7D021379B9D00394FFF /* PXYMainThreadMonitorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA7A721379B9D00394FFF /* PXYMainThreadMonitorHelper.m */; };
 		E61EA7D121379B9D00394FFF /* PXYStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA7AA21379B9D00394FFF /* PXYStatusBarView.m */; };
 		E61EA7D221379B9D00394FFF /* PXYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E61EA7AC21379B9D00394FFF /* PXYFPSLabel.m */; };
+		E625A3F52268EE2000E74C23 /* PXYDispalyView.m in Sources */ = {isa = PBXBuildFile; fileRef = E625A3F42268EE2000E74C23 /* PXYDispalyView.m */; };
+		E625A3F72268EE5600E74C23 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E625A3F62268EE5600E74C23 /* CoreText.framework */; };
 		E635911921A7D108008D534B /* 1111.png in Resources */ = {isa = PBXBuildFile; fileRef = E635911821A7D108008D534B /* 1111.png */; };
 		E635911B21A7D226008D534B /* 222.png in Resources */ = {isa = PBXBuildFile; fileRef = E635911A21A7D225008D534B /* 222.png */; };
 		E636FD99213E24DB00B50A74 /* PXYFMWKDYLIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */; };
@@ -63,6 +65,10 @@
 		E63B1F12222CC5720019A435 /* TKSSOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63B1F10222CC5720019A435 /* TKSSOViewController.xib */; };
 		E63B1F16222CC5820019A435 /* TKTradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E63B1F14222CC5820019A435 /* TKTradeViewController.m */; };
 		E63B1F17222CC5820019A435 /* TKTradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63B1F15222CC5820019A435 /* TKTradeViewController.xib */; };
+		E645D7C22268F2870038FB17 /* UIView+FrameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = E645D7C12268F2870038FB17 /* UIView+FrameAdjust.m */; };
+		E645D7C52268F3CF0038FB17 /* PXYCTFrameParserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E645D7C42268F3CF0038FB17 /* PXYCTFrameParserConfig.m */; };
+		E645D7C82268F40B0038FB17 /* PXYCTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E645D7C72268F40B0038FB17 /* PXYCTFrameParser.m */; };
+		E645D7CB2268F4470038FB17 /* PXYCTTextData.m in Sources */ = {isa = PBXBuildFile; fileRef = E645D7CA2268F4470038FB17 /* PXYCTTextData.m */; };
 		E663CB85215250B000D0304F /* NSObject+DLIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */; };
 		E665BDE5224DF9B7003BECB4 /* TKFXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = E665BDE3224DF9B7003BECB4 /* TKFXBlurView.m */; };
 		E669E0A522687D8200F5B11D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E669E0A422687D8200F5B11D /* Person.m */; };
@@ -71,9 +77,13 @@
 		E67DEA792154E66400AE5895 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = E67DEA782154E66300AE5895 /* Aspects.m */; };
 		E6C2B39B222E510300670AA5 /* UIViewController+PXYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2B39A222E510300670AA5 /* UIViewController+PXYBaseViewController.m */; };
 		E6C2B39E222E523900670AA5 /* PXYViewControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2B39D222E523900670AA5 /* PXYViewControllerHelper.m */; };
+		E6C7D217227000BC00886964 /* PXYAppCrashMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C7D216227000BC00886964 /* PXYAppCrashMonitor.m */; };
 		E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D62F95217587CE005554AF /* PXYHashHelper.m */; };
 		E6F2BC4E2254A46000546221 /* TestPushPrsentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F2BC4C2254A46000546221 /* TestPushPrsentViewController.m */; };
 		E6F2BC4F2254A46000546221 /* TestPushPrsentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F2BC4D2254A46000546221 /* TestPushPrsentViewController.xib */; };
+		E6FCBC6E226D5C4800880E56 /* PXYDeviceBatteryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FCBC6D226D5C4800880E56 /* PXYDeviceBatteryHelper.m */; };
+		E6FCBC8E226D60BF00880E56 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6FCBC75226D60BE00880E56 /* IOKit.framework */; };
+		E6FCBC92226D897B00880E56 /* PXYThreadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FCBC91226D897B00880E56 /* PXYThreadHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +182,9 @@
 		E61EA8B1213D4EA700394FFF /* PXYFMWKDYLIB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PXYFMWKDYLIB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61EA8C4213D506900394FFF /* libPXYFMWKLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libPXYFMWKLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6225A052112FE36003BFE79 /* PXYFMWKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXYFMWKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E625A3F32268EE2000E74C23 /* PXYDispalyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYDispalyView.h; sourceTree = "<group>"; };
+		E625A3F42268EE2000E74C23 /* PXYDispalyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYDispalyView.m; sourceTree = "<group>"; };
+		E625A3F62268EE5600E74C23 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E635911821A7D108008D534B /* 1111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1111.png; sourceTree = "<group>"; };
 		E635911A21A7D225008D534B /* 222.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 222.png; sourceTree = "<group>"; };
 		E636FD98213E24DB00B50A74 /* PXYFMWKDYLIB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PXYFMWKDYLIB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +225,14 @@
 		E63B1F13222CC5820019A435 /* TKTradeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTradeViewController.h; sourceTree = "<group>"; };
 		E63B1F14222CC5820019A435 /* TKTradeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTradeViewController.m; sourceTree = "<group>"; };
 		E63B1F15222CC5820019A435 /* TKTradeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TKTradeViewController.xib; sourceTree = "<group>"; };
+		E645D7C02268F2870038FB17 /* UIView+FrameAdjust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameAdjust.h"; sourceTree = "<group>"; };
+		E645D7C12268F2870038FB17 /* UIView+FrameAdjust.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameAdjust.m"; sourceTree = "<group>"; };
+		E645D7C32268F3CF0038FB17 /* PXYCTFrameParserConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYCTFrameParserConfig.h; sourceTree = "<group>"; };
+		E645D7C42268F3CF0038FB17 /* PXYCTFrameParserConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYCTFrameParserConfig.m; sourceTree = "<group>"; };
+		E645D7C62268F40B0038FB17 /* PXYCTFrameParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYCTFrameParser.h; sourceTree = "<group>"; };
+		E645D7C72268F40B0038FB17 /* PXYCTFrameParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYCTFrameParser.m; sourceTree = "<group>"; };
+		E645D7C92268F4470038FB17 /* PXYCTTextData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYCTTextData.h; sourceTree = "<group>"; };
+		E645D7CA2268F4470038FB17 /* PXYCTTextData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYCTTextData.m; sourceTree = "<group>"; };
 		E663CB83215250B000D0304F /* NSObject+DLIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DLIntrospection.h"; sourceTree = "<group>"; };
 		E663CB84215250B000D0304F /* NSObject+DLIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DLIntrospection.m"; sourceTree = "<group>"; };
 		E663CB862152551000D0304F /* libsystem_blocks.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libsystem_blocks.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,11 +248,44 @@
 		E6C2B39A222E510300670AA5 /* UIViewController+PXYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PXYBaseViewController.m"; sourceTree = "<group>"; };
 		E6C2B39C222E523900670AA5 /* PXYViewControllerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYViewControllerHelper.h; sourceTree = "<group>"; };
 		E6C2B39D222E523900670AA5 /* PXYViewControllerHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYViewControllerHelper.m; sourceTree = "<group>"; };
+		E6C7D215227000BC00886964 /* PXYAppCrashMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYAppCrashMonitor.h; sourceTree = "<group>"; };
+		E6C7D216227000BC00886964 /* PXYAppCrashMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYAppCrashMonitor.m; sourceTree = "<group>"; };
 		E6D62F94217587CE005554AF /* PXYHashHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYHashHelper.h; sourceTree = "<group>"; };
 		E6D62F95217587CE005554AF /* PXYHashHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYHashHelper.m; sourceTree = "<group>"; };
 		E6F2BC4B2254A46000546221 /* TestPushPrsentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPushPrsentViewController.h; sourceTree = "<group>"; };
 		E6F2BC4C2254A46000546221 /* TestPushPrsentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPushPrsentViewController.m; sourceTree = "<group>"; };
 		E6F2BC4D2254A46000546221 /* TestPushPrsentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestPushPrsentViewController.xib; sourceTree = "<group>"; };
+		E6FCBC6C226D5C4800880E56 /* PXYDeviceBatteryHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYDeviceBatteryHelper.h; sourceTree = "<group>"; };
+		E6FCBC6D226D5C4800880E56 /* PXYDeviceBatteryHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYDeviceBatteryHelper.m; sourceTree = "<group>"; };
+		E6FCBC70226D60BE00880E56 /* IOTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOTypes.h; sourceTree = "<group>"; };
+		E6FCBC71226D60BE00880E56 /* IOKitKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOKitKeys.h; sourceTree = "<group>"; };
+		E6FCBC72226D60BE00880E56 /* IOMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOMessage.h; sourceTree = "<group>"; };
+		E6FCBC73226D60BE00880E56 /* IOReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOReturn.h; sourceTree = "<group>"; };
+		E6FCBC74226D60BE00880E56 /* OSMessageNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMessageNotification.h; sourceTree = "<group>"; };
+		E6FCBC75226D60BE00880E56 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
+		E6FCBC77226D60BE00880E56 /* IOPM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPM.h; sourceTree = "<group>"; };
+		E6FCBC78226D60BE00880E56 /* IOPMLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPMLib.h; sourceTree = "<group>"; };
+		E6FCBC79226D60BE00880E56 /* IOPMKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPMKeys.h; sourceTree = "<group>"; };
+		E6FCBC7A226D60BE00880E56 /* IOPMLibDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPMLibDefs.h; sourceTree = "<group>"; };
+		E6FCBC7C226D60BE00880E56 /* IOPSKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPSKeys.h; sourceTree = "<group>"; };
+		E6FCBC7D226D60BE00880E56 /* IOUPSPlugIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOUPSPlugIn.h; sourceTree = "<group>"; };
+		E6FCBC7E226D60BE00880E56 /* IOPowerSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPowerSources.h; sourceTree = "<group>"; };
+		E6FCBC7F226D60BE00880E56 /* OSKext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSKext.h; sourceTree = "<group>"; };
+		E6FCBC81226D60BE00880E56 /* IOHIDEventSystemClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDEventSystemClient.h; sourceTree = "<group>"; };
+		E6FCBC82226D60BE00880E56 /* IOHIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDService.h; sourceTree = "<group>"; };
+		E6FCBC83226D60BE00880E56 /* IOHIDNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDNotification.h; sourceTree = "<group>"; };
+		E6FCBC84226D60BE00880E56 /* IOHIDEventQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDEventQueue.h; sourceTree = "<group>"; };
+		E6FCBC85226D60BE00880E56 /* IOHIDEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDEvent.h; sourceTree = "<group>"; };
+		E6FCBC86226D60BE00880E56 /* IOHIDEventSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDEventSystem.h; sourceTree = "<group>"; };
+		E6FCBC87226D60BE00880E56 /* IOHIDEventData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDEventData.h; sourceTree = "<group>"; };
+		E6FCBC88226D60BE00880E56 /* IOHIDEventTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDEventTypes.h; sourceTree = "<group>"; };
+		E6FCBC89226D60BE00880E56 /* IOHIDDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDDisplay.h; sourceTree = "<group>"; };
+		E6FCBC8A226D60BE00880E56 /* IOHIDSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDSession.h; sourceTree = "<group>"; };
+		E6FCBC8B226D60BE00880E56 /* IOHIDUserDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOHIDUserDevice.h; sourceTree = "<group>"; };
+		E6FCBC8C226D60BF00880E56 /* IOKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOKit.h; sourceTree = "<group>"; };
+		E6FCBC8D226D60BF00880E56 /* IOKitLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOKitLib.h; sourceTree = "<group>"; };
+		E6FCBC90226D897B00880E56 /* PXYThreadHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXYThreadHelper.h; sourceTree = "<group>"; };
+		E6FCBC91226D897B00880E56 /* PXYThreadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXYThreadHelper.m; sourceTree = "<group>"; };
 		F1D220B63AF65D2AD97FF878 /* Pods-PXYFMWKTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXYFMWKTest.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PXYFMWKTest/Pods-PXYFMWKTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,10 +294,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E625A3F72268EE5600E74C23 /* CoreText.framework in Frameworks */,
 				E67DEA752154D9C200AE5895 /* JavaScriptCore.framework in Frameworks */,
 				E636FD99213E24DB00B50A74 /* PXYFMWKDYLIB.framework in Frameworks */,
 				E67DEA732154D95500AE5895 /* JSPatchPlatform.framework in Frameworks */,
 				28DAE1148854376F2321414F /* libPods-PXYFMWKTest.a in Frameworks */,
+				E6FCBC8E226D60BF00880E56 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +401,9 @@
 		E61EA77A21379B9D00394FFF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E6C7D214227000A500886964 /* AppCrashHelper */,
+				E6FCBC8F226D896B00880E56 /* ThreadHelper */,
+				E6FCBC6B226D5C3700880E56 /* DeviceBatteryHelper */,
 				E61EA77B21379B9D00394FFF /* DeviceCpuHelper */,
 				E61EA77E21379B9D00394FFF /* DeviceMemoryHelper */,
 				E61EA78121379B9D00394FFF /* FPS */,
@@ -494,6 +553,7 @@
 		E61EA7EB2137C44B00394FFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E625A3F62268EE5600E74C23 /* CoreText.framework */,
 				E67DEA742154D9C100AE5895 /* JavaScriptCore.framework */,
 				E663CB862152551000D0304F /* libsystem_blocks.dylib */,
 				E61EA8C4213D506900394FFF /* libPXYFMWKLib.a */,
@@ -535,6 +595,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E625A3F22268ED7100E74C23 /* TestCoreText */ = {
+			isa = PBXGroup;
+			children = (
+				E625A3F32268EE2000E74C23 /* PXYDispalyView.h */,
+				E625A3F42268EE2000E74C23 /* PXYDispalyView.m */,
+				E645D7C32268F3CF0038FB17 /* PXYCTFrameParserConfig.h */,
+				E645D7C42268F3CF0038FB17 /* PXYCTFrameParserConfig.m */,
+				E645D7C62268F40B0038FB17 /* PXYCTFrameParser.h */,
+				E645D7C72268F40B0038FB17 /* PXYCTFrameParser.m */,
+				E645D7C92268F4470038FB17 /* PXYCTTextData.h */,
+				E645D7CA2268F4470038FB17 /* PXYCTTextData.m */,
+				E645D7C02268F2870038FB17 /* UIView+FrameAdjust.h */,
+				E645D7C12268F2870038FB17 /* UIView+FrameAdjust.m */,
+			);
+			path = TestCoreText;
+			sourceTree = "<group>";
+		};
 		E63ADEE22179769D000104F4 /* PXYFileType */ = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +624,7 @@
 		E63B1ED0222AE4990019A435 /* TestFunction */ = {
 			isa = PBXGroup;
 			children = (
+				E625A3F22268ED7100E74C23 /* TestCoreText */,
 				E6C2B398222E50D500670AA5 /* TestRootViewController */,
 				E63B1F02222BB7530019A435 /* TestTKMessageModule */,
 				E63B1EE8222AE7FF0019A435 /* TestCTMediator */,
@@ -734,6 +812,92 @@
 			path = TestRootViewController;
 			sourceTree = "<group>";
 		};
+		E6C7D214227000A500886964 /* AppCrashHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E6C7D215227000BC00886964 /* PXYAppCrashMonitor.h */,
+				E6C7D216227000BC00886964 /* PXYAppCrashMonitor.m */,
+			);
+			path = AppCrashHelper;
+			sourceTree = "<group>";
+		};
+		E6FCBC6B226D5C3700880E56 /* DeviceBatteryHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E6FCBC6F226D60BE00880E56 /* IOKit */,
+				E6FCBC6C226D5C4800880E56 /* PXYDeviceBatteryHelper.h */,
+				E6FCBC6D226D5C4800880E56 /* PXYDeviceBatteryHelper.m */,
+			);
+			path = DeviceBatteryHelper;
+			sourceTree = "<group>";
+		};
+		E6FCBC6F226D60BE00880E56 /* IOKit */ = {
+			isa = PBXGroup;
+			children = (
+				E6FCBC70226D60BE00880E56 /* IOTypes.h */,
+				E6FCBC71226D60BE00880E56 /* IOKitKeys.h */,
+				E6FCBC72226D60BE00880E56 /* IOMessage.h */,
+				E6FCBC73226D60BE00880E56 /* IOReturn.h */,
+				E6FCBC74226D60BE00880E56 /* OSMessageNotification.h */,
+				E6FCBC75226D60BE00880E56 /* IOKit.framework */,
+				E6FCBC76226D60BE00880E56 /* pwr_mgt */,
+				E6FCBC7B226D60BE00880E56 /* ps */,
+				E6FCBC7F226D60BE00880E56 /* OSKext.h */,
+				E6FCBC80226D60BE00880E56 /* hid */,
+				E6FCBC8C226D60BF00880E56 /* IOKit.h */,
+				E6FCBC8D226D60BF00880E56 /* IOKitLib.h */,
+			);
+			path = IOKit;
+			sourceTree = "<group>";
+		};
+		E6FCBC76226D60BE00880E56 /* pwr_mgt */ = {
+			isa = PBXGroup;
+			children = (
+				E6FCBC77226D60BE00880E56 /* IOPM.h */,
+				E6FCBC78226D60BE00880E56 /* IOPMLib.h */,
+				E6FCBC79226D60BE00880E56 /* IOPMKeys.h */,
+				E6FCBC7A226D60BE00880E56 /* IOPMLibDefs.h */,
+			);
+			path = pwr_mgt;
+			sourceTree = "<group>";
+		};
+		E6FCBC7B226D60BE00880E56 /* ps */ = {
+			isa = PBXGroup;
+			children = (
+				E6FCBC7C226D60BE00880E56 /* IOPSKeys.h */,
+				E6FCBC7D226D60BE00880E56 /* IOUPSPlugIn.h */,
+				E6FCBC7E226D60BE00880E56 /* IOPowerSources.h */,
+			);
+			path = ps;
+			sourceTree = "<group>";
+		};
+		E6FCBC80226D60BE00880E56 /* hid */ = {
+			isa = PBXGroup;
+			children = (
+				E6FCBC81226D60BE00880E56 /* IOHIDEventSystemClient.h */,
+				E6FCBC82226D60BE00880E56 /* IOHIDService.h */,
+				E6FCBC83226D60BE00880E56 /* IOHIDNotification.h */,
+				E6FCBC84226D60BE00880E56 /* IOHIDEventQueue.h */,
+				E6FCBC85226D60BE00880E56 /* IOHIDEvent.h */,
+				E6FCBC86226D60BE00880E56 /* IOHIDEventSystem.h */,
+				E6FCBC87226D60BE00880E56 /* IOHIDEventData.h */,
+				E6FCBC88226D60BE00880E56 /* IOHIDEventTypes.h */,
+				E6FCBC89226D60BE00880E56 /* IOHIDDisplay.h */,
+				E6FCBC8A226D60BE00880E56 /* IOHIDSession.h */,
+				E6FCBC8B226D60BE00880E56 /* IOHIDUserDevice.h */,
+			);
+			path = hid;
+			sourceTree = "<group>";
+		};
+		E6FCBC8F226D896B00880E56 /* ThreadHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E6FCBC90226D897B00880E56 /* PXYThreadHelper.h */,
+				E6FCBC91226D897B00880E56 /* PXYThreadHelper.m */,
+			);
+			path = ThreadHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -918,6 +1082,7 @@
 				E63B1EE5222AE6030019A435 /* RSSwizzle.m in Sources */,
 				E61EA7C921379B9D00394FFF /* PXYMonitorDataDetailController.m in Sources */,
 				E61EA7C121379B9D00394FFF /* PXYWeakProxy.m in Sources */,
+				E625A3F52268EE2000E74C23 /* PXYDispalyView.m in Sources */,
 				E61EA7B221379B9D00394FFF /* ViewController.m in Sources */,
 				E63B1EEF222AEA220019A435 /* CTMediator.m in Sources */,
 				E61EA7CD21379B9D00394FFF /* YYKVStorage.m in Sources */,
@@ -926,24 +1091,31 @@
 				E63B1EFB222AEDC70019A435 /* Target_HomePageModule.m in Sources */,
 				E6D62F96217587CE005554AF /* PXYHashHelper.m in Sources */,
 				E61EA7B821379B9D00394FFF /* UIImageView+ImageCorner.m in Sources */,
+				E6C7D217227000BC00886964 /* PXYAppCrashMonitor.m in Sources */,
 				E61EA7D121379B9D00394FFF /* PXYStatusBarView.m in Sources */,
 				E63B1EDA222AE4990019A435 /* AppDelegate+BAppDelegate.m in Sources */,
 				E61EA7B521379B9D00394FFF /* main.m in Sources */,
+				E645D7C82268F40B0038FB17 /* PXYCTFrameParser.m in Sources */,
 				E63B1EDC222AE4990019A435 /* CAppDelegate.m in Sources */,
 				E61705632170947C00EDAF1E /* PXYBase64Helper.m in Sources */,
 				E61EA7C821379B9D00394FFF /* PXYMonitorManager.m in Sources */,
+				E645D7C52268F3CF0038FB17 /* PXYCTFrameParserConfig.m in Sources */,
 				E61EA7CB21379B9D00394FFF /* YYDiskCache.m in Sources */,
 				E63B1F11222CC5720019A435 /* TKSSOViewController.m in Sources */,
 				E6C2B39E222E523900670AA5 /* PXYViewControllerHelper.m in Sources */,
 				E63B1EE6222AE6030019A435 /* NSData+ImageContentType.m in Sources */,
 				E61EA7C421379B9D00394FFF /* PXYDataMonitorManager.m in Sources */,
 				E61EA7C221379B9D00394FFF /* PXYFPSHelper.m in Sources */,
+				E645D7CB2268F4470038FB17 /* PXYCTTextData.m in Sources */,
+				E6FCBC6E226D5C4800880E56 /* PXYDeviceBatteryHelper.m in Sources */,
 				E6C2B39B222E510300670AA5 /* UIViewController+PXYBaseViewController.m in Sources */,
 				E61EA7C321379B9D00394FFF /* PXYMonitorDataCacheHelper.m in Sources */,
 				E63B1EF4222AEC5A0019A435 /* HomeViewController.m in Sources */,
+				E645D7C22268F2870038FB17 /* UIView+FrameAdjust.m in Sources */,
 				E60B971D216F55B900F43B27 /* PXYDesHelper.m in Sources */,
 				E63B1F0A222CC1330019A435 /* TKModuleManager.m in Sources */,
 				E669E0A522687D8200F5B11D /* Person.m in Sources */,
+				E6FCBC92226D897B00880E56 /* PXYThreadHelper.m in Sources */,
 				E63B1F01222AF0710019A435 /* CTMediator+HomePageModuleActions.m in Sources */,
 				E61EA7C021379B9D00394FFF /* PXYDeviceMemoryHelper.m in Sources */,
 				E63ADEE5217976B3000104F4 /* NSData+PXYFileType.m in Sources */,
@@ -1095,6 +1267,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PXYFMWKTest",
+					"$(PROJECT_DIR)/PXYFMWKTest/PXYPerformanceMonitor/Tools/DeviceBatteryHelper/IOKit",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PXYFMWKTest/Info.plist";
@@ -1124,6 +1297,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/PXYFMWKTest",
+					"$(PROJECT_DIR)/PXYFMWKTest/PXYPerformanceMonitor/Tools/DeviceBatteryHelper/IOKit",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PXYFMWKTest/Info.plist";

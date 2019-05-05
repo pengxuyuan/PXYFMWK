@@ -20,5 +20,11 @@
  */
 + (float)fetchCpuUsage;
 
+/**
+ 获取所有线程，将 cpu_usafge 累加，可以得到当前 App 所在进程的的 CPU 使用率
+ 戴銘老师的 Demo
+ @return float
+ */
++ (float)fetchCPUsage;
 
 @end

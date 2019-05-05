@@ -11,33 +11,76 @@
 
 @implementation PXYDeviceMemoryHelper
 
+
+#pragma mark - Plublic Methods
 /**
- 获取已使用内存
+ 获取 App 占用的物理内存 phys_footprint
+ 
+ @return phys_footprint
  */
-+ (long)fetchUsedMemory {
-    return usedMemory();
++ (uint64_t)fetchAppPhysicalMmory {
+    task_vm_info_data_t vmInfo = FetchTaskVmInfoDataT();
+    return vmInfo.phys_footprint;
 }
 
 /**
- 获取可用内存
+ 获取 App 占用的驻留内存 虚拟内存
+ 
+ @return resident_size
  */
-+ (long)fetchFreeMemory {
-    return freeMemory();
++ (uint64_t)fetchAppVirtualMemory {
+    task_vm_info_data_t vmInfo = FetchTaskVmInfoDataT();
+    return vmInfo.resident_size;
 }
 
 /**
- 打印内存信息
+ Log 内存相关信息
  */
-+ (void)fetchLogMemUsage {
-    logMemUsage();
++ (void)printMemoryInfo {
+    uint64_t PhysicalMmory = [self fetchAppPhysicalMmory];
+    uint64_t VirtualMemory = [self fetchAppVirtualMemory];
+    
+    NSLog(@"App 占用物理内存：%llu MB(%llu MB), 占用虚拟内存：%llu MB",(PhysicalMmory/1024/1024),(PhysicalMmory/1000/1000),(VirtualMemory/1024/1024));
 }
 
+
+#pragma mark - Privaye Methods
+//task_vm_info
+//struct task_vm_info {
+//    mach_vm_size_t  virtual_size;       // 虚拟内存大小
+//    integer_t region_count;             // 内存区域的数量
+//    integer_t page_size;
+//    mach_vm_size_t  resident_size;      // 驻留内存大小
+//    mach_vm_size_t  resident_size_peak; // 驻留内存峰值
+//
+//    ...
+//
+//    /* added for rev1 */
+//    mach_vm_size_t  phys_footprint;     // 物理内存
+//
+//    ...
+task_vm_info_data_t FetchTaskVmInfoDataT(void) {
+    task_vm_info_data_t vmInfo;
+    mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
+    kern_return_t result = task_info(mach_task_self(), TASK_VM_INFO, (task_info_t)&vmInfo, &count);
+    if (result != KERN_SUCCESS) {
+//        return NULL;
+    } else {
+        return vmInfo;
+    }
+
+    return vmInfo;
+}
 
 vm_size_t usedMemory(void) {
-    struct task_basic_info info;
-    mach_msg_type_number_t size = sizeof(info);
-    kern_return_t kerr = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&info, &size);
-    return (kerr == KERN_SUCCESS) ? info.resident_size : 0; // size in bytes
+    task_vm_info_data_t vmInfo;
+    mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
+    kern_return_t result = task_info(mach_task_self(), TASK_VM_INFO, (task_info_t)&vmInfo, &count);
+    if (result != KERN_SUCCESS) {
+        return 0;
+    } else {
+        return vmInfo.phys_footprint;
+    }
 }
 
 vm_size_t freeMemory(void) {
@@ -49,18 +92,6 @@ vm_size_t freeMemory(void) {
     host_page_size(host_port, &pagesize);
     (void) host_statistics(host_port, HOST_VM_INFO, (host_info_t)&vm_stat, &host_size);
     return vm_stat.free_count * pagesize;
-}
-
-void logMemUsage(void) {
-    // compute memory usage and log if different by >= 100k
-    static long prevMemUsage = 0;
-    long curMemUsage = usedMemory();
-    long memUsageDiff = curMemUsage - prevMemUsage;
-    
-    if (memUsageDiff > 100000 || memUsageDiff < -100000) {
-        prevMemUsage = curMemUsage;
-        NSLog(@"Memory used %7.1f (%+5.0f), free %7.1f kb", curMemUsage/1024.0f, memUsageDiff/1000.0f, freeMemory()/1024.0f);
-    }
 }
 
 @end

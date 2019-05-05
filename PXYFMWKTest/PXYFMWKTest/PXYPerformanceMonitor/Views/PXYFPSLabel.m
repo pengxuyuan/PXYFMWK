@@ -39,7 +39,7 @@
         
         float cpuUsage = [PXYDeviceCpuHelper fetchCpuUsage];
         
-        long usedMemory = [PXYDeviceMemoryHelper fetchUsedMemory];
+        long usedMemory = [PXYDeviceMemoryHelper fetchAppPhysicalMmory];
         self.text = [NSString stringWithFormat:@"%d FPS | CPU Usage:%.2f%% | Memory Usage:%ldMB",(int)round(fps),cpuUsage,usedMemory/1024/1024];
     }];
 }
